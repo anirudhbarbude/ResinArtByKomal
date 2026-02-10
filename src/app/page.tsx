@@ -1,11 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { products } from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
-import { Palette, Sparkles, Brush, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { Button } from '@/components/ui/button';
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -40,7 +41,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-grow">
-        <section className="relative py-12 md:py-24 lg:py-32 bg-secondary/50 overflow-hidden">
+        <section className="relative flex items-center justify-center min-h-[calc(100vh-3.5rem)] bg-secondary/50 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <svg
               width="100%"
@@ -119,10 +120,13 @@ export default function Home() {
               home décor to beautiful personal accessories. Each piece is a
               one-of-a-kind creation, made with passion and precision.
             </p>
-            <div className="flex justify-center gap-6 mt-8 text-accent animate-in fade-in slide-in-from-top-4 duration-1000 delay-400">
-              <Brush size={32} />
-              <Palette size={32} />
-              <Sparkles size={32} />
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 animate-in fade-in slide-in-from-top-4 duration-1000 delay-400">
+                <Button asChild size="lg">
+                    <Link href="/about">Our Story</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                    <Link href="/#products">Our Collections</Link>
+                </Button>
             </div>
           </div>
         </section>
