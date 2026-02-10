@@ -7,6 +7,7 @@ export type Product = {
   description: string;
   price: string;
   image: ImagePlaceholder;
+  category: "Home Decor" | "Art work" | "Designs" | "Jewellery";
 };
 
 const getImage = (id: string): ImagePlaceholder => {
@@ -14,10 +15,10 @@ const getImage = (id: string): ImagePlaceholder => {
   if (!img) {
     // In a real app, you might want a default fallback image
     return {
-        id: 'not-found',
-        description: 'Image not found',
-        imageUrl: 'https://picsum.photos/seed/notfound/600/600',
-        imageHint: 'placeholder'
+      id: "not-found",
+      description: "Image not found",
+      imageUrl: "https://picsum.photos/seed/notfound/600/600",
+      imageHint: "placeholder",
     };
   }
   return img;
@@ -31,6 +32,7 @@ export const products: Product[] = [
       "Set of four handcrafted coasters inspired by azure geodes. A touch of gold leaf adds a luxurious finish, perfect for protecting your surfaces in style.",
     price: "$45.00",
     image: getImage("resin-coasters-1"),
+    category: "Home Decor",
   },
   {
     id: "2",
@@ -39,6 +41,7 @@ export const products: Product[] = [
       "A beautiful serving or vanity tray with real preserved flowers and foliage. Each piece is unique, bringing a piece of nature into your home.",
     price: "$70.00",
     image: getImage("resin-tray-1"),
+    category: "Designs",
   },
   {
     id: "3",
@@ -47,6 +50,7 @@ export const products: Product[] = [
       "Lightweight and elegant drop earrings featuring swirls of amethyst purple and pearly white. Hypoallergenic silver-plated hooks.",
     price: "$25.00",
     image: getImage("resin-jewelry-1"),
+    category: "Jewellery",
   },
   {
     id: "4",
@@ -55,6 +59,7 @@ export const products: Product[] = [
       "A stunning statement piece for your wall, mimicking the intricate beauty of a natural crystal geode. Measures 24 inches in diameter.",
     price: "$250.00",
     image: getImage("resin-wall-art-1"),
+    category: "Art work",
   },
   {
     id: "5",
@@ -63,6 +68,7 @@ export const products: Product[] = [
       "Keep time with the serene beauty of the ocean. This 12-inch wall clock features realistic lacing waves on a wooden base.",
     price: "$120.00",
     image: getImage("resin-clock-1"),
+    category: "Home Decor",
   },
   {
     id: "6",
@@ -71,5 +77,6 @@ export const products: Product[] = [
       "Personalize your keys with a custom initial keychain. Filled with deep space colors and a sprinkle of star-like glitter.",
     price: "$15.00",
     image: getImage("resin-keychains-1"),
+    category: "Jewellery",
   },
 ];
