@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -12,27 +13,38 @@ export default function AboutPage() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
               <div>
-                <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl text-primary">
-                  About Komal
+                <h2 className="font-headline text-3xl text-primary tracking-tight">
+                  The Artisan's Touch
+                </h2>
+                <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl text-primary mt-2">
+                  Hi, I'm Komal
                 </h1>
                 <p className="mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed font-body">
-                  Komal is a passionate resin artist who finds joy in creating
-                  unique and beautiful pieces that bring a touch of elegance and
-                  artistry to everyday life. Her journey into the world of resin
-                  art began as a hobby, a way to express her creativity and
-                  experiment with colors, textures, and forms.
+                  - the artist behind AK Artistic Resin. What started as a
+                  passion project has blossomed into a dedicated craft of
+                  creating beautiful resin art pieces.
                 </p>
                 <p className="mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed font-body">
-                  What started in a small home studio has blossomed into
-                  &quot;Artistic Resin By Komal,&quot; a place where she shares her
-                  one-of-a-kind creations with the world. Each piece, whether
-                  it&apos;s a delicate piece of jewelry or a statement home décor
-                  item, is handcrafted with meticulous attention to detail and a
-                  deep love for the craft. Komal believes that art should be
-                  accessible and personal, and she pours her heart into every
-                  creation, hoping to bring a little bit of beauty and joy into
-                  your home.
+                  Each creation is meticulously handcrafted with attention to
+                  detail, using high-quality materials and sustainable
+                  practices. My inspiration comes from the beauty of nature,
+                  abstract patterns, and the endless possibilities of resin as a
+                  medium.
                 </p>
+                <ul className="mt-6 space-y-4 text-muted-foreground md:text-lg font-body">
+                  <li className="flex items-start">
+                    <CheckCircle className="mr-3 mt-1 h-5 w-5 text-accent flex-shrink-0" />
+                    <span>Unique, one-of-a-kind designs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="mr-3 mt-1 h-5 w-5 text-accent flex-shrink-0" />
+                    <span>Eco-friendly materials & practices</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="mr-3 mt-1 h-5 w-5 text-accent flex-shrink-0" />
+                    <span>Made with love & attention to detail</span>
+                  </li>
+                </ul>
               </div>
               <div className="flex justify-center">
                 <Card className="rounded-xl shadow-2xl overflow-hidden w-full max-w-sm">
