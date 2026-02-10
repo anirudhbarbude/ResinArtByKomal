@@ -40,8 +40,12 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-grow">
-        <section className="py-12 md:py-24 lg:py-32 bg-secondary/50 overflow-hidden">
-          <div className="container px-4 md:px-6 text-center">
+        <section className="relative py-12 md:py-24 lg:py-32 bg-secondary/50 overflow-hidden">
+          <div className="absolute top-0 -left-4 w-72 h-72 bg-accent/20 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob"></div>
+          <div className="absolute top-0 -right-4 w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob [animation-delay:2s]"></div>
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-accent/10 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob [animation-delay:4s]"></div>
+
+          <div className="container relative px-4 md:px-6 text-center">
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary animate-in fade-in slide-in-from-top-4 duration-1000">
               Artistic Resin By Komal
             </h1>
