@@ -1,17 +1,39 @@
+'use client';
+
+import { useState } from 'react';
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { products, Product } from "@/lib/products";
+import { products } from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
 import { Palette, Sparkles, Brush } from "lucide-react";
+import { Button } from '@/components/ui/button';
 
-const productCategories: Product["category"][] = [
+const filterCategories = [
+  "All Products",
+  "Jewelry",
   "Home Decor",
-  "Art work",
-  "Designs",
-  "Jewellery",
+  "Custom Pieces",
 ];
 
 export default function Home() {
+  const [filter, setFilter] = useState("All Products");
+
+  const filteredProducts = products.filter((product) => {
+    if (filter === "All Products") {
+      return true;
+    }
+    if (filter === "Jewelry") {
+      return product.category === "Jewellery";
+    }
+    if (filter === "Home Decor") {
+      return product.category === "Home Decor";
+    }
+    if (filter === "Custom Pieces") {
+      return product.category === "Art work" || product.category === "Designs";
+    }
+    return false;
+  });
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -40,25 +62,24 @@ export default function Home() {
               Our Collection
             </h2>
 
-            {productCategories.map((category) => {
-              const categoryProducts = products.filter(
-                (p) => p.category === category
-              );
-              if (categoryProducts.length === 0) return null;
+            <div className="flex justify-center gap-2 md:gap-4 mb-12 flex-wrap">
+              {filterCategories.map((category) => (
+                <Button
+                  key={category}
+                  variant={filter === category ? "default" : "outline"}
+                  onClick={() => setFilter(category)}
+                  className="font-body"
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
 
-              return (
-                <div key={category} className="mb-16">
-                  <h3 className="font-headline text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-center mb-8 text-primary/80">
-                    {category}
-                  </h3>
-                  <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {categoryProducts.map((product) => (
-                      <ProductCard key={product.id} product={product} />
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {filteredProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
           </div>
         </section>
       </main>
