@@ -40,17 +40,17 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-grow">
-        <section className="py-12 md:py-24 lg:py-32 bg-secondary/50">
+        <section className="py-12 md:py-24 lg:py-32 bg-secondary/50 overflow-hidden">
           <div className="container px-4 md:px-6 text-center">
-            <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary">
+            <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary animate-in fade-in slide-in-from-top-4 duration-1000">
               Artistic Resin By Komal
             </h1>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mt-4 font-body">
+            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mt-4 font-body animate-in fade-in slide-in-from-top-4 duration-1000 delay-200">
               Explore a unique collection of handcrafted resin art, from elegant
               home décor to beautiful personal accessories. Each piece is a
               one-of-a-kind creation, made with passion and precision.
             </p>
-            <div className="flex justify-center gap-6 mt-8 text-accent">
+            <div className="flex justify-center gap-6 mt-8 text-accent animate-in fade-in slide-in-from-top-4 duration-1000 delay-400">
               <Brush size={32} />
               <Palette size={32} />
               <Sparkles size={32} />
