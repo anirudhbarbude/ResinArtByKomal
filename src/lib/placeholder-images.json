@@ -50,9 +50,9 @@
     },
     {
       "id": "komal-portrait",
-      "description": "A placeholder for the artist's portrait. Please replace with a real image.",
-      "imageUrl": "https://images.unsplash.com/photo-1740576178201-40293eab446e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3J0cmFpdCUyMHBsYWNlaG9sZGVyfGVufDB8fHx8MTc3MTYzMDIwNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "portrait placeholder",
+      "description": "Portrait of Komal, the artist.",
+      "imageUrl": "https://i.imgur.com/vHqEXgR.jpeg",
+      "imageHint": "artist portrait",
       "width": 600,
       "height": 900
     },
