@@ -198,7 +198,7 @@ export default function Home() {
               {filteredProducts.map((product, index) => (
                 <div
                   key={product.id}
-                  className="animate-in fade-in-0 zoom-in-95 duration-300"
+                  className="animate-in fade-in slide-in-from-top-8 duration-500"
                   style={{ animationDelay: `${200 + index * 100}ms`, animationFillMode: 'both' }}
                 >
                   <ProductCard product={product} />
