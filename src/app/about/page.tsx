@@ -119,13 +119,12 @@ export default function AboutPage() {
               </div>
               <div className="flex justify-center">
                 <Card className="rounded-xl shadow-2xl overflow-hidden w-full max-w-sm">
-                  <CardContent className="p-0">
+                  <CardContent className="p-0 relative aspect-[3/4]">
                     <Image
                       src={komalImage.imageUrl}
                       alt={komalImage.description}
                       data-ai-hint={komalImage.imageHint}
-                      width={komalImage.width}
-                      height={komalImage.height}
+                      fill
                       className="object-cover"
                     />
                   </CardContent>
