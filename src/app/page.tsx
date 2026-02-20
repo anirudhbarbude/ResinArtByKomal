@@ -177,11 +177,11 @@ export default function Home() {
 
         <section id="products" className="py-12 md:py-24">
           <div className="container">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary animate-in fade-in slide-in-from-top-4 duration-500">
               Our Collection
             </h2>
 
-            <div className="flex justify-center gap-2 md:gap-4 mb-12 flex-wrap">
+            <div className="flex justify-center gap-2 md:gap-4 mb-12 flex-wrap animate-in fade-in slide-in-from-top-4 duration-500 delay-100">
               {filterCategories.map((category) => (
                 <Button
                   key={category}
@@ -195,8 +195,14 @@ export default function Home() {
             </div>
 
             <div className="mx-auto max-w-max grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {filteredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
+              {filteredProducts.map((product, index) => (
+                <div
+                  key={product.id}
+                  className="animate-in fade-in-0 zoom-in-95 duration-300"
+                  style={{ animationDelay: `${200 + index * 100}ms`, animationFillMode: 'both' }}
+                >
+                  <ProductCard product={product} />
+                </div>
               ))}
             </div>
           </div>
@@ -273,7 +279,7 @@ export default function Home() {
           </div>
           <div className="container relative px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-              <div className="flex justify-center">
+              <div className="flex justify-center animate-in fade-in slide-in-from-left-8 duration-700">
                 <Card className="rounded-xl shadow-2xl overflow-hidden w-full max-w-sm">
                   <CardContent className="p-0 relative aspect-[2/3]">
                     <Image
@@ -286,7 +292,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </div>
-              <div>
+              <div className="animate-in fade-in slide-in-from-right-8 duration-700">
                 <h2 className="font-headline text-3xl text-primary tracking-tight">
                   The Artisan's Touch
                 </h2>
@@ -326,14 +332,17 @@ export default function Home() {
 
         <section id="past-artworks" className="py-12 md:py-24 bg-background">
           <div className="container px-4 md:px-6">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary animate-in fade-in slide-in-from-top-4 duration-500">
               My Resin Arts
             </h2>
             <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-              {pastArtworks.map((artwork) => (
+              {pastArtworks.map((artwork, index) => (
                 <Dialog key={artwork.id}>
                   <DialogTrigger asChild>
-                    <div className="break-inside-avoid cursor-pointer">
+                    <div
+                      className="break-inside-avoid cursor-pointer animate-in fade-in-0 zoom-in-95 duration-300"
+                      style={{ animationDelay: `${200 + index * 50}ms`, animationFillMode: 'both' }}
+                    >
                       <Card className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1">
                         <CardContent className="p-0">
                           <Image
@@ -366,7 +375,7 @@ export default function Home() {
 
         <section id="watch-me-create" className="py-12 md:py-24 bg-secondary/50">
           <div className="container px-4 md:px-6">
-            <div className="mx-auto max-w-3xl text-center">
+            <div className="mx-auto max-w-3xl text-center animate-in fade-in slide-in-from-top-4 duration-500">
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary mb-4">
                 Watch Me Create
               </h2>
@@ -381,7 +390,8 @@ export default function Home() {
                   href={video.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full"
+                  className="block w-full animate-in fade-in-0 zoom-in-95 duration-300"
+                  style={{ animationDelay: `${200 + index * 150}ms`, animationFillMode: 'both' }}
                 >
                   <Card className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
                     <CardContent className="p-0">
