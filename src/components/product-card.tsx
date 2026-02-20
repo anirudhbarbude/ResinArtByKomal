@@ -28,16 +28,13 @@ export function ProductCard({ product }: ProductCardProps) {
         <p className="mt-2 text-muted-foreground font-body flex-grow">
           {product.description}
         </p>
-        <div className="mt-4 flex justify-between items-center">
-          <p className="font-headline text-xl font-bold text-primary">
-            {product.price}
-          </p>
+        <div className="mt-4 flex justify-center">
           <Button
             asChild
             className="bg-accent hover:bg-accent/90 text-accent-foreground"
           >
             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-              Buy Now
+              Buy on Instagram Shop
             </a>
           </Button>
         </div>
