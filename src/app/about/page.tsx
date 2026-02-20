@@ -83,7 +83,7 @@ export default function AboutPage() {
           </div>
           <div className="container relative px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-              <div>
+              <div className="animate-in fade-in slide-in-from-left-8 duration-700">
                 <h2 className="font-headline text-3xl text-primary tracking-tight">
                   The Artisan's Touch
                 </h2>
@@ -117,7 +117,7 @@ export default function AboutPage() {
                   </li>
                 </ul>
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center animate-in fade-in slide-in-from-right-8 duration-700">
                 <Card className="rounded-xl shadow-2xl overflow-hidden w-full max-w-sm">
                   <CardContent className="p-0 relative aspect-[2/3]">
                     <Image
