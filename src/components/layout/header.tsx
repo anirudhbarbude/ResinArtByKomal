@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Instagram, Paintbrush, Palette } from "lucide-react";
+import { Instagram } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const INSTAGRAM_URL = "https://www.instagram.com/artisticresinbykomal";
 
@@ -24,10 +25,6 @@ export function Header() {
               <Logo />
             </Link>
           </div>
-          <div className="flex items-center gap-2">
-            <Paintbrush className="h-5 w-5 text-accent" />
-            <Palette className="h-5 w-5 text-accent" />
-          </div>
           <nav className="flex items-center">
             <Button variant="ghost" size="icon" asChild>
               <a
@@ -39,6 +36,7 @@ export function Header() {
                 <Instagram className="h-5 w-5 text-primary" />
               </a>
             </Button>
+            <ModeToggle />
           </nav>
         </div>
       </div>
