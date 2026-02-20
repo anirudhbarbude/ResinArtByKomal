@@ -15,6 +15,11 @@ import {
   PlaceHolderImages,
   type ImagePlaceholder,
 } from '@/lib/placeholder-images';
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const filterCategories = [
   "All Products",
@@ -313,20 +318,34 @@ export default function Home() {
             </h2>
             <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
               {pastArtworks.map((artwork) => (
-                <div key={artwork.id} className="break-inside-avoid">
-                  <Card className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1">
-                    <CardContent className="p-0">
-                      <Image
-                        src={artwork.imageUrl}
-                        alt={artwork.description}
-                        data-ai-hint={artwork.imageHint}
-                        width={artwork.width}
-                        height={artwork.height}
-                        className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </CardContent>
-                  </Card>
-                </div>
+                <Dialog key={artwork.id}>
+                  <DialogTrigger asChild>
+                    <div className="break-inside-avoid cursor-pointer">
+                      <Card className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1">
+                        <CardContent className="p-0">
+                          <Image
+                            src={artwork.imageUrl}
+                            alt={artwork.description}
+                            data-ai-hint={artwork.imageHint}
+                            width={artwork.width}
+                            height={artwork.height}
+                            className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="p-0 border-0 bg-transparent shadow-none max-w-5xl w-auto">
+                    <Image
+                      src={artwork.imageUrl}
+                      alt={artwork.description}
+                      data-ai-hint={artwork.imageHint}
+                      width={artwork.width * 2}
+                      height={artwork.height * 2}
+                      className="object-contain w-full h-auto max-h-[90vh] rounded-lg"
+                    />
+                  </DialogContent>
+                </Dialog>
               ))}
             </div>
           </div>
