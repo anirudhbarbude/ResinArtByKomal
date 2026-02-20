@@ -48,7 +48,6 @@ export default function Home() {
   });
   
   const komalImage = getImage('komal-portrait');
-  const videoThumbnail = getImage('resin-video-thumb-1');
 
   const pastArtworksIds = [
     'tilak-thali-1', 'rakhi-1', 'frame-1', 'beach-watch-1', 'wine-glass-1', 'radha-art-1',
@@ -67,6 +66,20 @@ export default function Home() {
     .map(id => PlaceHolderImages.find(img => img.id === id))
     .filter((img): img is ImagePlaceholder => !!img);
 
+  const videos = [
+    {
+      href: "https://www.instagram.com/reel/DDhiNu4Br_I/?igsh=dngxb2U1MWQ3MjI=",
+      thumbnail: getImage('resin-video-thumb-1'),
+    },
+    {
+      href: "https://www.instagram.com/reel/C8q_1Z_yY3L/",
+      thumbnail: getImage('resin-video-thumb-2'),
+    },
+    {
+      href: "https://www.instagram.com/reel/C9A_Z_YyZJ_/",
+      thumbnail: getImage('resin-video-thumb-3'),
+    },
+  ];
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -361,30 +374,33 @@ export default function Home() {
                 See the magic happen! Watch a timelapse of a beautiful piece being created from start to finish.
               </p>
             </div>
-            <div className="mt-12 flex justify-center">
-              <a
-                href="https://www.instagram.com/reel/DDhiNu4Br_I/?igsh=dngxb2U1MWQ3MjI="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full max-w-2xl"
-              >
-                <Card className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
-                  <CardContent className="p-0">
-                    <div className="aspect-video w-full relative">
-                      <Image
-                        src={videoThumbnail.imageUrl}
-                        alt={videoThumbnail.description}
-                        data-ai-hint={videoThumbnail.imageHint}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                        <PlayCircle className="h-20 w-20 text-white/80 transition-transform duration-300 group-hover:scale-110" />
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+              {videos.map((video, index) => (
+                <a
+                  key={index}
+                  href={video.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full"
+                >
+                  <Card className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                    <CardContent className="p-0">
+                      <div className="aspect-video w-full relative">
+                        <Image
+                          src={video.thumbnail.imageUrl}
+                          alt={video.thumbnail.description}
+                          data-ai-hint={video.thumbnail.imageHint}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                          <PlayCircle className="h-20 w-20 text-white/80 transition-transform duration-300 group-hover:scale-110" />
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </a>
+                    </CardContent>
+                  </Card>
+                </a>
+              ))}
             </div>
           </div>
         </section>
