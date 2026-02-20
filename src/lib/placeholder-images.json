@@ -51,8 +51,8 @@
     {
       "id": "komal-portrait",
       "description": "Portrait of Komal, the artist",
-      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=900&fit=crop&q=80",
-      "imageHint": "woman smiling",
+      "imageUrl": "https://storage.googleapis.com/monet-prod-us-central1-bug-apy-attachments/f9a88e63-c782-4148-8bb0-c8f8ac396263_1720803450",
+      "imageHint": "woman orange wall",
       "width": 600,
       "height": 900
     },
