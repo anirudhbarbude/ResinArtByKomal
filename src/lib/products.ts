@@ -1,3 +1,4 @@
+
 import type { ImagePlaceholder } from "./placeholder-images";
 import { getImage } from "./placeholder-images";
 
@@ -12,50 +13,58 @@ export type Product = {
 export const products: Product[] = [
   {
     id: "1",
-    name: "Azure Geode Coasters",
-    description:
-      "Set of four handcrafted coasters inspired by azure geodes. A touch of gold leaf adds a luxurious finish, perfect for protecting your surfaces in style.",
-    image: getImage("resin-coasters-1"),
+    name: "Blue Hour Sip Wine Glass",
+    description: "Elegant wine glass with a touch of blue resin art, perfect for special occasions.",
+    image: getImage("wine-glass-1"),
     category: "Home Decor",
   },
   {
     id: "2",
-    name: "Enchanted Garden Tray",
-    description:
-      "A beautiful serving or vanity tray with real preserved flowers and foliage. Each piece is unique, bringing a piece of nature into your home.",
+    name: "Shubh Labh Hangings",
+    description: "Welcome prosperity with these artistic Shubh Labh hangings for your home entrance.",
+    image: getImage("shubh-labh-1"),
+    category: "Home Decor",
+  },
+  {
+    id: "3",
+    name: "Decorative Tilak Thali",
+    description: "A beautifully decorated thali for auspicious occasions and religious ceremonies.",
+    image: getImage("tilak-thali-1"),
+    category: "Home Decor",
+  },
+  {
+    id: "4",
+    name: "Handcrafted Resin Rakhi",
+    description: "Celebrate the bond of love with a unique, handcrafted resin Rakhi for your brother.",
+    image: getImage("rakhi-1"),
+    category: "Jewellery",
+  },
+  {
+    id: "5",
+    name: "25th Anniversary Engagement Platter",
+    description: "A custom platter celebrating 25 years of togetherness, beautifully crafted with resin.",
     image: getImage("resin-tray-1"),
     category: "Designs",
   },
   {
-    id: "3",
-    name: "Amethyst Swirl Earrings",
-    description:
-      "Lightweight and elegant drop earrings featuring swirls of amethyst purple and pearly white. Hypoallergenic silver-plated hooks.",
-    image: getImage("resin-jewelry-1"),
-    category: "Jewellery",
-  },
-  {
-    id: "4",
-    name: "Crystal Slice Wall Art",
-    description:
-      "A stunning statement piece for your wall, mimicking the intricate beauty of a natural crystal geode. Measures 24 inches in diameter.",
-    image: getImage("resin-wall-art-1"),
-    category: "Art work",
-  },
-  {
-    id: "5",
-    name: "Ocean Wave Clock",
-    description:
-      "Keep time with the serene beauty of the ocean. This 12-inch wall clock features realistic lacing waves on a wooden base.",
-    image: getImage("resin-clock-1"),
-    category: "Home Decor",
-  },
-  {
     id: "6",
-    name: "Galaxy Initial Keychain",
-    description:
-      "Personalize your keys with a custom initial keychain. Filled with deep space colors and a sprinkle of star-like glitter.",
-    image: getImage("resin-keychains-1"),
-    category: "Jewellery",
+    name: "Miniature Family Photo Frame",
+    description: "Preserve your precious memories in a custom miniature photo frame with resin details.",
+    image: getImage("frame-1"),
+    category: "Designs",
+  },
+  {
+    id: "7",
+    name: "Custom Marriage Frame",
+    description: "A personalized resin frame to cherish the special moments of your wedding day.",
+    image: getImage("frame-2"),
+    category: "Designs",
+  },
+  {
+    id: "8",
+    name: "Customised Phone Cover",
+    description: "Protect your phone in style with a unique, custom-designed resin phone cover.",
+    image: getImage("phone-cover-1"),
+    category: "Designs",
   },
 ];

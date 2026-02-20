@@ -51,10 +51,10 @@
     {
       "id": "komal-portrait",
       "description": "Portrait of Komal, the artist",
-      "imageUrl": "https://storage.googleapis.com/gcs-public-buck-sc-sb-gse-central1/v1-assets/l1-p-gcs-prod-web-aso-publish-ext-prod/sc-frontend-dev/e4c34a2c-e1b9-4a0b-8002-8a9d1d6a693c/e7a2b918_d288_405f_82e8_d5f661a3d937.png",
+      "imageUrl": "https://storage.googleapis.com/gcs-public-buck-sc-sb-gse-central1/v1-assets/l1-p-gcs-prod-web-aso-publish-ext-prod/sc-frontend-dev/9f1704a4-569d-400d-9659-397a8e8b0a99/c0352b27_3408_485f_ac34_35e808064ac3.png",
       "imageHint": "woman smiling",
-      "width": 450,
-      "height": 600
+      "width": 600,
+      "height": 800
     },
     {
       "id": "tilak-thali-1",
@@ -263,6 +263,22 @@
       "imageHint": "radha krishna",
       "width": 600,
       "height": 1000
+    },
+    {
+      "id": "shubh-labh-1",
+      "description": "Decorative Shubh Labh hangings",
+      "imageUrl": "https://images.unsplash.com/photo-1666778714312-4439cb43136a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyZXNpbiUyMGhhbmdpbmd8ZW58MHx8fHwxNzcxNjIyOTkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "resin hanging",
+      "width": 600,
+      "height": 600
+    },
+    {
+      "id": "phone-cover-1",
+      "description": "A custom resin phone cover",
+      "imageUrl": "https://picsum.photos/seed/phone-cover-1/600/600",
+      "imageHint": "resin phonecover",
+      "width": 600,
+      "height": 600
     }
   ]
 }
