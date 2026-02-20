@@ -6,7 +6,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { products } from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, PlayCircle } from "lucide-react";
 import { Button } from '@/components/ui/button';
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -48,6 +48,7 @@ export default function Home() {
   });
   
   const komalImage = getImage('komal-portrait');
+  const videoThumbnail = getImage('resin-video-thumb-1');
 
   const pastArtworksIds = [
     'tilak-thali-1', 'rakhi-1', 'frame-1', 'beach-watch-1', 'wine-glass-1', 'radha-art-1',
@@ -346,6 +347,44 @@ export default function Home() {
                   </DialogContent>
                 </Dialog>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="watch-me-create" className="py-12 md:py-24 bg-secondary/50">
+          <div className="container px-4 md:px-6">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary mb-4">
+                Watch Me Create
+              </h2>
+              <p className="text-muted-foreground md:text-xl/relaxed font-body">
+                See the magic happen! Watch a timelapse of a beautiful piece being created from start to finish.
+              </p>
+            </div>
+            <div className="mt-12 flex justify-center">
+              <a
+                href="https://www.instagram.com/reel/DDhiNu4Br_I/?igsh=dngxb2U1MWQ3MjI="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full max-w-2xl"
+              >
+                <Card className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                  <CardContent className="p-0">
+                    <div className="aspect-video w-full relative">
+                      <Image
+                        src={videoThumbnail.imageUrl}
+                        alt={videoThumbnail.description}
+                        data-ai-hint={videoThumbnail.imageHint}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <PlayCircle className="h-20 w-20 text-white/80 transition-transform duration-300 group-hover:scale-110" />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
             </div>
           </div>
         </section>
