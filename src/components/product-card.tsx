@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Product } from "@/lib/products";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Instagram } from "lucide-react";
 
 const INSTAGRAM_URL = "https://www.instagram.com/artisticresinbykomal";
 
@@ -34,6 +35,7 @@ export function ProductCard({ product }: ProductCardProps) {
             className="bg-accent hover:bg-accent/90 text-accent-foreground"
           >
             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
+              <Instagram />
               Buy on Instagram Shop
             </a>
           </Button>
