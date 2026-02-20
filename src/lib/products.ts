@@ -1,5 +1,5 @@
 import type { ImagePlaceholder } from "./placeholder-images";
-import { PlaceHolderImages } from "./placeholder-images";
+import { getImage } from "./placeholder-images";
 
 export type Product = {
   id: string;
@@ -8,20 +8,6 @@ export type Product = {
   price: string;
   image: ImagePlaceholder;
   category: "Home Decor" | "Art work" | "Designs" | "Jewellery";
-};
-
-const getImage = (id: string): ImagePlaceholder => {
-  const img = PlaceHolderImages.find((p) => p.id === id);
-  if (!img) {
-    // In a real app, you might want a default fallback image
-    return {
-      id: "not-found",
-      description: "Image not found",
-      imageUrl: "https://picsum.photos/seed/notfound/600/600",
-      imageHint: "placeholder",
-    };
-  }
-  return img;
 };
 
 export const products: Product[] = [

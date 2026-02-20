@@ -10,6 +10,11 @@ import { CheckCircle } from "lucide-react";
 import { Button } from '@/components/ui/button';
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  getImage,
+  PlaceHolderImages,
+  type ImagePlaceholder,
+} from '@/lib/placeholder-images';
 
 const filterCategories = [
   "All Products",
@@ -36,6 +41,26 @@ export default function Home() {
     }
     return false;
   });
+  
+  const komalImage = getImage('komal-portrait');
+
+  const pastArtworksIds = [
+    'tilak-thali-1', 'rakhi-1', 'frame-1', 'beach-watch-1', 'wine-glass-1', 'radha-art-1',
+    'rakhi-2', 'frame-2', 'beach-watch-2', 'wine-glass-2', 'radha-art-2', 'tilak-thali-2',
+    'rakhi-3', 'frame-3', 'beach-watch-3', 'wine-glass-3', 'radha-art-3',
+    'rakhi-4', 'frame-4',
+    'rakhi-5', 'frame-5',
+    'rakhi-6',
+    'rakhi-7',
+    'rakhi-8',
+    'rakhi-9',
+    'rakhi-10',
+  ];
+
+  const pastArtworks: ImagePlaceholder[] = pastArtworksIds
+    .map(id => PlaceHolderImages.find(img => img.id === id))
+    .filter((img): img is ImagePlaceholder => !!img);
+
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -233,11 +258,11 @@ export default function Home() {
                 <Card className="rounded-xl shadow-2xl overflow-hidden w-full max-w-sm">
                   <CardContent className="p-0">
                     <Image
-                      src="https://picsum.photos/seed/komal/600/700"
-                      alt="Portrait of Komal, the artist"
-                      data-ai-hint="artist portrait"
-                      width={600}
-                      height={700}
+                      src={komalImage.imageUrl}
+                      alt={komalImage.description}
+                      data-ai-hint={komalImage.imageHint}
+                      width={komalImage.width}
+                      height={komalImage.height}
                       className="object-cover"
                     />
                   </CardContent>
@@ -277,6 +302,32 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="past-artworks" className="py-12 md:py-24 bg-background">
+          <div className="container px-4 md:px-6">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary">
+              My Resin Arts
+            </h2>
+            <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+              {pastArtworks.map((artwork) => (
+                <div key={artwork.id} className="break-inside-avoid">
+                  <Card className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1">
+                    <CardContent className="p-0">
+                      <Image
+                        src={artwork.imageUrl}
+                        alt={artwork.description}
+                        data-ai-hint={artwork.imageHint}
+                        width={artwork.width}
+                        height={artwork.height}
+                        className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
             </div>
           </div>
         </section>

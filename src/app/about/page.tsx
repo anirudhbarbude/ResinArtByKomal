@@ -3,8 +3,11 @@ import { Footer } from "@/components/layout/footer";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
+import { getImage } from "@/lib/placeholder-images";
 
 export default function AboutPage() {
+  const komalImage = getImage("komal-portrait");
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -118,11 +121,11 @@ export default function AboutPage() {
                 <Card className="rounded-xl shadow-2xl overflow-hidden w-full max-w-sm">
                   <CardContent className="p-0">
                     <Image
-                      src="https://picsum.photos/seed/komal/600/700"
-                      alt="Portrait of Komal, the artist"
-                      data-ai-hint="artist portrait"
-                      width={600}
-                      height={700}
+                      src={komalImage.imageUrl}
+                      alt={komalImage.description}
+                      data-ai-hint={komalImage.imageHint}
+                      width={komalImage.width}
+                      height={komalImage.height}
                       className="object-cover"
                     />
                   </CardContent>
