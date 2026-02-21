@@ -5,7 +5,7 @@ export function Logo({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(
-        "font-headline text-3xl font-bold text-primary",
+        "font-logo text-4xl text-primary",
         className
       )}
       {...props}

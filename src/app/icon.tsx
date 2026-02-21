@@ -10,14 +10,14 @@ export const contentType = 'image/png';
 // Image generation
 export default async function Icon() {
   const fontData = await fetch(
-    'https://fonts.gstatic.com/s/belleza/v15/0nkoC9_pNeECw6U__vA.ttf'
+    'https://fonts.gstatic.com/s/greatvibes/v18/RWmMoKWR9v4ksMvYd2qU_g.ttf'
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
     (
       <div
         style={{
-          fontSize: 22,
+          fontSize: 24,
           background: 'hsl(40, 33%, 97%)',
           width: '100%',
           height: '100%',
@@ -25,9 +25,7 @@ export default async function Icon() {
           alignItems: 'center',
           justifyContent: 'center',
           color: 'hsl(30, 30%, 50%)',
-          fontFamily: 'Belleza',
-          fontWeight: 700,
-          letterSpacing: '0.05em',
+          fontFamily: '"Great Vibes"',
         }}
       >
         AK
@@ -37,7 +35,7 @@ export default async function Icon() {
       ...size,
       fonts: [
         {
-          name: 'Belleza',
+          name: 'Great Vibes',
           data: fontData,
           style: 'normal',
           weight: 400,
