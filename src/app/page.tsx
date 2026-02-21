@@ -165,10 +165,10 @@ export default function Home() {
               {heroDescription.split(" ").map((word, index) => (
                 <span
                   key={index}
-                  className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500"
+                  className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500 mr-1.5"
                   style={{ animationDelay: `${200 + index * 50}ms`, animationFillMode: 'both' }}
                 >
-                  {word}{' '}
+                  {word}
                 </span>
               ))}
             </p>
