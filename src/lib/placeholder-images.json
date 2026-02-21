@@ -303,14 +303,6 @@
       "imageHint": "resin video",
       "width": 1280,
       "height": 720
-    },
-    {
-      "id": "site-logo",
-      "description": "Artistic Resin by Komal Logo",
-      "imageUrl": "https://i.imgur.com/1cqE4gQ.png",
-      "imageHint": "company logo",
-      "width": 400,
-      "height": 150
     }
   ]
 }
