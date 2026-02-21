@@ -3,8 +3,7 @@ import type { Product } from "@/lib/products";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
-
-const INSTAGRAM_URL = "https://www.instagram.com/artisticresinbykomal";
+import { INSTAGRAM_URL } from "@/lib/constants";
 
 type ProductCardProps = {
   product: Product;

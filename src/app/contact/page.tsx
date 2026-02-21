@@ -2,11 +2,12 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Instagram, Mail, Phone } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-const INSTAGRAM_USERNAME = "artisticresinbykomal";
-const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_USERNAME}`;
-const EMAIL_ADDRESS = "artisticresin@example.com";
-const PHONE_NUMBER = "+1 (555) 123-4567";
+import {
+  EMAIL_ADDRESS,
+  INSTAGRAM_URL,
+  INSTAGRAM_USERNAME,
+  PHONE_NUMBER,
+} from "@/lib/constants";
 
 export default function ContactPage() {
   return (

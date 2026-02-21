@@ -3,8 +3,7 @@ import { Instagram } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
-
-const INSTAGRAM_URL = "https://www.instagram.com/artisticresinbykomal";
+import { INSTAGRAM_URL } from "@/lib/constants";
 
 export function Header() {
   return (

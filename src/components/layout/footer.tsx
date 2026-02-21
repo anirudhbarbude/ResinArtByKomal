@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-
-const INSTAGRAM_USERNAME = "artisticresinbykomal";
-const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_USERNAME}`;
-const EMAIL_ADDRESS = "artisticresin@example.com";
-const PHONE_NUMBER = "+1 (555) 123-4567";
+import {
+  EMAIL_ADDRESS,
+  INSTAGRAM_URL,
+  INSTAGRAM_USERNAME,
+  PHONE_NUMBER,
+} from "@/lib/constants";
 
 export function Footer() {
   return (
