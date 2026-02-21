@@ -29,7 +29,7 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --cursor-paintbrush: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 12V2H3v10'/%3E%3Cpath d='M17.1 12.3c.7-.7 1-1.5 1-2.3c0-1.6-1.3-3-3-3c-.8 0-1.6.3-2.3 1L3 18c-1.1 1-1.5 2.5-.9 3.7c.6 1.2 1.9 2 3.2 2c1.3 0 2.5-.8 3.2-2l8.6-8.6Z'/%3E%3Cpath d='M12.5 7.5L16.5 11.5'/%3E%3C/svg%3E");
+    --cursor-paintbrush: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.8285 2.15573C19.4479 1.53634 20.4721 1.53634 21.0915 2.15573L25.3332 6.3974C25.9526 7.01679 25.9526 8.041 25.3332 8.66039L13.1666 20.827L7.40973 21.0915C6.01416 21.1561 4.84394 20.0463 4.90853 18.6508L5.17303 12.8939L18.8285 2.15573Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.4142 4.98413L22.7071 10.277' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.5 18.6508H9.25781' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   }
 
   .dark {
@@ -52,7 +52,7 @@
     --border: 30 10% 20%;
     --input: 30 10% 25%;
     --ring: 35 65% 70%;
-    --cursor-paintbrush: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 12V2H3v10'/%3E%3Cpath d='M17.1 12.3c.7-.7 1-1.5 1-2.3c0-1.6-1.3-3-3-3c-.8 0-1.6.3-2.3 1L3 18c-1.1 1-1.5 2.5-.9 3.7c.6 1.2 1.9 2 3.2 2c1.3 0 2.5-.8 3.2-2l8.6-8.6Z'/%3E%3Cpath d='M12.5 7.5L16.5 11.5'/%3E%3C/svg%3E");
+    --cursor-paintbrush: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.8285 2.15573C19.4479 1.53634 20.4721 1.53634 21.0915 2.15573L25.3332 6.3974C25.9526 7.01679 25.9526 8.041 25.3332 8.66039L13.1666 20.827L7.40973 21.0915C6.01416 21.1561 4.84394 20.0463 4.90853 18.6508L5.17303 12.8939L18.8285 2.15573Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.4142 4.98413L22.7071 10.277' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.5 18.6508H9.25781' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   }
 
   * {
@@ -96,5 +96,32 @@
   .dark body::before,
   .dark body::after {
     opacity: 0;
+  }
+
+  @keyframes splatter-animation {
+    0% {
+      transform: scale(0.5) rotate(var(--splatter-rotation));
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2) rotate(var(--splatter-rotation));
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1.5) rotate(var(--splatter-rotation));
+      opacity: 0;
+    }
+  }
+
+  .paint-splatter {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    width: 30px;
+    height: 30px;
+    background-color: var(--splatter-color);
+    border-radius: 70% 30% 60% 40% / 60% 40% 70% 30%;
+    animation: splatter-animation 0.5s ease-out forwards;
+    will-change: transform, opacity;
   }
 }
