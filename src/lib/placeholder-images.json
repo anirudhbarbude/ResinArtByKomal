@@ -50,9 +50,9 @@
     },
     {
       "id": "komal-portrait",
-      "description": "Portrait of the artist.",
-      "imageUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=900&fit=crop",
-      "imageHint": "artist portrait",
+      "description": "Portrait of Komal, the artist.",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
+      "imageHint": "woman portrait",
       "width": 600,
       "height": 900
     },
@@ -303,6 +303,14 @@
       "imageHint": "resin video",
       "width": 1280,
       "height": 720
+    },
+    {
+      "id": "site-logo",
+      "description": "Artistic Resin by Komal Logo",
+      "imageUrl": "https://i.imgur.com/1cqE4gQ.png",
+      "imageHint": "company logo",
+      "width": 400,
+      "height": 150
     }
   ]
 }

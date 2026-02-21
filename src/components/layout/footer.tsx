@@ -39,16 +39,8 @@ export function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center">
               <Logo />
-              <div>
-                <span className="font-bold sm:inline-block font-headline text-primary text-lg">
-                  Artistic Resin
-                </span>
-                <span className="block text-sm text-muted-foreground">
-                  by Komal
-                </span>
-              </div>
             </Link>
             <p className="text-muted-foreground text-sm">
               Creating beautiful resin art pieces that inspire and delight.
