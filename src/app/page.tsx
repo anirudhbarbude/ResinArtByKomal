@@ -80,6 +80,8 @@ export default function Home() {
       thumbnail: getImage('resin-video-thumb-3'),
     },
   ];
+  
+  const heroDescription = "Explore a unique collection of handcrafted resin art, from elegant home décor to beautiful personal accessories. Each piece is a one-of-a-kind creation, made with passion and precision.";
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -159,10 +161,16 @@ export default function Home() {
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary animate-in fade-in slide-in-from-top-4 duration-1000">
               Artistic Resin By Komal
             </h1>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mt-4 font-body animate-in fade-in slide-in-from-top-4 duration-1000 delay-200">
-              Explore a unique collection of handcrafted resin art, from elegant
-              home décor to beautiful personal accessories. Each piece is a
-              one-of-a-kind creation, made with passion and precision.
+            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mt-4 font-body">
+              {heroDescription.split(" ").map((word, index) => (
+                <span
+                  key={index}
+                  className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500"
+                  style={{ animationDelay: `${200 + index * 50}ms`, animationFillMode: 'both' }}
+                >
+                  {word}{' '}
+                </span>
+              ))}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 animate-in fade-in slide-in-from-top-4 duration-1000 delay-400">
                 <Button asChild size="lg">
