@@ -188,9 +188,9 @@ export default function Home() {
             muted
             playsInline
             className="absolute z-0 w-full h-full object-cover"
-            poster="https://images.pexels.com/videos/4496275/pictures/picture-796.jpg"
+            poster="https://picsum.photos/seed/video-poster/1920/1080"
           >
-            <source src="https://videos.pexels.com/video-files/4496275/4496275-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute z-10 inset-0 bg-black/60"></div>
