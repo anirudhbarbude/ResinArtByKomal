@@ -72,7 +72,7 @@ export default function Home() {
     .filter((img): img is ImagePlaceholder => !!img);
 
   const artworksInGroups: ImagePlaceholder[][] = [];
-  const groupSize = 12;
+  const groupSize = 15;
   for (let i = 0; i < pastArtworks.length; i += groupSize) {
     artworksInGroups.push(pastArtworks.slice(i, i + groupSize));
   }
@@ -323,7 +323,7 @@ export default function Home() {
               <CarouselContent>
                 {artworksInGroups.map((group, index) => (
                   <CarouselItem key={index}>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <div className="grid grid-cols-5 gap-4">
                       {group.map((artwork) => (
                         <Dialog key={artwork.id}>
                           <DialogTrigger asChild>
