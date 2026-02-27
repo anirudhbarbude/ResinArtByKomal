@@ -98,32 +98,32 @@ export default function AboutPage() {
                   Hi, I'm Komal
                 </h1>
                 <p className="mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed font-body">
-                  {para1.split(" ").map((word, index) => (
+                  {para1.split("").map((char, index) => (
                     <span
                       key={index}
-                      className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500 mr-1.5"
+                      className="inline-block animate-in fade-in slide-in-from-top-2 duration-500"
                       style={{
-                        animationDelay: `${300 + index * 30}ms`,
+                        animationDelay: `${300 + index * 20}ms`,
                         animationFillMode: "both",
                       }}
                     >
-                      {word}
+                      {char === " " ? "\u00A0" : char}
                     </span>
                   ))}
                 </p>
                 <p className="mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed font-body">
-                  {para2.split(" ").map((word, index) => (
+                  {para2.split("").map((char, index) => (
                     <span
                       key={index}
-                      className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500 mr-1.5"
+                      className="inline-block animate-in fade-in slide-in-from-top-2 duration-500"
                       style={{
                         animationDelay: `${
-                          300 + para1.split(" ").length * 30 + index * 30
+                          300 + para1.length * 20 + index * 20
                         }ms`,
                         animationFillMode: "both",
                       }}
                     >
-                      {word}
+                      {char === " " ? "\u00A0" : char}
                     </span>
                   ))}
                 </p>
