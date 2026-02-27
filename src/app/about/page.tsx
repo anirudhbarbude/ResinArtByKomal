@@ -98,32 +98,32 @@ export default function AboutPage() {
                   Hi, I'm Komal
                 </h1>
                 <p className="mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed font-body">
-                  {para1.split("").map((char, index) => (
+                  {para1.split(" ").map((word, index) => (
                     <span
                       key={index}
-                      className="inline-block animate-in fade-in slide-in-from-top-2 duration-500"
+                      className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500 mr-1.5"
                       style={{
-                        animationDelay: `${300 + index * 20}ms`,
+                        animationDelay: `${300 + index * 50}ms`,
                         animationFillMode: "both",
                       }}
                     >
-                      {char === " " ? "\u00A0" : char}
+                      {word}
                     </span>
                   ))}
                 </p>
                 <p className="mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed font-body">
-                  {para2.split("").map((char, index) => (
+                  {para2.split(" ").map((word, index) => (
                     <span
                       key={index}
-                      className="inline-block animate-in fade-in slide-in-from-top-2 duration-500"
+                      className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500 mr-1.5"
                       style={{
                         animationDelay: `${
-                          300 + para1.length * 20 + index * 20
+                          300 + para1.split(" ").length * 50 + index * 50
                         }ms`,
                         animationFillMode: "both",
                       }}
                     >
-                      {char === " " ? "\u00A0" : char}
+                      {word}
                     </span>
                   ))}
                 </p>
@@ -131,7 +131,7 @@ export default function AboutPage() {
                   <li
                     className="flex items-start animate-in fade-in slide-in-from-bottom-4 duration-500"
                     style={{
-                      animationDelay: "2200ms",
+                      animationDelay: "3000ms",
                       animationFillMode: "both",
                     }}
                   >
@@ -141,7 +141,7 @@ export default function AboutPage() {
                   <li
                     className="flex items-start animate-in fade-in slide-in-from-bottom-4 duration-500"
                     style={{
-                      animationDelay: "2300ms",
+                      animationDelay: "3100ms",
                       animationFillMode: "both",
                     }}
                   >
@@ -151,7 +151,7 @@ export default function AboutPage() {
                   <li
                     className="flex items-start animate-in fade-in slide-in-from-bottom-4 duration-500"
                     style={{
-                      animationDelay: "2400ms",
+                      animationDelay: "3200ms",
                       animationFillMode: "both",
                     }}
                   >
