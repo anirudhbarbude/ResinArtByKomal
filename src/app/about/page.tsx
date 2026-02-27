@@ -56,20 +56,34 @@ export default function AboutPage() {
             />
             
             {/* Decor */}
-            <use href="#flower" x="25" y="50" />
-            <use href="#leaf" x="15" y="120" transform="rotate(-30 15 120)" />
+            <use href="#flower" x="25" y="50">
+              <animateTransform attributeName="transform" type="scale" additive="sum" values="1; 1.05; 1" dur="7s" begin="-0.5s" repeatCount="indefinite" />
+            </use>
+            <use href="#leaf" x="15" y="120" transform="rotate(-30 15 120)">
+              <animateTransform attributeName="transform" type="rotate" additive="sum" values="0; 5; 0" dur="6s" begin="0s" repeatCount="indefinite" />
+            </use>
             <use href="#berry" x="35" y="150" />
             <use href="#berry" x="45" y="160" />
 
-            <use href="#leaf" x="-25" y="220" transform="rotate(210 -25 220)" />
-            <use href="#flower" x="-20" y="280" />
+            <use href="#leaf" x="-25" y="220" transform="rotate(210 -25 220)">
+              <animateTransform attributeName="transform" type="rotate" additive="sum" values="0; -5; 0" dur="6s" begin="-1.5s" repeatCount="indefinite" />
+            </use>
+            <use href="#flower" x="-20" y="280">
+              <animateTransform attributeName="transform" type="scale" additive="sum" values="1; 1.05; 1" dur="7s" begin="-2s" repeatCount="indefinite" />
+            </use>
             <use href="#berry" x="-35" y="180" />
             
-            <use href="#flower" x="25" y="380" />
-            <use href="#leaf" x="15" y="450" transform="rotate(-30 15 450)" />
+            <use href="#flower" x="25" y="380">
+              <animateTransform attributeName="transform" type="scale" additive="sum" values="1; 1.05; 1" dur="7s" begin="-3.5s" repeatCount="indefinite" />
+            </use>
+            <use href="#leaf" x="15" y="450" transform="rotate(-30 15 450)">
+              <animateTransform attributeName="transform" type="rotate" additive="sum" values="0; 5; 0" dur="6s" begin="-4s" repeatCount="indefinite" />
+            </use>
             <use href="#berry" x="35" y="480" />
             
-            <use href="#leaf" x="-25" y="520" transform="rotate(210 -25 520)" />
+            <use href="#leaf" x="-25" y="520" transform="rotate(210 -25 520)">
+              <animateTransform attributeName="transform" type="rotate" additive="sum" values="0; -5; 0" dur="6s" begin="-5.5s" repeatCount="indefinite" />
+            </use>
             <use href="#berry" x="-35" y="550" />
           </g>
         </g>
