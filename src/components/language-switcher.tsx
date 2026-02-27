@@ -31,6 +31,9 @@ export function LanguageSwitcher() {
         <DropdownMenuItem onClick={() => setLanguage('de')}>
           Deutsch
         </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setLanguage('mrw')}>
+          मारवाड़ी
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
