@@ -104,28 +104,50 @@ export default function Home() {
       className="absolute inset-0 w-full h-full object-cover"
     >
       <rect width="1000" height="1000" fill="hsl(var(--background))" />
-      <g opacity="0.6">
-        {/* Pink watercolor circles */}
-        <circle cx="150" cy="250" r="180" fill="hsl(var(--accent))" opacity="0.1" />
-        <circle cx="800" cy="850" r="200" fill="hsl(var(--accent))" opacity="0.1" />
-        <circle cx="500" cy="500" r="100" fill="hsl(var(--accent))" opacity="0.05" />
-        <circle cx="900" cy="150" r="120" fill="hsl(var(--accent))" opacity="0.12" />
+      <g>
+        {/* Bottom left shape */}
+        <path
+          d="M -100 1100 C 200 1000, 400 900, 500 700 C 600 500, 200 400, -100 600 Z"
+          fill="hsl(var(--secondary))"
+          opacity="0.4"
+        />
+        {/* Top right shape */}
+        <path
+          d="M 1100 -100 C 900 0, 700 100, 600 300 C 500 500, 900 600, 1100 400 Z"
+          fill="hsl(var(--muted))"
+          opacity="0.6"
+        />
 
-        {/* Lighter secondary circles */}
-        <circle cx="250" cy="800" r="150" fill="hsl(var(--secondary))" opacity="0.5" />
-        <circle cx="700" cy="300" r="130" fill="hsl(var(--secondary))" opacity="0.4" />
+        {/* Bottom left branch */}
+        <g transform="translate(50, 750) scale(1.2)" stroke="hsl(var(--primary))" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.8">
+          <path d="M 0 200 C 50 150, 150 100, 200 0" />
+          {/* leaves */}
+          <path d="M 40 180 C 20 170, 30 150, 45 155" />
+          <path d="M 80 140 C 60 130, 70 110, 85 115" />
+          <path d="M 120 100 C 100 90, 110 70, 125 75" />
+          <path d="M 160 60 C 140 50, 150 30, 165 35" />
+          <path d="M 190 20 C 170 10, 180 -10, 195 -5" />
+          <path d="M 10 150 C 0 130, 10 120, 20 125" />
+          <path d="M 60 100 C 50 80, 60 70, 70 75" />
+          <path d="M 100 60 C 90 40, 100 30, 110 35" />
+          <path d="M 140 20 C 130 0, 140 -10, 150 -5" />
+        </g>
         
-        {/* Arch/Rainbow shape */}
-        <path d="M 400 700 A 100 100 0 0 1 600 700" stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none" opacity="0.2" />
-        <path d="M 380 700 A 120 120 0 0 1 620 700" stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none" opacity="0.2" />
-        <path d="M 360 700 A 140 140 0 0 1 640 700" stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none" opacity="0.2" />
-
-         {/* Scribble texture */}
-        <g transform="translate(750, 50) rotate(-30)">
-          <path d="M0,0 L80,10" stroke="hsl(var(--accent))" strokeWidth="1.5" opacity="0.3" />
-          <path d="M0,10 L80,20" stroke="hsl(var(--accent))" strokeWidth="1.5" opacity="0.3" />
-          <path d="M0,20 L80,30" stroke="hsl(var(--accent))" strokeWidth="1.5" opacity="0.3" />
-          <path d="M0,30 L80,40" stroke="hsl(var(--accent))" strokeWidth="1.5" opacity="0.3" />
+        {/* Top right branch */}
+        <g transform="translate(680, 80) scale(1.1) rotate(10)" stroke="hsl(var(--primary))" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.8">
+           <path d="M 250 0 C 200 50, 100 100, 0 200" />
+           {/* leaves */}
+           <path d="M 240 20 C 260 30, 240 40, 235 35" />
+           <path d="M 200 50 C 220 60, 200 70, 195 65" />
+           <path d="M 160 85 C 180 95, 160 105, 155 100" />
+           <path d="M 110 125 C 130 135, 110 145, 105 140" />
+           <path d="M 65 160 C 85 170, 65 180, 60 175" />
+           <path d="M 20 190 C 40 200, 20 210, 15 205" />
+           <path d="M 180 30 C 190 20, 210 30, 200 35" />
+           <path d="M 130 70 C 140 60, 160 70, 150 75" />
+           <path d="M 85 110 C 95 100, 115 110, 105 115" />
+           <path d="M 40 150 C 50 140, 70 150, 60 155" />
+           <path d="M 0 180 C 10 170, 30 180, 20 185" />
         </g>
       </g>
     </svg>
