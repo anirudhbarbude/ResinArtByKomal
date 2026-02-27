@@ -20,6 +20,13 @@ import {
   DialogContent,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const filterCategories = [
   "All Products",
@@ -50,16 +57,14 @@ export default function Home() {
   const komalImage = getImage('komal-portrait');
 
   const pastArtworksIds = [
-    'tilak-thali-1', 'rakhi-1', 'frame-1', 'beach-watch-1', 'wine-glass-1', 'radha-art-1',
-    'rakhi-2', 'frame-2', 'beach-watch-2', 'wine-glass-2', 'radha-art-2', 'tilak-thali-2',
-    'rakhi-3', 'frame-3', 'beach-watch-3', 'wine-glass-3', 'radha-art-3',
-    'rakhi-4', 'frame-4',
-    'rakhi-5', 'frame-5',
-    'rakhi-6',
-    'rakhi-7',
-    'rakhi-8',
-    'rakhi-9',
-    'rakhi-10',
+    'resin-coasters-1', 'resin-tray-1', 'resin-jewelry-1', 'resin-wall-art-1', 'resin-clock-1', 'resin-keychains-1', 
+    'tilak-thali-1', 'tilak-thali-2', 'rakhi-1', 'rakhi-2', 'rakhi-3', 'rakhi-4', 'rakhi-5', 'rakhi-6', 'rakhi-7', 
+    'rakhi-8', 'rakhi-9', 'rakhi-10', 'frame-1', 'frame-2', 'frame-3', 'frame-4', 'frame-5', 'beach-watch-1', 
+    'beach-watch-2', 'beach-watch-3', 'wine-glass-1', 'wine-glass-2', 'wine-glass-3', 'radha-art-1', 'radha-art-2', 
+    'radha-art-3', 'shubh-labh-1', 'phone-cover-1', 'moksmala-frame-1', 'beach-theme-clock-1', 'flower-preservation-1', 
+    'custom-diyas-1', 'birthmoon-pendant-1', 'resin-necklaces-1', 'tissue-box-1', 'scanner-stand-1', 'rose-vase-1', 
+    'oceanic-journal-1', 'navkar-mantra-standee-1', 'resin-art-thali-1', 'shree-krishna-art-1', 'resin-ring-platter-1', 
+    'birthday-bouquet-1', 'ganpati-standee-1'
   ];
 
   const pastArtworks: ImagePlaceholder[] = pastArtworksIds
@@ -343,41 +348,51 @@ export default function Home() {
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary animate-in fade-in slide-in-from-top-4 duration-500">
               My Resin Arts
             </h2>
-            <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-              {pastArtworks.map((artwork, index) => (
-                <Dialog key={artwork.id}>
-                  <DialogTrigger asChild>
-                    <div
-                      className="break-inside-avoid cursor-pointer animate-in fade-in-0 zoom-in-95 duration-300"
-                      style={{ animationDelay: `${200 + index * 50}ms`, animationFillMode: 'both' }}
-                    >
-                      <Card className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1">
-                        <CardContent className="p-0">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-6xl mx-auto"
+            >
+              <CarouselContent>
+                {pastArtworks.map((artwork) => (
+                  <CarouselItem key={artwork.id} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <div className="cursor-pointer">
+                            <Card className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1">
+                              <CardContent className="p-0 relative aspect-[3/4]">
+                                <Image
+                                  src={artwork.imageUrl}
+                                  alt={artwork.description}
+                                  data-ai-hint={artwork.imageHint}
+                                  fill
+                                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                />
+                              </CardContent>
+                            </Card>
+                          </div>
+                        </DialogTrigger>
+                        <DialogContent className="p-0 border-0 bg-transparent shadow-none max-w-5xl w-auto">
                           <Image
                             src={artwork.imageUrl}
                             alt={artwork.description}
                             data-ai-hint={artwork.imageHint}
-                            width={artwork.width}
-                            height={artwork.height}
-                            className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                            width={artwork.width * 2}
+                            height={artwork.height * 2}
+                            className="object-contain w-full h-auto max-h-[90vh] rounded-lg"
                           />
-                        </CardContent>
-                      </Card>
+                        </DialogContent>
+                      </Dialog>
                     </div>
-                  </DialogTrigger>
-                  <DialogContent className="p-0 border-0 bg-transparent shadow-none max-w-5xl w-auto">
-                    <Image
-                      src={artwork.imageUrl}
-                      alt={artwork.description}
-                      data-ai-hint={artwork.imageHint}
-                      width={artwork.width * 2}
-                      height={artwork.height * 2}
-                      className="object-contain w-full h-auto max-h-[90vh] rounded-lg"
-                    />
-                  </DialogContent>
-                </Dialog>
-              ))}
-            </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden sm:flex" />
+              <CarouselNext className="hidden sm:flex" />
+            </Carousel>
           </div>
         </section>
 
