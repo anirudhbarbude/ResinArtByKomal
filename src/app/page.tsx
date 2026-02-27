@@ -71,6 +71,12 @@ export default function Home() {
     .map(id => PlaceHolderImages.find(img => img.id === id))
     .filter((img): img is ImagePlaceholder => !!img);
 
+  const artworksInGroups: ImagePlaceholder[][] = [];
+  const groupSize = 12;
+  for (let i = 0; i < pastArtworks.length; i += groupSize) {
+    artworksInGroups.push(pastArtworks.slice(i, i + groupSize));
+  }
+
   const videos = [
     {
       href: "https://www.instagram.com/reel/DDhiNu4Br_I/?igsh=dngxb2U1MWQ3MjI=",
@@ -310,44 +316,43 @@ export default function Home() {
             <Carousel
               opts={{
                 align: "start",
-                loop: true,
+                loop: artworksInGroups.length > 1,
               }}
               className="w-full"
             >
-              <CarouselContent className="-ml-4">
-                {pastArtworks.map((artwork, index) => (
-                  <CarouselItem key={artwork.id} className="pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4">
-                    <div
-                      className="animate-in fade-in-0 zoom-in-95 duration-300"
-                      style={{ animationDelay: `${100 + index * 50}ms`, animationFillMode: 'both' }}
-                    >
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <div className="cursor-pointer">
-                            <Card className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1">
-                              <CardContent className="p-0 relative aspect-[3/4]">
-                                <Image
-                                  src={artwork.imageUrl}
-                                  alt={artwork.description}
-                                  data-ai-hint={artwork.imageHint}
-                                  fill
-                                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                />
-                              </CardContent>
-                            </Card>
-                          </div>
-                        </DialogTrigger>
-                        <DialogContent className="p-0 border-0 bg-transparent shadow-none max-w-5xl w-auto">
-                          <Image
-                            src={artwork.imageUrl}
-                            alt={artwork.description}
-                            data-ai-hint={artwork.imageHint}
-                            width={artwork.width * 2}
-                            height={artwork.height * 2}
-                            className="object-contain w-full h-auto max-h-[90vh] rounded-lg"
-                          />
-                        </DialogContent>
-                      </Dialog>
+              <CarouselContent>
+                {artworksInGroups.map((group, index) => (
+                  <CarouselItem key={index}>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                      {group.map((artwork) => (
+                        <Dialog key={artwork.id}>
+                          <DialogTrigger asChild>
+                            <div className="cursor-pointer">
+                              <Card className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1">
+                                <CardContent className="p-0 relative aspect-[3/4]">
+                                  <Image
+                                    src={artwork.imageUrl}
+                                    alt={artwork.description}
+                                    data-ai-hint={artwork.imageHint}
+                                    fill
+                                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                  />
+                                </CardContent>
+                              </Card>
+                            </div>
+                          </DialogTrigger>
+                          <DialogContent className="p-0 border-0 bg-transparent shadow-none max-w-5xl w-auto">
+                            <Image
+                              src={artwork.imageUrl}
+                              alt={artwork.description}
+                              data-ai-hint={artwork.imageHint}
+                              width={artwork.width * 2}
+                              height={artwork.height * 2}
+                              className="object-contain w-full h-auto max-h-[90vh] rounded-lg"
+                            />
+                          </DialogContent>
+                        </Dialog>
+                      ))}
                     </div>
                   </CarouselItem>
                 ))}
