@@ -104,51 +104,62 @@ export default function Home() {
       className="absolute inset-0 w-full h-full object-cover"
     >
       <rect width="1000" height="1000" fill="hsl(var(--background))" />
-      <g>
-        {/* Bottom left shape */}
-        <path
-          d="M -100 1100 C 200 1000, 400 900, 500 700 C 600 500, 200 400, -100 600 Z"
-          fill="hsl(var(--secondary))"
-          opacity="0.4"
-        />
-        {/* Top right shape */}
-        <path
-          d="M 1100 -100 C 900 0, 700 100, 600 300 C 500 500, 900 600, 1100 400 Z"
-          fill="hsl(var(--muted))"
-          opacity="0.6"
-        />
+      <defs>
+        <g id="floral-border-motif">
+          {/* Scalloped edge shadow */}
+          <path
+            d="M 0 0 C 30 0, 50 20, 50 50 S 30 100, 0 100 C -30 100, -50 80, -50 50 S -30 0, 0 0 Z"
+            id="scallop"
+            fill="hsl(var(--muted))"
+            opacity="0.6"
+          />
+          <path d="M0,0 C10,15 30,15 40,0 L20,-5 Z" id="leaf" fill="hsl(var(--chart-2))" />
+          <g id="flower">
+            <circle r="12" fill="hsl(var(--accent))" />
+            <circle r="5" fill="hsl(var(--chart-4))" />
+          </g>
+          <circle r="4" id="berry" fill="hsl(var(--chart-4))" opacity="0.9" />
 
-        {/* Bottom left branch */}
-        <g transform="translate(50, 750) scale(1.2)" stroke="hsl(var(--primary))" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.8">
-          <path d="M 0 200 C 50 150, 150 100, 200 0" />
-          {/* leaves */}
-          <path d="M 40 180 C 20 170, 30 150, 45 155" />
-          <path d="M 80 140 C 60 130, 70 110, 85 115" />
-          <path d="M 120 100 C 100 90, 110 70, 125 75" />
-          <path d="M 160 60 C 140 50, 150 30, 165 35" />
-          <path d="M 190 20 C 170 10, 180 -10, 195 -5" />
-          <path d="M 10 150 C 0 130, 10 120, 20 125" />
-          <path d="M 60 100 C 50 80, 60 70, 70 75" />
-          <path d="M 100 60 C 90 40, 100 30, 110 35" />
-          <path d="M 140 20 C 130 0, 140 -10, 150 -5" />
+          <g id="floral-vine-section">
+            {/* Scallops behind */}
+            <use href="#scallop" x="-60" y="50" transform="scale(0.8)" />
+            <use href="#scallop" x="-60" y="150" transform="scale(0.8)" />
+            <use href="#scallop" x="-60" y="250" transform="scale(0.8)" />
+            <use href="#scallop" x="-60" y="350" transform="scale(0.8)" />
+            <use href="#scallop" x="-60" y="450" transform="scale(0.8)" />
+
+            {/* Vine Path */}
+            <path
+              d="M 0 0 C 50 100, -50 200, 0 300 C 50 400, -50 500, 0 600"
+              stroke="hsl(var(--primary))"
+              strokeWidth="5"
+              fill="none"
+              strokeLinecap="round"
+            />
+            
+            {/* Decor */}
+            <use href="#flower" x="25" y="50" />
+            <use href="#leaf" x="15" y="120" transform="rotate(-30 15 120)" />
+            <use href="#berry" x="35" y="150" />
+            <use href="#berry" x="45" y="160" />
+
+            <use href="#leaf" x="-25" y="220" transform="rotate(210 -25 220)" />
+            <use href="#flower" x="-20" y="280" />
+            <use href="#berry" x="-35" y="180" />
+            
+            <use href="#flower" x="25" y="380" />
+            <use href="#leaf" x="15" y="450" transform="rotate(-30 15 450)" />
+            <use href="#berry" x="35" y="480" />
+            
+            <use href="#leaf" x="-25" y="520" transform="rotate(210 -25 520)" />
+            <use href="#berry" x="-35" y="550" />
+          </g>
         </g>
-        
-        {/* Top right branch */}
-        <g transform="translate(680, 80) scale(1.1) rotate(10)" stroke="hsl(var(--primary))" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.8">
-           <path d="M 250 0 C 200 50, 100 100, 0 200" />
-           {/* leaves */}
-           <path d="M 240 20 C 260 30, 240 40, 235 35" />
-           <path d="M 200 50 C 220 60, 200 70, 195 65" />
-           <path d="M 160 85 C 180 95, 160 105, 155 100" />
-           <path d="M 110 125 C 130 135, 110 145, 105 140" />
-           <path d="M 65 160 C 85 170, 65 180, 60 175" />
-           <path d="M 20 190 C 40 200, 20 210, 15 205" />
-           <path d="M 180 30 C 190 20, 210 30, 200 35" />
-           <path d="M 130 70 C 140 60, 160 70, 150 75" />
-           <path d="M 85 110 C 95 100, 115 110, 105 115" />
-           <path d="M 40 150 C 50 140, 70 150, 60 155" />
-           <path d="M 0 180 C 10 170, 30 180, 20 185" />
-        </g>
+      </defs>
+
+      <g opacity="0.7">
+        <use href="#floral-vine-section" transform="translate(980 0) rotate(10)" />
+        <use href="#floral-vine-section" transform="translate(20 1000) rotate(190)" />
       </g>
     </svg>
   );
