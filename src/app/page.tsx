@@ -94,21 +94,40 @@ export default function Home() {
   
   const heroDescription = "Explore a unique collection of handcrafted resin art, from elegant home décor to beautiful personal accessories. Each piece is a one-of-a-kind creation, made with passion and precision.";
 
-  const ModernBohoBackground = () => (
+  const BotanicalBackground = () => (
     <svg
       width="100%"
       height="100%"
       viewBox="0 0 1000 1000"
       preserveAspectRatio="xMidYMid slice"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute inset-0 w-full h-full object-cover opacity-100"
+      className="absolute inset-0 w-full h-full object-cover"
     >
       <rect width="1000" height="1000" fill="hsl(var(--background))" />
-      <path d="M 500 1000 A 400 400 0 0 0 500 200 A 400 400 0 0 0 500 1000 Z" fill="hsl(var(--secondary))" opacity="0.4" transform="translate(300, -350)" />
-      <path d="M 200 1200 A 300 300 0 0 1 200 600" fill="none" stroke="hsl(var(--accent))" strokeWidth="80" opacity="0.3" />
-      <circle cx="150" cy="200" r="100" fill="hsl(var(--primary))" opacity="0.2" />
-      <circle cx="900" cy="800" r="150" fill="hsl(var(--accent))" opacity="0.25" />
-      <rect x="0" y="450" width="1000" height="100" fill="hsl(var(--secondary))" opacity="0.3" />
+      <g opacity="0.6">
+        {/* Pink watercolor circles */}
+        <circle cx="150" cy="250" r="180" fill="hsl(var(--accent))" opacity="0.1" />
+        <circle cx="800" cy="850" r="200" fill="hsl(var(--accent))" opacity="0.1" />
+        <circle cx="500" cy="500" r="100" fill="hsl(var(--accent))" opacity="0.05" />
+        <circle cx="900" cy="150" r="120" fill="hsl(var(--accent))" opacity="0.12" />
+
+        {/* Lighter secondary circles */}
+        <circle cx="250" cy="800" r="150" fill="hsl(var(--secondary))" opacity="0.5" />
+        <circle cx="700" cy="300" r="130" fill="hsl(var(--secondary))" opacity="0.4" />
+        
+        {/* Arch/Rainbow shape */}
+        <path d="M 400 700 A 100 100 0 0 1 600 700" stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none" opacity="0.2" />
+        <path d="M 380 700 A 120 120 0 0 1 620 700" stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none" opacity="0.2" />
+        <path d="M 360 700 A 140 140 0 0 1 640 700" stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none" opacity="0.2" />
+
+         {/* Scribble texture */}
+        <g transform="translate(750, 50) rotate(-30)">
+          <path d="M0,0 L80,10" stroke="hsl(var(--accent))" strokeWidth="1.5" opacity="0.3" />
+          <path d="M0,10 L80,20" stroke="hsl(var(--accent))" strokeWidth="1.5" opacity="0.3" />
+          <path d="M0,20 L80,30" stroke="hsl(var(--accent))" strokeWidth="1.5" opacity="0.3" />
+          <path d="M0,30 L80,40" stroke="hsl(var(--accent))" strokeWidth="1.5" opacity="0.3" />
+        </g>
+      </g>
     </svg>
   );
 
@@ -118,7 +137,7 @@ export default function Home() {
       <main className="flex-grow">
         <section className="relative flex items-center justify-center min-h-[calc(100vh-3.5rem)] bg-secondary/50 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <ModernBohoBackground />
+            <BotanicalBackground />
           </div>
 
           <div className="container relative px-4 md:px-6 text-center">
@@ -209,7 +228,7 @@ export default function Home() {
 
         <section className="relative py-12 md:py-24 lg:py-32 bg-secondary/50 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <ModernBohoBackground />
+            <BotanicalBackground />
           </div>
           <div className="container relative px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">

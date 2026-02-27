@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 25 50% 95%;
-    --foreground: 25 25% 20%;
-    --card: 25 50% 95%;
-    --card-foreground: 25 25% 20%;
-    --popover: 25 50% 95%;
-    --popover-foreground: 25 25% 20%;
-    --primary: 15 40% 45%;
-    --primary-foreground: 25 50% 98%;
-    --secondary: 25 30% 90%;
-    --secondary-foreground: 25 25% 20%;
-    --muted: 25 30% 92%;
-    --muted-foreground: 25 25% 45%;
-    --accent: 20 30% 35%;
-    --accent-foreground: 25 50% 98%;
+    --background: 30 40% 97%;
+    --foreground: 30 15% 20%;
+    --card: 30 40% 97%;
+    --card-foreground: 30 15% 20%;
+    --popover: 30 40% 97%;
+    --popover-foreground: 30 15% 20%;
+    --primary: 340 30% 35%;
+    --primary-foreground: 30 40% 98%;
+    --secondary: 340 40% 92%;
+    --secondary-foreground: 30 15% 20%;
+    --muted: 340 30% 94%;
+    --muted-foreground: 30 10% 40%;
+    --accent: 340 50% 65%;
+    --accent-foreground: 30 40% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 25 20% 80%;
-    --input: 25 20% 85%;
-    --ring: 15 40% 45%;
+    --border: 340 20% 88%;
+    --input: 340 20% 90%;
+    --ring: 340 50% 65%;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -33,25 +33,25 @@
   }
 
   .dark {
-    --background: 25 10% 10%;
-    --foreground: 25 50% 95%;
-    --card: 25 10% 15%;
-    --card-foreground: 25 50% 95%;
-    --popover: 25 10% 15%;
-    --popover-foreground: 25 50% 95%;
-    --primary: 15 40% 65%;
-    --primary-foreground: 25 10% 10%;
-    --secondary: 25 10% 20%;
-    --secondary-foreground: 25 50% 95%;
-    --muted: 25 10% 18%;
-    --muted-foreground: 25 40% 70%;
-    --accent: 20 30% 55%;
-    --accent-foreground: 25 10% 98%;
+    --background: 340 10% 10%;
+    --foreground: 30 40% 97%;
+    --card: 340 10% 12%;
+    --card-foreground: 30 40% 97%;
+    --popover: 340 10% 12%;
+    --popover-foreground: 30 40% 97%;
+    --primary: 340 40% 70%;
+    --primary-foreground: 340 10% 10%;
+    --secondary: 340 10% 18%;
+    --secondary-foreground: 30 40% 97%;
+    --muted: 340 10% 15%;
+    --muted-foreground: 30 30% 70%;
+    --accent: 340 50% 55%;
+    --accent-foreground: 30 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 25 10% 25%;
-    --input: 25 10% 22%;
-    --ring: 15 40% 65%;
+    --border: 340 10% 25%;
+    --input: 340 10% 22%;
+    --ring: 340 40% 70%;
     --cursor-paintbrush: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.8285 2.15573C19.4479 1.53634 20.4721 1.53634 21.0915 2.15573L25.3332 6.3974C25.9526 7.01679 25.9526 8.041 25.3332 8.66039L13.1666 20.827L7.40973 21.0915C6.01416 21.1561 4.84394 20.0463 4.90853 18.6508L5.17303 12.8939L18.8285 2.15573Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.4142 4.98413L22.7071 10.277' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.5 18.6508H9.25781' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   }
 
