@@ -240,8 +240,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="products" className="py-12 md:py-24">
-          <div className="container">
+        <section id="products" className="relative py-12 md:py-24 bg-secondary/50 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <BotanicalBackground />
+          </div>
+          <div className="container relative">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary animate-in fade-in slide-in-from-top-4 duration-500">
               {t('home.collection.title')}
             </h2>
