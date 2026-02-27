@@ -202,7 +202,7 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mx-auto max-w-max grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto max-w-max grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
               {filteredProducts.map((product, index) => (
                 <div
                   key={product.id}
