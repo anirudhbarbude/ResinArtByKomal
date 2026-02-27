@@ -181,6 +181,33 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="relative h-[70vh] w-full overflow-hidden flex items-center justify-center text-center text-white">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute z-0 w-full h-full object-cover"
+            poster="https://images.pexels.com/videos/4496275/pictures/picture-796.jpg"
+          >
+            <source src="https://videos.pexels.com/video-files/4496275/4496275-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute z-10 inset-0 bg-black/60"></div>
+          <div className="relative z-20 container px-4 md:px-6">
+              <div className="flex flex-col items-center justify-center h-full">
+                  <h2 className="font-headline text-4xl font-bold tracking-wider sm:text-5xl md:text-6xl uppercase animate-in fade-in slide-in-from-bottom-4 duration-1000">
+                    Crafted with passion, poured with purpose
+                  </h2>
+                  <p 
+                    className="mt-6 font-body text-xl md:text-2xl max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300"
+                  >
+                    Resin art made to inspire
+                  </p>
+              </div>
+          </div>
+        </section>
+
         <section id="products" className="py-12 md:py-24">
           <div className="container">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary animate-in fade-in slide-in-from-top-4 duration-500">
