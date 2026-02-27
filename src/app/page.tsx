@@ -167,9 +167,9 @@ export default function Home() {
             muted
             playsInline
             className="absolute z-0 w-full h-full object-cover"
-            poster="https://storage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg"
+            poster="https://images.unsplash.com/photo-1599748633391-e9a6a849d443?w=1280&q=80"
           >
-            <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4" />
+            <source src="https://videos.coverr.co/video/coverr-mixing-paint-1-9628.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute z-10 inset-0 bg-black/60"></div>
