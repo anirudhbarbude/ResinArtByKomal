@@ -89,80 +89,37 @@ export default function AboutPage() {
           </div>
           <div className="container relative px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-              <div>
-                <h2 className="font-headline text-3xl text-primary tracking-tight animate-in fade-in slide-in-from-top-4 duration-700">
+              <div className="animate-in fade-in slide-in-from-left-8 duration-700">
+                <h2 className="font-headline text-3xl text-primary tracking-tight">
                   The Artisan's Touch
                 </h2>
                 <h1
-                  className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl text-primary mt-2 animate-in fade-in slide-in-from-top-4 duration-700"
-                  style={{ animationDelay: "150ms", animationFillMode: "both" }}
+                  className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl text-primary mt-2"
                 >
                   Hi, I'm Komal
                 </h1>
                 <p className="mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed font-body">
-                  {para1.split(" ").map((word, index) => (
-                    <span
-                      key={index}
-                      className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500 mr-1.5"
-                      style={{
-                        animationDelay: `${300 + index * 50}ms`,
-                        animationFillMode: "both",
-                      }}
-                    >
-                      {word}
-                    </span>
-                  ))}
+                  {para1}
                 </p>
                 <p className="mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed font-body">
-                  {para2.split(" ").map((word, index) => (
-                    <span
-                      key={index}
-                      className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500 mr-1.5"
-                      style={{
-                        animationDelay: `${
-                          300 + para1.split(" ").length * 50 + index * 50
-                        }ms`,
-                        animationFillMode: "both",
-                      }}
-                    >
-                      {word}
-                    </span>
-                  ))}
+                  {para2}
                 </p>
                 <ul className="mt-6 space-y-4 text-muted-foreground md:text-lg font-body">
-                  <li
-                    className="flex items-start animate-in fade-in slide-in-from-bottom-4 duration-500"
-                    style={{
-                      animationDelay: "3000ms",
-                      animationFillMode: "both",
-                    }}
-                  >
+                  <li className="flex items-start">
                     <CheckCircle className="mr-3 mt-1 h-5 w-5 text-accent flex-shrink-0" />
                     <span>Unique, one-of-a-kind designs</span>
                   </li>
-                  <li
-                    className="flex items-start animate-in fade-in slide-in-from-bottom-4 duration-500"
-                    style={{
-                      animationDelay: "3100ms",
-                      animationFillMode: "both",
-                    }}
-                  >
+                  <li className="flex items-start">
                     <CheckCircle className="mr-3 mt-1 h-5 w-5 text-accent flex-shrink-0" />
                     <span>Eco-friendly materials & practices</span>
                   </li>
-                  <li
-                    className="flex items-start animate-in fade-in slide-in-from-bottom-4 duration-500"
-                    style={{
-                      animationDelay: "3200ms",
-                      animationFillMode: "both",
-                    }}
-                  >
+                  <li className="flex items-start">
                     <CheckCircle className="mr-3 mt-1 h-5 w-5 text-accent flex-shrink-0" />
                     <span>Made with love & attention to detail</span>
                   </li>
                 </ul>
               </div>
-              <div className="flex justify-center animate-in fade-in slide-in-from-right-8 duration-700">
+              <div className="flex justify-center animate-in fade-in slide-in-from-right-8 duration-700" style={{ animationDelay: "200ms", animationFillMode: "both" }}>
                 <Card className="rounded-xl shadow-2xl overflow-hidden w-full max-w-sm">
                   <CardContent className="p-0 relative aspect-[2/3]">
                     <Image
