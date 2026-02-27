@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { Instagram } from "lucide-react";
+import { Globe, Instagram } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
 import { INSTAGRAM_URL } from "@/lib/constants";
+import { LanguageSwitcher } from "../language-switcher";
 
 export function Header() {
   return (
@@ -27,6 +28,7 @@ export function Header() {
                 <Instagram className="h-5 w-5 text-primary" />
               </a>
             </Button>
+            <LanguageSwitcher />
             <ModeToggle />
           </nav>
         </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import { Instagram, Heart, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
@@ -9,19 +11,20 @@ import {
   INSTAGRAM_USERNAME,
   PHONE_NUMBER,
 } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n";
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-secondary/50 border-t border-border/40 font-body">
       <div className="container py-12 md:py-16">
         <div className="text-center mb-12 p-8 bg-card rounded-xl shadow-lg">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary">
-            Shop Directly on Instagram
+            {t('footer.shop.title')}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">
-            Browse our latest collections, see behind-the-scenes, and purchase
-            directly through Instagram DMs. Follow us for updates on new
-            arrivals and exclusive offers!
+            {t('footer.shop.description')}
           </p>
           <Button asChild size="lg" className="mt-6">
             <a
@@ -29,11 +32,11 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Instagram className="mr-2" /> Visit Our Instagram Shop
+              <Instagram className="mr-2" /> {t('footer.shop.button')}
             </a>
           </Button>
           <p className="mt-2 text-sm text-muted-foreground">
-            DM us on Instagram to purchase any product
+            {t('footer.shop.note')}
           </p>
         </div>
 
@@ -43,7 +46,7 @@ export function Footer() {
               <Logo />
             </Link>
             <p className="text-muted-foreground text-sm">
-              Creating beautiful resin art pieces that inspire and delight.
+              {t('footer.tagline')}
             </p>
             <div className="space-y-2 text-sm">
               <a
@@ -72,7 +75,7 @@ export function Footer() {
           <div className="md:col-span-2 grid grid-cols-2 gap-8">
             <div>
               <h3 className="font-headline text-lg font-semibold text-primary">
-                Quick Links
+                {t('footer.quicklinks.title')}
               </h3>
               <ul className="mt-4 space-y-2 text-sm">
                 <li>
@@ -80,7 +83,7 @@ export function Footer() {
                     href="/"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    Home
+                    {t('footer.quicklinks.home')}
                   </Link>
                 </li>
                 <li>
@@ -88,7 +91,7 @@ export function Footer() {
                     href="/#products"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    Products
+                    {t('footer.quicklinks.products')}
                   </Link>
                 </li>
                 <li>
@@ -96,7 +99,7 @@ export function Footer() {
                     href="/about"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    About
+                    {t('footer.quicklinks.about')}
                   </Link>
                 </li>
                 <li>
@@ -104,7 +107,7 @@ export function Footer() {
                     href="/contact"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    Contact
+                    {t('footer.quicklinks.contact')}
                   </Link>
                 </li>
               </ul>
@@ -112,7 +115,7 @@ export function Footer() {
 
             <div>
               <h3 className="font-headline text-lg font-semibold text-primary">
-                Categories
+                {t('footer.categories.title')}
               </h3>
               <ul className="mt-4 space-y-2 text-sm">
                 <li>
@@ -120,7 +123,7 @@ export function Footer() {
                     href="/#products"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    Resin Jewelry
+                    {t('footer.categories.jewelry')}
                   </Link>
                 </li>
                 <li>
@@ -128,7 +131,7 @@ export function Footer() {
                     href="/#products"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    Home Decor
+                    {t('footer.categories.homedecor')}
                   </Link>
                 </li>
                 <li>
@@ -136,7 +139,7 @@ export function Footer() {
                     href="/#products"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    Wall Art
+                    {t('footer.categories.wallart')}
                   </Link>
                 </li>
                 <li>
@@ -144,7 +147,7 @@ export function Footer() {
                     href="/#products"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    Custom Orders
+                    {t('footer.categories.customorders')}
                   </Link>
                 </li>
               </ul>
@@ -153,31 +156,29 @@ export function Footer() {
 
           <div>
             <h3 className="font-headline text-lg font-semibold text-primary">
-              Newsletter
+              {t('footer.newsletter.title')}
             </h3>
             <p className="mt-4 text-sm text-muted-foreground">
-              Subscribe for updates on new collections and exclusive offers.
+              {t('footer.newsletter.description')}
             </p>
             <form className="mt-4 flex gap-2">
               <Input
                 type="email"
-                placeholder="Your email"
+                placeholder={t('footer.newsletter.placeholder')}
                 className="flex-1"
                 aria-label="Email for newsletter"
               />
-              <Button type="submit">Subscribe</Button>
+              <Button type="submit">{t('footer.newsletter.button')}</Button>
             </form>
           </div>
         </div>
 
         <div className="mt-12 border-t border-border/40 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Artistic Resin By Komal. All rights
-            reserved.
+            {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
           <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
-            Handcrafted with <Heart className="h-4 w-4 text-accent" /> in every
-            piece
+            {t('footer.handcrafted')} <Heart className="h-4 w-4 text-accent" /> {t('footer.ineverypiece')}
           </p>
         </div>
       </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Instagram, Mail, Phone } from "lucide-react";
@@ -8,8 +10,12 @@ import {
   INSTAGRAM_USERNAME,
   PHONE_NUMBER,
 } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n";
+
 
 export default function ContactPage() {
+  const { t } = useTranslation();
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -18,11 +24,10 @@ export default function ContactPage() {
           <div className="container px-4 md:px-6">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl text-primary">
-                Get In Touch
+                {t('contact.title')}
               </h1>
               <p className="mt-4 text-muted-foreground md:text-xl/relaxed font-body">
-                Have questions about our products or interested in a custom
-                piece? Reach out to us through any of these channels.
+                {t('contact.description')}
               </p>
             </div>
 
@@ -34,7 +39,7 @@ export default function ContactPage() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <CardTitle className="text-xl font-headline">Email</CardTitle>
+                  <CardTitle className="text-xl font-headline">{t('contact.email')}</CardTitle>
                   <p className="mt-2 text-muted-foreground">
                     <a
                       href={`mailto:${EMAIL_ADDRESS}`}
@@ -54,7 +59,7 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <CardTitle className="text-xl font-headline">
-                    Instagram
+                    {t('contact.instagram')}
                   </CardTitle>
                   <p className="mt-2 text-muted-foreground">
                     <a
@@ -76,7 +81,7 @@ export default function ContactPage() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <CardTitle className="text-xl font-headline">Phone</CardTitle>
+                  <CardTitle className="text-xl font-headline">{t('contact.phone')}</CardTitle>
                   <p className="mt-2 text-muted-foreground">{PHONE_NUMBER}</p>
                 </CardContent>
               </Card>

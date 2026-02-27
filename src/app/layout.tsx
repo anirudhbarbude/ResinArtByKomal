@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { PaintSplatterEffect } from "@/components/paint-splatter-effect";
 import { AutoThemeChanger } from "@/components/auto-theme-changer";
 import "./globals.css";
+import { LanguageProvider } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Artistic Resin By Komal",
@@ -36,10 +37,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AutoThemeChanger />
-          <PaintSplatterEffect />
-          {children}
-          <Toaster />
+          <LanguageProvider>
+            <AutoThemeChanger />
+            <PaintSplatterEffect />
+            {children}
+            <Toaster />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

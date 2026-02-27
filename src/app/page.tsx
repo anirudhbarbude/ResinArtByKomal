@@ -27,6 +27,7 @@ import {
   CarouselNext, 
   CarouselPrevious 
 } from '@/components/ui/carousel';
+import { useTranslation } from '@/lib/i18n';
 
 const filterCategories = [
   "All Products",
@@ -37,6 +38,7 @@ const filterCategories = [
 
 export default function Home() {
   const [filter, setFilter] = useState("All Products");
+  const { t } = useTranslation();
 
   const filteredProducts = products.filter((product) => {
     if (filter === "All Products") {
@@ -92,8 +94,6 @@ export default function Home() {
     },
   ];
   
-  const heroDescription = "Explore a unique collection of handcrafted resin art, from elegant home décor to beautiful personal accessories. Each piece is a one-of-a-kind creation, made with passion and precision.";
-
   const BotanicalBackground = () => (
     <svg
       width="100%"
@@ -142,10 +142,10 @@ export default function Home() {
 
           <div className="container relative px-4 md:px-6 text-center">
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary animate-in fade-in slide-in-from-top-4 duration-1000">
-              Artistic Resin By Komal
+              {t('home.hero.title')}
             </h1>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mt-4 font-body">
-              {heroDescription.split(" ").map((word, index) => (
+              {t('home.hero.description').split(" ").map((word, index) => (
                 <span
                   key={index}
                   className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500 mr-1.5"
@@ -157,10 +157,10 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 animate-in fade-in slide-in-from-top-4 duration-1000 delay-400">
                 <Button asChild size="lg">
-                    <Link href="/about">Our Story</Link>
+                    <Link href="/about">{t('home.hero.button1')}</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                    <Link href="/#products">Our Collections</Link>
+                    <Link href="/#products">{t('home.hero.button2')}</Link>
                 </Button>
             </div>
           </div>
@@ -182,12 +182,12 @@ export default function Home() {
           <div className="relative z-20 container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center h-full">
                   <h2 className="font-headline text-4xl font-bold tracking-wider sm:text-5xl md:text-6xl uppercase animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                    Crafted with passion, poured with purpose
+                    {t('home.video.title')}
                   </h2>
                   <p 
                     className="mt-6 font-body text-xl md:text-2xl max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300"
                   >
-                    Resin art made to inspire
+                    {t('home.video.subtitle')}
                   </p>
               </div>
           </div>
@@ -196,7 +196,7 @@ export default function Home() {
         <section id="products" className="py-12 md:py-24">
           <div className="container">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary animate-in fade-in slide-in-from-top-4 duration-500">
-              Our Collection
+              {t('home.collection.title')}
             </h2>
 
             <div className="flex justify-center gap-2 md:gap-4 mb-12 flex-wrap animate-in fade-in slide-in-from-top-4 duration-500 delay-100">
@@ -207,7 +207,7 @@ export default function Home() {
                   onClick={() => setFilter(category)}
                   className="font-body"
                 >
-                  {category}
+                  {t(`home.collection.filters.${category.replace(/ /g, '')}`)}
                 </Button>
               ))}
             </div>
@@ -247,35 +247,29 @@ export default function Home() {
               </div>
               <div className="animate-in fade-in slide-in-from-right-8 duration-700">
                 <h2 className="font-headline text-3xl text-primary tracking-tight">
-                  The Artisan's Touch
+                  {t('about.subtitle')}
                 </h2>
                 <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl text-primary mt-2">
-                  Hi, I'm Komal
+                  {t('about.title')}
                 </h1>
                 <p className="mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed font-body">
-                  - the artist behind AK Artistic Resin. What started as a
-                  passion project has blossomed into a dedicated craft of
-                  creating beautiful resin art pieces.
+                  {t('about.para1')}
                 </p>
                 <p className="mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed font-body">
-                  Each creation is meticulously handcrafted with attention to
-                  detail, using high-quality materials and sustainable
-                  practices. My inspiration comes from the beauty of nature,
-                  abstract patterns, and the endless possibilities of resin as a
-                  medium.
+                  {t('about.para2')}
                 </p>
                 <ul className="mt-6 space-y-4 text-muted-foreground md:text-lg font-body">
                   <li className="flex items-start">
                     <CheckCircle className="mr-3 mt-1 h-5 w-5 text-accent flex-shrink-0" />
-                    <span>Unique, one-of-a-kind designs</span>
+                    <span>{t('about.feature1')}</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="mr-3 mt-1 h-5 w-5 text-accent flex-shrink-0" />
-                    <span>Eco-friendly materials & practices</span>
+                    <span>{t('about.feature2')}</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="mr-3 mt-1 h-5 w-5 text-accent flex-shrink-0" />
-                    <span>Made with love & attention to detail</span>
+                    <span>{t('about.feature3')}</span>
                   </li>
                 </ul>
               </div>
@@ -286,7 +280,7 @@ export default function Home() {
         <section id="past-artworks" className="py-12 md:py-24 bg-background">
           <div className="container px-4 md:px-6">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary animate-in fade-in slide-in-from-top-4 duration-500">
-              My Resin Arts
+              {t('home.gallery.title')}
             </h2>
             <Carousel
               opts={{
@@ -342,10 +336,10 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="mx-auto max-w-3xl text-center animate-in fade-in slide-in-from-top-4 duration-500">
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary mb-4">
-                Watch Me Create
+                {t('home.create.title')}
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed font-body">
-                See the magic happen! Watch a timelapse of a beautiful piece being created from start to finish.
+                {t('home.create.description')}
               </p>
             </div>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">

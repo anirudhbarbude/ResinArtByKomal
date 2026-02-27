@@ -1,0 +1,295 @@
+'use client';
+
+import { createContext, useContext, useState, type ReactNode } from 'react';
+
+const translations = {
+  en: {
+    home: {
+      hero: {
+        title: "Artistic Resin By Komal",
+        description: "Explore a unique collection of handcrafted resin art, from elegant home décor to beautiful personal accessories. Each piece is a one-of-a-kind creation, made with passion and precision.",
+        button1: "Our Story",
+        button2: "Our Collections"
+      },
+      video: {
+        title: "Crafted with passion, poured with purpose",
+        subtitle: "Resin art made to inspire"
+      },
+      collection: {
+        title: "Our Collection",
+        filters: {
+            AllProducts: "All Products",
+            Jewelry: "Jewelry",
+            HomeDecor: "Home Decor",
+            CustomPieces: "Custom Pieces"
+        }
+      },
+      gallery: {
+        title: "My Resin Arts"
+      },
+      create: {
+        title: "Watch Me Create",
+        description: "See the magic happen! Watch a timelapse of a beautiful piece being created from start to finish."
+      }
+    },
+    about: {
+      subtitle: "The Artisan's Touch",
+      title: "Hi, I'm Komal",
+      para1: "- the artist behind AK Artistic Resin. What started as a passion project has blossomed into a dedicated craft of creating beautiful resin art pieces.",
+      para2: "Each creation is meticulously handcrafted with attention to detail, using high-quality materials and sustainable practices. My inspiration comes from the beauty of nature, abstract patterns, and the endless possibilities of resin as a medium.",
+      feature1: "Unique, one-of-a-kind designs",
+      feature2: "Eco-friendly materials & practices",
+      feature3: "Made with love & attention to detail"
+    },
+    contact: {
+      title: "Get In Touch",
+      description: "Have questions about our products or interested in a custom piece? Reach out to us through any of these channels.",
+      email: "Email",
+      instagram: "Instagram",
+      phone: "Phone"
+    },
+    footer: {
+      shop: {
+        title: "Shop Directly on Instagram",
+        description: "Browse our latest collections, see behind-the-scenes, and purchase directly through Instagram DMs. Follow us for updates on new arrivals and exclusive offers!",
+        button: "Visit Our Instagram Shop",
+        note: "DM us on Instagram to purchase any product"
+      },
+      tagline: "Creating beautiful resin art pieces that inspire and delight.",
+      quicklinks: {
+        title: "Quick Links",
+        home: "Home",
+        products: "Products",
+        about: "About",
+        contact: "Contact"
+      },
+      categories: {
+        title: "Categories",
+        jewelry: "Resin Jewelry",
+        homedecor: "Home Decor",
+        wallart: "Wall Art",
+        customorders: "Custom Orders"
+      },
+      newsletter: {
+        title: "Newsletter",
+        description: "Subscribe for updates on new collections and exclusive offers.",
+        placeholder: "Your email",
+        button: "Subscribe"
+      },
+      copyright: "© {{year}} Artistic Resin By Komal. All rights reserved.",
+      handcrafted: "Handcrafted with",
+      ineverypiece: "in every piece"
+    }
+  },
+  hi: {
+    home: {
+      hero: {
+        title: "कोमल की कलात्मक रेज़िन",
+        description: "हस्तनिर्मित रेज़िन कला का एक अनूठा संग्रह देखें, जिसमें सुंदर घर की सजावट से लेकर सुंदर व्यक्तिगत सामान शामिल हैं। प्रत्येक टुकड़ा जुनून और सटीकता के साथ बनाई गई एक अनूठी रचना है।",
+        button1: "हमारी कहानी",
+        button2: "हमारे संग्रह"
+      },
+      video: {
+        title: "जुनून से गढ़ा, उद्देश्य से उंडेला गया",
+        subtitle: "प्रेरित करने के लिए बनी रेज़िन कला"
+      },
+      collection: {
+        title: "हमारा संग्रह",
+        filters: {
+            AllProducts: "सभी उत्पाद",
+            Jewelry: "आभूषण",
+            HomeDecor: "घर की सजावट",
+            CustomPieces: "कस्टम पीस"
+        }
+      },
+      gallery: {
+        title: "मेरी रेज़िन कला"
+      },
+      create: {
+        title: "मुझे बनाते हुए देखें",
+        description: "जादू होते देखें! शुरू से अंत तक बनाए जा रहे एक सुंदर टुकड़े का टाइमलैप्स देखें।"
+      }
+    },
+    about: {
+      subtitle: "कलाकार का स्पर्श",
+      title: "नमस्ते, मैं कोमल हूँ",
+      para1: "- AK आर्टिस्टिक रेज़िन के पीछे की कलाकार। जो एक जुनून परियोजना के रूप में शुरू हुआ वह सुंदर रेज़िन कला के टुकड़े बनाने के एक समर्पित शिल्प में बदल गया है।",
+      para2: "प्रत्येक रचना को उच्च-गुणवत्ता वाली सामग्री और टिकाऊ प्रथाओं का उपयोग करके विस्तार से सावधानीपूर्वक दस्तकारी की जाती है। मेरी प्रेरणा प्रकृति की सुंदरता, अमूर्त पैटर्न और एक माध्यम के रूप में रेज़िन की अनंत संभावनाओं से आती है।",
+      feature1: "अद्वितीय, एक तरह का डिज़ाइन",
+      feature2: "पर्यावरण के अनुकूल सामग्री और प्रथाएं",
+      feature3: "प्यार और विस्तार पर ध्यान देने के साथ बनाया गया"
+    },
+    contact: {
+      title: "संपर्क में रहें",
+      description: "हमारे उत्पादों के बारे में प्रश्न हैं या एक कस्टम टुकड़े में रुचि रखते हैं? इन चैनलों में से किसी के माध्यम से हमसे संपर्क करें।",
+      email: "ईमेल",
+      instagram: "इंस्टाग्राम",
+      phone: "फ़ोन"
+    },
+    footer: {
+      shop: {
+        title: "इंस्टाग्राम पर सीधे खरीदारी करें",
+        description: "हमारे नवीनतम संग्रह ब्राउज़ करें, पर्दे के पीछे देखें, और सीधे इंस्टाग्राम डीएम के माध्यम से खरीदें। नए आगमन और विशेष प्रस्तावों पर अपडेट के लिए हमें फॉलो करें!",
+        button: "हमारी इंस्टाग्राम दुकान पर जाएँ",
+        note: "किसी भी उत्पाद को खरीदने के लिए हमें इंस्टाग्राम पर डीएम करें"
+      },
+      tagline: "सुंदर रेज़िन कला के टुकड़े बनाना जो प्रेरित और प्रसन्न करते हैं।",
+      quicklinks: {
+        title: "त्वरित सम्पक",
+        home: "होम",
+        products: "उत्पादों",
+        about: "हमारे बारे में",
+        contact: "संपर्क करें"
+      },
+      categories: {
+        title: "श्रेणियाँ",
+        jewelry: "रेज़िन आभूषण",
+        homedecor: "घर की सजावट",
+        wallart: "दीवार कला",
+        customorders: "कस्टम आदेश"
+      },
+      newsletter: {
+        title: "न्यूज़लेटर",
+        description: "नए संग्रह और विशेष प्रस्तावों पर अपडेट के लिए सदस्यता लें।",
+        placeholder: "आपका ईमेल",
+        button: "सदस्यता लें"
+      },
+      copyright: "© {{year}} कोमल द्वारा कलात्मक रेज़िन। सर्वाधिकार सुरक्षित।",
+      handcrafted: "हस्तनिर्मित",
+      ineverypiece: "हर टुकड़े में"
+    }
+  },
+  de: {
+    home: {
+      hero: {
+        title: "Künstlerisches Harz von Komal",
+        description: "Entdecken Sie eine einzigartige Sammlung handgefertigter Harzkunst, von eleganter Wohnkultur bis hin zu wunderschönen persönlichen Accessoires. Jedes Stück ist eine einzigartige Kreation, die mit Leidenschaft und Präzision hergestellt wurde.",
+        button1: "Unsere Geschichte",
+        button2: "Unsere Kollektionen"
+      },
+      video: {
+        title: "Mit Leidenschaft gefertigt, mit Absicht gegossen",
+        subtitle: "Harzkunst, die inspiriert"
+      },
+      collection: {
+        title: "Unsere Kollektion",
+        filters: {
+            AllProducts: "Alle Produkte",
+            Jewelry: "Schmuck",
+            HomeDecor: "Wohnkultur",
+            CustomPieces: "Einzelanfertigungen"
+        }
+      },
+      gallery: {
+        title: "Meine Harzkünste"
+      },
+      create: {
+        title: "Schau mir beim Schaffen zu",
+        description: "Sehen Sie die Magie geschehen! Sehen Sie sich einen Zeitraffer an, wie ein wunderschönes Stück von Anfang bis Ende entsteht."
+      }
+    },
+    about: {
+      subtitle: "Die Note des Handwerkers",
+      title: "Hallo, ich bin Komal",
+      para1: "- die Künstlerin hinter AK Artistic Resin. Was als Leidenschaftsprojekt begann, hat sich zu einem engagierten Handwerk entwickelt, bei dem wunderschöne Harzkunstwerke entstehen.",
+      para2: "Jede Kreation wird sorgfältig von Hand und mit Liebe zum Detail gefertigt, wobei hochwertige Materialien und nachhaltige Praktiken verwendet werden. Meine Inspiration kommt von der Schönheit der Natur, abstrakten Mustern und den endlosen Möglichkeiten von Harz als Medium.",
+      feature1: "Einzigartige, einmalige Designs",
+      feature2: "Umweltfreundliche Materialien und Praktiken",
+      feature3: "Mit Liebe und Liebe zum Detail hergestellt"
+    },
+    contact: {
+      title: "In Kontakt kommen",
+      description: "Haben Sie Fragen zu unseren Produkten oder interessieren Sie sich für ein individuelles Stück? Kontaktieren Sie uns über einen dieser Kanäle.",
+      email: "Email",
+      instagram: "Instagram",
+      phone: "Telefon"
+    },
+    footer: {
+      shop: {
+        title: "Direkt auf Instagram einkaufen",
+        description: "Durchsuchen Sie unsere neuesten Kollektionen, sehen Sie hinter die Kulissen und kaufen Sie direkt über Instagram DMs. Folgen Sie uns für Updates zu Neuankömmlingen und exklusiven Angeboten!",
+        button: "Besuchen Sie unseren Instagram-Shop",
+        note: "DM uns auf Instagram, um ein Produkt zu kaufen"
+      },
+      tagline: "Schöne Harzkunstwerke schaffen, die inspirieren und begeistern.",
+      quicklinks: {
+        title: "Schnelllinks",
+        home: "Startseite",
+        products: "Produkte",
+        about: "Über uns",
+        contact: "Kontakt"
+      },
+      categories: {
+        title: "Kategorien",
+        jewelry: "Harzschmuck",
+        homedecor: "Wohnkultur",
+        wallart: "Wandkunst",
+        customorders: "Sonderanfertigungen"
+      },
+      newsletter: {
+        title: "Newsletter",
+        description: "Abonnieren Sie für Updates zu neuen Kollektionen und exklusiven Angeboten.",
+        placeholder: "Deine E-Mail",
+        button: "Abonnieren"
+      },
+      copyright: "© {{year}} Künstlerisches Harz von Komal. Alle Rechte vorbehalten.",
+      handcrafted: "Handgefertigt mit",
+      ineverypiece: "in jedem Stück"
+    }
+  }
+};
+
+type Language = keyof typeof translations;
+
+type LanguageContextType = {
+  language: Language;
+  setLanguage: (language: Language) => void;
+  t: (key: string, replacements?: Record<string, string | number>) => string;
+};
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [language, setLanguage] = useState<Language>('en');
+
+  const t = (key: string, replacements: Record<string, string | number> = {}) => {
+    const keys = key.split('.');
+    let result: any = translations[language];
+    for (const k of keys) {
+      result = result?.[k];
+      if (result === undefined) {
+        // Fallback to English if translation is missing
+        let fallbackResult: any = translations.en;
+        for (const fk of keys) {
+            fallbackResult = fallbackResult?.[fk];
+        }
+        let text = fallbackResult || key;
+        Object.keys(replacements).forEach(rKey => {
+            text = text.replace(`{{${rKey}}}`, String(replacements[rKey]));
+        });
+        return text;
+      }
+    }
+    
+    let text = result || key;
+    Object.keys(replacements).forEach(rKey => {
+        text = text.replace(`{{${rKey}}}`, String(replacements[rKey]));
+    });
+
+    return text;
+  };
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+}
+
+export function useTranslation() {
+  const context = useContext(LanguageContext);
+  if (context === undefined) {
+    throw new Error('useTranslation must be used within a LanguageProvider');
+  }
+  return context;
+}
