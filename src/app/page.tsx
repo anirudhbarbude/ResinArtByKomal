@@ -93,65 +93,31 @@ export default function Home() {
               viewBox="0 0 1000 1000"
               preserveAspectRatio="xMidYMid slice"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+              className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-500"
             >
-              <defs>
-                <pattern
-                  id="lines-1"
-                  width="12"
-                  height="12"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 0 6 H 12"
-                    stroke="hsl(var(--accent))"
-                    strokeWidth="1.5"
-                  />
-                </pattern>
-                <pattern
-                  id="lines-2"
-                  width="12"
-                  height="12"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 0 6 H 12"
-                    stroke="hsl(var(--primary))"
-                    strokeWidth="1.5"
-                  />
-                </pattern>
-                <pattern
-                  id="lines-3"
-                  width="12"
-                  height="12"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 0 6 H 12"
-                    stroke="hsl(var(--chart-4))"
-                    strokeWidth="1.5"
-                  />
-                </pattern>
-              </defs>
-              <g transform="translate(100, 100) scale(0.8) rotate(-15 500 500)">
-                <circle cx="650" cy="300" r="250" fill="url(#lines-1)" />
-                <circle cx="300" cy="700" r="220" fill="url(#lines-2)" />
-                <circle cx="800" cy="750" r="150" fill="url(#lines-3)" />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="12"
-                  fill="none"
-                  stroke="hsl(var(--foreground))"
-                  d="M 543 986 C 596 820, 615 651, 658 493 C 688 381, 725 268, 775 168 
-                   M 658 493 C 603 446, 523 424, 452 387 C 401 360, 355 323, 331 270
-                   M 658 493 C 711 547, 750 632, 792 703
-                   M 565 831 C 590 754, 624 672, 658 493
-                   M 732 328 C 695 381, 676 439, 658 493
-                   M 402 334 C 493 381, 579 430, 658 493
-                "
-                />
-              </g>
+                <path d="M-100,0 C 200,200 150,400 400,300 C 650,200 800,400 1100,200 L 1100,0 Z" fill="hsl(var(--secondary))" />
+                <path d="M-100,1000 C 200,800 150,600 400,700 C 650,800 800,600 1100,800 L 1100,1000 Z" fill="hsl(var(--accent) / 0.5)" />
+
+                <g transform="translate(650, 100) scale(1.2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" fill="none" stroke="hsl(var(--primary))">
+                  <path d="M 0,0 C 50,50 100,50 150,0" />
+                  <path d="M 25,50 C 35,40 45,40 55,50" />
+                  <path d="M 75,50 C 85,40 95,40 105,50" />
+                  <path d="M 125,40 C 135,30 145,30 155,40" />
+
+                  <path d="M 75,50 C 75,100 125,120 150,150" />
+                  <path d="M 95,95 C 105,85 115,85 125,95" />
+                  <path d="M 130,135 C 140,125 150,125 160,135" />
+                </g>
+
+                <g transform="translate(100, 600) scale(1.5) rotate(20)" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" fill="none" stroke="hsl(var(--primary))">
+                    <path d="M 0,0 C 50,50 100,50 150,0" />
+                    <path d="M 25,50 C 35,40 45,40 55,50" />
+                    <path d="M 75,50 C 85,40 95,40 105,50" />
+                    <path d="M 125,40 C 135,30 145,30 155,40" />
+                    <path d="M 0,0 C 0,50 -50,70 -80,100" />
+                    <path d="M -20,45 C -30,35 -40,35 -50,45" />
+                    <path d="M -60,85 C -70,75 -80,75 -90,85" />
+                </g>
             </svg>
           </div>
 
@@ -188,7 +154,7 @@ export default function Home() {
             muted
             playsInline
             className="absolute z-0 w-full h-full object-cover"
-            poster="https://picsum.photos/seed/video-poster/1920/1080"
+            poster="https://storage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg"
           >
             <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -249,65 +215,31 @@ export default function Home() {
               viewBox="0 0 1000 1000"
               preserveAspectRatio="xMidYMid slice"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+              className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-500"
             >
-              <defs>
-                <pattern
-                  id="lines-1"
-                  width="12"
-                  height="12"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 0 6 H 12"
-                    stroke="hsl(var(--accent))"
-                    strokeWidth="1.5"
-                  />
-                </pattern>
-                <pattern
-                  id="lines-2"
-                  width="12"
-                  height="12"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 0 6 H 12"
-                    stroke="hsl(var(--primary))"
-                    strokeWidth="1.5"
-                  />
-                </pattern>
-                <pattern
-                  id="lines-3"
-                  width="12"
-                  height="12"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 0 6 H 12"
-                    stroke="hsl(var(--chart-4))"
-                    strokeWidth="1.5"
-                  />
-                </pattern>
-              </defs>
-              <g transform="translate(100, 100) scale(0.8) rotate(-15 500 500)">
-                <circle cx="650" cy="300" r="250" fill="url(#lines-1)" />
-                <circle cx="300" cy="700" r="220" fill="url(#lines-2)" />
-                <circle cx="800" cy="750" r="150" fill="url(#lines-3)" />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="12"
-                  fill="none"
-                  stroke="hsl(var(--foreground))"
-                  d="M 543 986 C 596 820, 615 651, 658 493 C 688 381, 725 268, 775 168 
-                   M 658 493 C 603 446, 523 424, 452 387 C 401 360, 355 323, 331 270
-                   M 658 493 C 711 547, 750 632, 792 703
-                   M 565 831 C 590 754, 624 672, 658 493
-                   M 732 328 C 695 381, 676 439, 658 493
-                   M 402 334 C 493 381, 579 430, 658 493
-                "
-                />
-              </g>
+                <path d="M-100,0 C 200,200 150,400 400,300 C 650,200 800,400 1100,200 L 1100,0 Z" fill="hsl(var(--secondary))" />
+                <path d="M-100,1000 C 200,800 150,600 400,700 C 650,800 800,600 1100,800 L 1100,1000 Z" fill="hsl(var(--accent) / 0.5)" />
+
+                <g transform="translate(650, 100) scale(1.2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" fill="none" stroke="hsl(var(--primary))">
+                  <path d="M 0,0 C 50,50 100,50 150,0" />
+                  <path d="M 25,50 C 35,40 45,40 55,50" />
+                  <path d="M 75,50 C 85,40 95,40 105,50" />
+                  <path d="M 125,40 C 135,30 145,30 155,40" />
+
+                  <path d="M 75,50 C 75,100 125,120 150,150" />
+                  <path d="M 95,95 C 105,85 115,85 125,95" />
+                  <path d="M 130,135 C 140,125 150,125 160,135" />
+                </g>
+
+                <g transform="translate(100, 600) scale(1.5) rotate(20)" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" fill="none" stroke="hsl(var(--primary))">
+                    <path d="M 0,0 C 50,50 100,50 150,0" />
+                    <path d="M 25,50 C 35,40 45,40 55,50" />
+                    <path d="M 75,50 C 85,40 95,40 105,50" />
+                    <path d="M 125,40 C 135,30 145,30 155,40" />
+                    <path d="M 0,0 C 0,50 -50,70 -80,100" />
+                    <path d="M -20,45 C -30,35 -40,35 -50,45" />
+                    <path d="M -60,85 C -70,75 -80,75 -90,85" />
+                </g>
             </svg>
           </div>
           <div className="container relative px-4 md:px-6">
