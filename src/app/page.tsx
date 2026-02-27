@@ -30,6 +30,7 @@ const filterCategories = [
 
 export default function Home() {
   const [filter, setFilter] = useState("All Products");
+  const [visibleArtworksCount, setVisibleArtworksCount] = useState(16);
 
   const filteredProducts = products.filter((product) => {
     if (filter === "All Products") {
@@ -301,7 +302,7 @@ export default function Home() {
               My Resin Arts
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {pastArtworks.map((artwork, index) => (
+              {pastArtworks.slice(0, visibleArtworksCount).map((artwork, index) => (
                 <div
                   key={artwork.id}
                   className="animate-in fade-in-0 zoom-in-95 duration-300"
@@ -337,6 +338,16 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            {visibleArtworksCount < pastArtworks.length && (
+              <div className="mt-12 text-center animate-in fade-in duration-500">
+                <Button
+                  onClick={() => setVisibleArtworksCount(pastArtworks.length)}
+                  size="lg"
+                >
+                  Show More
+                </Button>
+              </div>
+            )}
           </div>
         </section>
 
