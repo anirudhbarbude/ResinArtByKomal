@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  :root,
+  body.theme-rose {
     --background: 30 40% 97%;
     --foreground: 30 15% 20%;
     --card: 30 40% 97%;
@@ -32,7 +33,30 @@
     --cursor-paintbrush: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.8285 2.15573C19.4479 1.53634 20.4721 1.53634 21.0915 2.15573L25.3332 6.3974C25.9526 7.01679 25.9526 8.041 25.3332 8.66039L13.1666 20.827L7.40973 21.0915C6.01416 21.1561 4.84394 20.0463 4.90853 18.6508L5.17303 12.8939L18.8285 2.15573Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.4142 4.98413L22.7071 10.277' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.5 18.6508H9.25781' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   }
 
-  .dark {
+  body.theme-terracotta {
+    --background: 25 35% 95%;
+    --foreground: 25 10% 20%;
+    --card: 25 35% 95%;
+    --card-foreground: 25 10% 20%;
+    --popover: 25 35% 95%;
+    --popover-foreground: 25 10% 20%;
+    --primary: 25 50% 40%;
+    --primary-foreground: 25 35% 98%;
+    --secondary: 20 50% 90%;
+    --secondary-foreground: 25 10% 20%;
+    --muted: 20 40% 94%;
+    --muted-foreground: 25 10% 45%;
+    --accent: 15 70% 60%;
+    --accent-foreground: 25 35% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 30% 88%;
+    --input: 20 30% 90%;
+    --ring: 15 70% 60%;
+  }
+
+  .dark,
+  .dark body.theme-rose {
     --background: 340 10% 10%;
     --foreground: 30 40% 97%;
     --card: 340 10% 12%;
@@ -55,6 +79,26 @@
     --cursor-paintbrush: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.8285 2.15573C19.4479 1.53634 20.4721 1.53634 21.0915 2.15573L25.3332 6.3974C25.9526 7.01679 25.9526 8.041 25.3332 8.66039L13.1666 20.827L7.40973 21.0915C6.01416 21.1561 4.84394 20.0463 4.90853 18.6508L5.17303 12.8939L18.8285 2.15573Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.4142 4.98413L22.7071 10.277' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.5 18.6508H9.25781' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   }
 
+  .dark body.theme-terracotta {
+    --background: 25 10% 10%;
+    --foreground: 25 35% 95%;
+    --card: 25 10% 12%;
+    --card-foreground: 25 35% 95%;
+    --popover: 25 10% 12%;
+    --popover-foreground: 25 35% 95%;
+    --primary: 25 50% 70%;
+    --primary-foreground: 25 10% 10%;
+    --secondary: 20 10% 18%;
+    --secondary-foreground: 25 35% 95%;
+    --muted: 20 10% 15%;
+    --muted-foreground: 25 30% 70%;
+    --accent: 15 60% 55%;
+    --accent-foreground: 25 35% 98%;
+    --border: 20 10% 25%;
+    --input: 20 10% 22%;
+    --ring: 15 60% 55%;
+  }
+
   * {
     @apply border-border;
   }
@@ -63,6 +107,7 @@
     cursor: var(--cursor-paintbrush) 4 20, auto;
     position: relative;
     z-index: 0;
+    transition: background-color 0.7s ease, color 0.7s ease;
   }
 
   body::before,
@@ -74,23 +119,7 @@
     filter: blur(100px);
     opacity: 0.3;
     will-change: transform;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  body::before {
-    width: 350px;
-    height: 350px;
-    top: -150px;
-    right: -150px;
-    background: hsl(var(--accent));
-  }
-
-  body::after {
-    width: 400px;
-    height: 400px;
-    bottom: -200px;
-    left: -200px;
-    background: hsl(var(--primary));
+    transition: opacity 0.3s ease-in-out, background-color 0.7s ease;
   }
   
   .dark body::before,
