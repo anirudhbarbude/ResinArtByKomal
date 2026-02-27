@@ -26,31 +26,23 @@ export default function AboutPage() {
               viewBox="0 0 1000 1000"
               preserveAspectRatio="xMidYMid slice"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-500"
+              className="absolute inset-0 w-full h-full object-cover opacity-60"
             >
-                <path d="M-100,0 C 200,200 150,400 400,300 C 650,200 800,400 1100,200 L 1100,0 Z" fill="hsl(var(--secondary))" />
-                <path d="M-100,1000 C 200,800 150,600 400,700 C 650,800 800,600 1100,800 L 1100,1000 Z" fill="hsl(var(--accent) / 0.5)" />
-
-                <g transform="translate(650, 100) scale(1.2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" fill="none" stroke="hsl(var(--primary))">
-                  <path d="M 0,0 C 50,50 100,50 150,0" />
-                  <path d="M 25,50 C 35,40 45,40 55,50" />
-                  <path d="M 75,50 C 85,40 95,40 105,50" />
-                  <path d="M 125,40 C 135,30 145,30 155,40" />
-
-                  <path d="M 75,50 C 75,100 125,120 150,150" />
-                  <path d="M 95,95 C 105,85 115,85 125,95" />
-                  <path d="M 130,135 C 140,125 150,125 160,135" />
-                </g>
-
-                <g transform="translate(100, 600) scale(1.5) rotate(20)" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" fill="none" stroke="hsl(var(--primary))">
-                    <path d="M 0,0 C 50,50 100,50 150,0" />
-                    <path d="M 25,50 C 35,40 45,40 55,50" />
-                    <path d="M 75,50 C 85,40 95,40 105,50" />
-                    <path d="M 125,40 C 135,30 145,30 155,40" />
-                    <path d="M 0,0 C 0,50 -50,70 -80,100" />
-                    <path d="M -20,45 C -30,35 -40,35 -50,45" />
-                    <path d="M -60,85 C -70,75 -80,75 -90,85" />
-                </g>
+              <rect width="1000" height="1000" fill="transparent" />
+              <path d="M -100 500 A 350 350 0 0 1 600 500 L 600 1000 L -100 1000 Z" fill="hsl(var(--primary))" opacity="0.7" />
+              <path d="M 700 800 A 250 250 0 0 1 1200 800 L 1200 1000 L 700 1000 Z" fill="hsl(var(--accent))" opacity="0.8" />
+              <circle cx="750" cy="200" r="80" fill="hsl(var(--primary))" opacity="0.7" />
+              <g stroke="hsl(var(--foreground))" strokeWidth="12" fill="none" opacity="0.7">
+                  <path d="M 100 550 A 150 150 0 0 1 400 550" />
+                  <path d="M 125 550 A 125 125 0 0 1 375 550" />
+                  <path d="M 150 550 A 100 100 0 0 1 350 550" />
+              </g>
+              <g fill="hsl(var(--foreground))" opacity="0.7">
+                  <circle cx="450" cy="400" r="10" />
+                  <circle cx="480" cy="420" r="5" />
+                  <circle cx="460" cy="370" r="7" />
+                  <circle cx="500" cy="380" r="8" />
+              </g>
             </svg>
           </div>
           <div className="container relative px-4 md:px-6">
