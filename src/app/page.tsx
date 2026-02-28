@@ -220,12 +220,12 @@ export default function Home() {
             muted
             playsInline
             className="absolute z-0 w-full h-full object-cover"
-            poster="https://images.unsplash.com/photo-1536924940846-222ab2d0ca1d?q=80&w=2070"
+            poster="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071"
           >
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-artist-working-on-a-painting-with-a-brush-222-large.mp4" type="video/mp4" />
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-girl-in-a-leather-jacket-with-a-brush-in-her-hands-4015-large.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute z-10 inset-0 bg-black/60"></div>
+          <div className="absolute z-10 inset-0 bg-black/40"></div>
           <div className="relative z-20 container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center h-full">
                   <h2 className="font-headline text-4xl font-bold tracking-wider sm:text-5xl md:text-6xl uppercase animate-in fade-in slide-in-from-bottom-4 duration-1000">
