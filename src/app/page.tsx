@@ -220,9 +220,9 @@ export default function Home() {
             muted
             playsInline
             className="absolute z-0 w-full h-full object-cover"
-            poster="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1471"
+            poster="https://images.unsplash.com/photo-1536924940846-222ab2d0ca1d?q=80&w=2070"
           >
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-artists-color-palette-and-brush-219-large.mp4" type="video/mp4" />
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-artist-working-on-a-painting-with-a-brush-222-large.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute z-10 inset-0 bg-black/60"></div>
