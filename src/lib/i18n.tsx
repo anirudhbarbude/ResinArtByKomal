@@ -352,27 +352,30 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const t = (key: string, replacements: Record<string, string | number> = {}) => {
     const keys = key.split('.');
+    
+    // Get translation for current language
     let result: any = translations[language];
     for (const k of keys) {
       result = result?.[k];
-      if (result === undefined) {
-        // Fallback to English if translation is missing
-        let fallbackResult: any = translations.en;
-        for (const fk of keys) {
-            fallbackResult = fallbackResult?.[fk];
-        }
-        let text = fallbackResult || key;
-        Object.keys(replacements).forEach(rKey => {
-            text = text.replace(`{{${rKey}}}`, String(replacements[rKey]));
-        });
-        return text;
+    }
+
+    // Fallback to English if not found
+    if (result === undefined) {
+      result = translations.en;
+      for (const k of keys) {
+        result = result?.[k];
       }
     }
     
-    let text = result || key;
-    Object.keys(replacements).forEach(rKey => {
+    // If still not found, use the key itself. Otherwise, use the found value (even if it's an empty string).
+    let text: any = result ?? key;
+
+    // Perform replacements if the result is a string
+    if (typeof text === 'string') {
+      Object.keys(replacements).forEach(rKey => {
         text = text.replace(`{{${rKey}}}`, String(replacements[rKey]));
-    });
+      });
+    }
 
     return text;
   };
