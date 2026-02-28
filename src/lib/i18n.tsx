@@ -34,7 +34,9 @@ const translations = {
     },
     about: {
       subtitle: "The Artisan's Touch",
-      title: "Hi, I'm Komal",
+      title_prefix: "Hi, I'm ",
+      title_name: "Komal",
+      title_suffix: "",
       para1: "- the artist behind AK Artistic Resin. What started as a passion project has blossomed into a dedicated craft of creating beautiful resin art pieces.",
       para2: "Each creation is meticulously handcrafted with attention to detail, using high-quality materials and sustainable practices. My inspiration comes from the beauty of nature, abstract patterns, and the endless possibilities of resin as a medium.",
       feature1: "Unique, one-of-a-kind designs",
@@ -112,7 +114,9 @@ const translations = {
     },
     about: {
       subtitle: "कलाकार का स्पर्श",
-      title: "नमस्ते, मैं कोमल हूँ",
+      title_prefix: "नमस्ते, मैं ",
+      title_name: "कोमल",
+      title_suffix: " हूँ",
       para1: "- AK आर्टिस्टिक रेज़िन के पीछे की कलाकार। जो एक जुनून परियोजना के रूप में शुरू हुआ वह सुंदर रेज़िन कला के टुकड़े बनाने के एक समर्पित शिल्प में बदल गया है।",
       para2: "प्रत्येक रचना को उच्च-गुणवत्ता वाली सामग्री और टिकाऊ प्रथाओं का उपयोग करके विस्तार से सावधानीपूर्वक दस्तकारी की जाती है। मेरी प्रेरणा प्रकृति की सुंदरता, अमूर्त पैटर्न और एक माध्यम के रूप में रेज़िन की अनंत संभावनाओं से आती है।",
       feature1: "अद्वितीय, एक तरह का डिज़ाइन",
@@ -190,7 +194,9 @@ const translations = {
     },
     about: {
       subtitle: "Die Note des Handwerkers",
-      title: "Hallo, ich bin Komal",
+      title_prefix: "Hallo, ich bin ",
+      title_name: "Komal",
+      title_suffix: "",
       para1: "- die Künstlerin hinter AK Artistic Resin. Was als Leidenschaftsprojekt begann, hat sich zu einem engagierten Handwerk entwickelt, bei dem wunderschöne Harzkunstwerke entstehen.",
       para2: "Jede Kreation wird sorgfältig von Hand und mit Liebe zum Detail gefertigt, wobei hochwertige Materialien und nachhaltige Praktiken verwendet werden. Meine Inspiration kommt von der Schönheit der Natur, abstrakten Mustern und den endlosen Möglichkeiten von Harz als Medium.",
       feature1: "Einzigartige, einmalige Designs",
@@ -268,7 +274,9 @@ const translations = {
     },
     about: {
       subtitle: "कलाकार रो स्पर्श",
-      title: "राम राम, मैं कोमल हूं",
+      title_prefix: "राम राम, मैं ",
+      title_name: "कोमल",
+      title_suffix: " हूं",
       para1: "- एके आर्टिस्टिक रेजिन री कलाकार। जिको एक शौक रे रूप में शुरू हुयो हो, वो अब खूबसूरत रेजिन कलाकृतियां बणावण रो एक समर्पित शिल्प बण गयो है।",
       para2: "हर एक रचना ने बारीकी सूं, उच्च गुणवत्ता वाली सामग्री अर टिकाऊ तरीकां सूं हाथ सूं बणाई जावे है। म्हारी प्रेरणा प्रकृति री सुंदरता, अमूर्त पैटर्न अर रेजिन री अनंत संभावनावां सूं आवे है।",
       feature1: "अनूठा, एक-एक डिजाइन",

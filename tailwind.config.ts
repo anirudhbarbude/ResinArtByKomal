@@ -96,10 +96,30 @@ export default {
             height: '0',
           },
         },
+        'fall-and-bounce': {
+          '0%': {
+            transform: 'translateY(-100px)',
+            opacity: '0',
+          },
+          '50%': {
+            transform: 'translateY(0px)',
+            opacity: '1',
+          },
+          '70%': {
+            transform: 'translateY(-20px)',
+          },
+          '90%': {
+            transform: 'translateY(0px)',
+          },
+          '100%': {
+            transform: 'translateY(0px)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'fall-and-bounce': 'fall-and-bounce 1s ease-out forwards',
       },
     },
   },
