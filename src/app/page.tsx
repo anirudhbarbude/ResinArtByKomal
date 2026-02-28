@@ -220,9 +220,9 @@ export default function Home() {
             muted
             playsInline
             className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
-            poster="https://images.unsplash.com/photo-1663121428718-04c60f1fb2e3?w=1920&q=80"
+            poster="https://images.unsplash.com/photo-1626846116799-ad61f874f99d?w=1920&q=80"
           >
-            <source src="https://videos.coverr.co/video/coverr-mixing-epoxy-resin-with-blue-paint-374-1080p.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/4496277/4496277-hd_1920_1080_25fps.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black/50 z-10"></div>
