@@ -20,16 +20,11 @@ const translations = {
       },
       pincode: {
         pincodePlaceholder: "Enter Pincode",
-        cityPlaceholder: "Select City",
         button: "Check Availability",
         success: "We are happy to deliver in {{city}}!",
-        cities: {
-            Mumbai: "Mumbai",
-            Delhi: "Delhi",
-            Bangalore: "Bangalore",
-            Jaipur: "Jaipur",
-            Kolkata: "Kolkata"
-        }
+        invalid: "Please enter a valid 6-digit pincode.",
+        error: "Sorry, we couldn't find that pincode. Please check and try again.",
+        api_error: "There was a problem checking the pincode. Please try again later."
       },
       collection: {
         title: "Our Collection",
@@ -116,16 +111,11 @@ const translations = {
       },
       pincode: {
         pincodePlaceholder: "पिनकोड दर्ज करें",
-        cityPlaceholder: "शहर चुनें",
         button: "उपलब्धता जांचें",
         success: "हमें {{city}} में डिलीवरी करने में खुशी है!",
-        cities: {
-            Mumbai: "मुंबई",
-            Delhi: "दिल्ली",
-            Bangalore: "बैंगलोर",
-            Jaipur: "जयपुर",
-            Kolkata: "कोलकाता"
-        }
+        invalid: "कृपया एक मान्य 6-अंकीय पिनकोड दर्ज करें।",
+        error: "क्षमा करें, हमें वह पिनकोड नहीं मिला। कृपया जांचें और पुनः प्रयास करें।",
+        api_error: "पिनकोड की जाँच करने में कोई समस्या हुई। कृपया बाद में पुनः प्रयास करें।"
       },
       collection: {
         title: "हमारा संग्रह",
@@ -212,16 +202,11 @@ const translations = {
       },
       pincode: {
         pincodePlaceholder: "Postleitzahl eingeben",
-        cityPlaceholder: "Stadt auswählen",
         button: "Verfügbarkeit prüfen",
         success: "Wir liefern gerne in {{city}}!",
-        cities: {
-            Mumbai: "Mumbai",
-            Delhi: "Delhi",
-            Bangalore: "Bangalore",
-            Jaipur: "Jaipur",
-            Kolkata: "Kolkata"
-        }
+        invalid: "Bitte geben Sie eine gültige 6-stellige Postleitzahl ein.",
+        error: "Leider konnten wir diese Postleitzahl nicht finden. Bitte überprüfen und erneut versuchen.",
+        api_error: "Beim Überprüfen der Postleitzahl ist ein Problem aufgetreten. Bitte versuchen Sie es später erneut."
       },
       collection: {
         title: "Unsere Kollektion",
@@ -308,16 +293,11 @@ const translations = {
       },
       pincode: {
         pincodePlaceholder: "पिनकोड दर्ज करो",
-        cityPlaceholder: "शहर चुणो",
         button: "उपलब्धता जांचो",
         success: "म्हने {{city}} में डिलीवरी करतां खुशी है!",
-        cities: {
-            Mumbai: "मुंबई",
-            Delhi: "दिल्ली",
-            Bangalore: "बैंगलोर",
-            Jaipur: "जयपुर",
-            Kolkata: "कोलकाता"
-        }
+        invalid: "कृपया एक मान्य 6-अंकीय पिनकोड दर्ज करें।",
+        error: "माफ़ करजो, म्हने वो पिनकोड नी मिल्यो। कृपया जांच'र पाछो प्रयास करो।",
+        api_error: "पिनकोड जांचता समय एक समस्या हुई। कृपया थोड़ी देर बाद पाछो प्रयास करो।"
       },
       collection: {
         title: "म्हारो संग्रह",
