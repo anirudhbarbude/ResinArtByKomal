@@ -18,6 +18,19 @@ const translations = {
       delivery: {
         text: "Delivering Pan India"
       },
+      pincode: {
+        pincodePlaceholder: "Enter Pincode",
+        cityPlaceholder: "Select City",
+        button: "Check Availability",
+        success: "We are happy to deliver in {{city}}!",
+        cities: {
+            Mumbai: "Mumbai",
+            Delhi: "Delhi",
+            Bangalore: "Bangalore",
+            Jaipur: "Jaipur",
+            Kolkata: "Kolkata"
+        }
+      },
       collection: {
         title: "Our Collection",
         filters: {
@@ -100,6 +113,19 @@ const translations = {
       },
       delivery: {
         text: "पूरे भारत में डिलीवरी"
+      },
+      pincode: {
+        pincodePlaceholder: "पिनकोड दर्ज करें",
+        cityPlaceholder: "शहर चुनें",
+        button: "उपलब्धता जांचें",
+        success: "हमें {{city}} में डिलीवरी करने में खुशी है!",
+        cities: {
+            Mumbai: "मुंबई",
+            Delhi: "दिल्ली",
+            Bangalore: "बैंगलोर",
+            Jaipur: "जयपुर",
+            Kolkata: "कोलकाता"
+        }
       },
       collection: {
         title: "हमारा संग्रह",
@@ -184,6 +210,19 @@ const translations = {
       delivery: {
         text: "Lieferung in ganz Indien"
       },
+      pincode: {
+        pincodePlaceholder: "Postleitzahl eingeben",
+        cityPlaceholder: "Stadt auswählen",
+        button: "Verfügbarkeit prüfen",
+        success: "Wir liefern gerne in {{city}}!",
+        cities: {
+            Mumbai: "Mumbai",
+            Delhi: "Delhi",
+            Bangalore: "Bangalore",
+            Jaipur: "Jaipur",
+            Kolkata: "Kolkata"
+        }
+      },
       collection: {
         title: "Unsere Kollektion",
         filters: {
@@ -266,6 +305,19 @@ const translations = {
       },
       delivery: {
         text: "पूरे भारत में डिलीवरी"
+      },
+      pincode: {
+        pincodePlaceholder: "पिनकोड दर्ज करो",
+        cityPlaceholder: "शहर चुणो",
+        button: "उपलब्धता जांचो",
+        success: "म्हने {{city}} में डिलीवरी करतां खुशी है!",
+        cities: {
+            Mumbai: "मुंबई",
+            Delhi: "दिल्ली",
+            Bangalore: "बैंगलोर",
+            Jaipur: "जयपुर",
+            Kolkata: "कोलकाता"
+        }
       },
       collection: {
         title: "म्हारो संग्रह",

@@ -6,7 +6,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { products } from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
-import { CheckCircle, Truck } from "lucide-react";
+import { CheckCircle, PlayCircle, Truck } from "lucide-react";
 import { Button } from '@/components/ui/button';
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -28,6 +28,7 @@ import {
   CarouselPrevious 
 } from '@/components/ui/carousel';
 import { useTranslation } from '@/lib/i18n';
+import { PincodeChecker } from '@/components/pincode-checker';
 
 const filterCategories = [
   "All Products",
@@ -222,7 +223,7 @@ export default function Home() {
             className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
             poster="https://images.unsplash.com/photo-1626846116799-ad61f874f99d?w=1920&q=80"
           >
-            <source src="https://videos.pexels.com/video-files/4496277/4496277-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/8060317/8060317-hd_1920_1080_30fps.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black/50 z-10"></div>
@@ -245,6 +246,9 @@ export default function Home() {
               <p className="font-headline text-2xl font-semibold text-primary tracking-wide">
                 {t('home.delivery.text')}
               </p>
+            </div>
+            <div className="mt-8">
+              <PincodeChecker />
             </div>
           </div>
         </section>
@@ -427,7 +431,7 @@ export default function Home() {
                           className="object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                          <CheckCircle className="h-20 w-20 text-white/80 transition-transform duration-300 group-hover:scale-110" />
+                          <PlayCircle className="h-20 w-20 text-white/80 transition-transform duration-300 group-hover:scale-110" />
                         </div>
                       </div>
                     </CardContent>
