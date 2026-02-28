@@ -6,7 +6,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { products } from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Truck } from "lucide-react";
 import { Button } from '@/components/ui/button';
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -233,6 +233,17 @@ export default function Home() {
               </h2>
               <p className="text-lg md:text-xl/relaxed font-body animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
                 {t('home.video.subtitle')}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 bg-background">
+          <div className="container">
+            <div className="flex items-center justify-center gap-4 rounded-xl bg-muted p-6 text-center shadow-md animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300">
+              <Truck className="h-8 w-8 text-primary" />
+              <p className="font-headline text-2xl font-semibold text-primary tracking-wide">
+                {t('home.delivery.text')}
               </p>
             </div>
           </div>

@@ -15,6 +15,9 @@ const translations = {
         title: "Crafted with passion, poured with purpose",
         subtitle: "Resin art made to inspire"
       },
+      delivery: {
+        text: "Delivering Pan India"
+      },
       collection: {
         title: "Our Collection",
         filters: {
@@ -94,6 +97,9 @@ const translations = {
       video: {
         title: "जुनून से गढ़ा, उद्देश्य से उंडेला गया",
         subtitle: "प्रेरित करने के लिए बनी रेज़िन कला"
+      },
+      delivery: {
+        text: "पूरे भारत में डिलीवरी"
       },
       collection: {
         title: "हमारा संग्रह",
@@ -175,6 +181,9 @@ const translations = {
         title: "Mit Leidenschaft gefertigt, mit Absicht gegossen",
         subtitle: "Harzkunst, die inspiriert"
       },
+      delivery: {
+        text: "Lieferung in ganz Indien"
+      },
       collection: {
         title: "Unsere Kollektion",
         filters: {
@@ -254,6 +263,9 @@ const translations = {
       video: {
         title: "जुनून सूं बणायोड़ी, मकसद सूं ढाळी",
         subtitle: "प्रेरित करण वास्ते बणायोड़ी रेजिन कला"
+      },
+      delivery: {
+        text: "पूरे भारत में डिलीवरी"
       },
       collection: {
         title: "म्हारो संग्रह",
