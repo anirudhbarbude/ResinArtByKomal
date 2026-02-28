@@ -213,30 +213,44 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative h-[70vh] w-full overflow-hidden flex items-center justify-center text-center text-white">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute z-0 w-full h-full object-cover"
-            poster="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071"
-          >
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-girl-in-a-leather-jacket-with-a-brush-in-her-hands-4015-large.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="absolute z-10 inset-0 bg-black/40"></div>
-          <div className="relative z-20 container px-4 md:px-6">
-              <div className="flex flex-col items-center justify-center h-full">
-                  <h2 className="font-headline text-4xl font-bold tracking-wider sm:text-5xl md:text-6xl uppercase animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                    {t('home.video.title')}
-                  </h2>
-                  <p 
-                    className="mt-6 font-body text-xl md:text-2xl max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300"
-                  >
-                    {t('home.video.subtitle')}
-                  </p>
-              </div>
+        <section id="video-section" className="relative py-12 md:py-24 bg-secondary/50 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <BotanicalBackground />
+          </div>
+          <div className="container relative px-4 md:px-6">
+            <div className="mx-auto max-w-3xl text-center animate-in fade-in slide-in-from-top-4 duration-500">
+              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary mb-4">
+                {t('home.video.title')}
+              </h2>
+              <p className="text-muted-foreground md:text-xl/relaxed font-body">
+                {t('home.video.subtitle')}
+              </p>
+            </div>
+            <div className="mt-12">
+              <a
+                href={videos[0].href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full max-w-4xl mx-auto animate-in fade-in-0 zoom-in-95 duration-300"
+              >
+                <Card className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                  <CardContent className="p-0">
+                    <div className="aspect-video w-full relative">
+                      <Image
+                        src={videos[0].thumbnail.imageUrl}
+                        alt={videos[0].thumbnail.description}
+                        data-ai-hint={videos[0].thumbnail.imageHint}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <PlayCircle className="h-24 w-24 text-white/80 transition-transform duration-300 group-hover:scale-110" />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
+            </div>
           </div>
         </section>
 
