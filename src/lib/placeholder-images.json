@@ -431,6 +431,14 @@
       "imageHint": "ganpati art",
       "width": 600,
       "height": 800
+    },
+    {
+      "id": "delivery-package-1",
+      "description": "A beautifully wrapped package ready for delivery.",
+      "imageUrl": "https://images.unsplash.com/photo-1594793583893-12502c3a5d89?w=1920&q=80",
+      "imageHint": "delivery package",
+      "width": 1920,
+      "height": 1080
     }
   ]
 }

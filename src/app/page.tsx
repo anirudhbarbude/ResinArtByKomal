@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -27,6 +27,7 @@ import {
   CarouselNext, 
   CarouselPrevious 
 } from '@/components/ui/carousel';
+import Autoplay from "embla-carousel-autoplay";
 import { useTranslation } from '@/lib/i18n';
 import { PincodeChecker } from '@/components/pincode-checker';
 
@@ -40,6 +41,10 @@ const filterCategories = [
 export default function Home() {
   const [filter, setFilter] = useState("All Products");
   const { t } = useTranslation();
+
+  const plugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
 
   const filteredProducts = products.filter((product) => {
     if (filter === "All Products") {
@@ -58,6 +63,7 @@ export default function Home() {
   });
   
   const komalImage = getImage('komal-portrait');
+  const deliveryImage = getImage('delivery-package-1');
 
   const pastArtworksIds = [
     'resin-coasters-1', 'resin-tray-1', 'resin-jewelry-1', 'resin-wall-art-1', 'resin-clock-1', 'resin-keychains-1', 
@@ -214,29 +220,61 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="video-section" className="relative h-[70vh] flex items-center justify-center text-center overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
-            poster="https://images.unsplash.com/photo-1626846116799-ad61f874f99d?w=1920&q=80"
+        <section id="hero-carousel" className="relative h-[70vh] overflow-hidden">
+          <Carousel
+            plugins={[plugin.current]}
+            className="w-full h-full"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
           >
-            <source src="https://videos.pexels.com/video-files/8060317/8060317-hd_1920_1080_30fps.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <div className="relative z-20 container px-4 md:px-6">
-            <div className="mx-auto max-w-3xl text-white">
-              <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-white mb-4 animate-in fade-in slide-in-from-top-4 duration-700">
-                {t('home.video.title')}
-              </h2>
-              <p className="text-lg md:text-xl/relaxed font-body animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-                {t('home.video.subtitle')}
-              </p>
-            </div>
-          </div>
+            <CarouselContent className="h-full">
+              <CarouselItem className="h-full">
+                <div className="relative h-full flex items-center justify-center text-center">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
+                    poster={getImage('resin-video-thumb-1').imageUrl}
+                  >
+                    <source src="https://videos.pexels.com/video-files/8060317/8060317-hd_1920_1080_30fps.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="absolute inset-0 bg-black/50 z-10"></div>
+                  <div className="relative z-20 container px-4 md:px-6">
+                    <div className="mx-auto max-w-3xl text-white">
+                      <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-white mb-4 animate-in fade-in slide-in-from-top-4 duration-700">
+                        {t('home.video.title')}
+                      </h2>
+                      <p className="text-lg md:text-xl/relaxed font-body animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+                        {t('home.video.subtitle')}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+              <CarouselItem className="h-full">
+                <div className="relative h-full flex items-center justify-center text-center">
+                  <Image
+                    src={deliveryImage.imageUrl}
+                    alt={deliveryImage.description}
+                    data-ai-hint={deliveryImage.imageHint}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/50 z-10"></div>
+                  <div className="relative z-20 container px-4 md:px-6">
+                    <div className="mx-auto max-w-3xl text-white">
+                      <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-white mb-4 animate-in fade-in slide-in-from-top-4 duration-700">
+                        {t('home.heroCarousel.slide2.title')}
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
         </section>
 
         <section className="py-12 bg-background">

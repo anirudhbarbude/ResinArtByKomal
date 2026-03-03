@@ -15,6 +15,11 @@ const translations = {
         title: "Crafted with passion, poured with purpose",
         subtitle: "Resin art made to inspire"
       },
+      heroCarousel: {
+        slide2: {
+          title: "We deliver the best"
+        }
+      },
       delivery: {
         text: "Delivering Pan India"
       },
@@ -105,6 +110,11 @@ const translations = {
       video: {
         title: "जुनून से गढ़ा, उद्देश्य से उंडेला गया",
         subtitle: "प्रेरित करने के लिए बनी रेज़िन कला"
+      },
+      heroCarousel: {
+        slide2: {
+          title: "हम सर्वश्रेष्ठ वितरित करते हैं"
+        }
       },
       delivery: {
         text: "पूरे भारत में डिलीवरी"
@@ -197,6 +207,11 @@ const translations = {
         title: "Mit Leidenschaft gefertigt, mit Absicht gegossen",
         subtitle: "Harzkunst, die inspiriert"
       },
+      heroCarousel: {
+        slide2: {
+          title: "Wir liefern das Beste"
+        }
+      },
       delivery: {
         text: "Lieferung in ganz Indien"
       },
@@ -287,6 +302,11 @@ const translations = {
       video: {
         title: "जुनून सूं बणायोड़ी, मकसद सूं ढाळी",
         subtitle: "प्रेरित करण वास्ते बणायोड़ी रेजिन कला"
+      },
+      heroCarousel: {
+        slide2: {
+          title: "म्हे सबसे बढ़िया देवां"
+        }
       },
       delivery: {
         text: "पूरे भारत में डिलीवरी"
