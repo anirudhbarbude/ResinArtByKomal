@@ -58,7 +58,7 @@ export default function Home() {
   });
   
   const komalImage = getImage('komal-portrait');
-  const artImage = getImage('resin-wall-art-1');
+  const artImage = getImage('shree-krishna-art-1');
 
   const pastArtworksIds = [
     'resin-coasters-1', 'resin-tray-1', 'resin-jewelry-1', 'resin-wall-art-1', 'resin-clock-1', 'resin-keychains-1', 
