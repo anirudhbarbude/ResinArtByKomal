@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -40,6 +40,33 @@ const filterCategories = [
 export default function Home() {
   const [filter, setFilter] = useState("All Products");
   const { t } = useTranslation();
+
+  const [isImageHeroVisible, setIsImageHeroVisible] = useState(false);
+  const imageHeroRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsImageHeroVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    const currentRef = imageHeroRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
 
   const filteredProducts = products.filter((product) => {
     if (filter === "All Products") {
@@ -217,7 +244,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="image-hero" className="relative h-[70vh] overflow-hidden flex items-center justify-center text-center">
+        <section ref={imageHeroRef} id="image-hero" className="relative h-[70vh] overflow-hidden flex items-center justify-center text-center">
           <Image
             src={artImage.imageUrl}
             alt={artImage.description}
@@ -233,8 +260,8 @@ export default function Home() {
                 {t('home.video.title').split(" ").map((word, index) => (
                     <span
                     key={index}
-                    className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500 mr-1.5"
-                    style={{ animationDelay: `${200 + index * 100}ms`, animationFillMode: 'both' }}
+                    className={`inline-block mr-1.5 ${isImageHeroVisible ? 'animate-in fade-in slide-in-from-bottom-2 duration-500' : 'opacity-0'}`}
+                    style={isImageHeroVisible ? { animationDelay: `${200 + index * 100}ms`, animationFillMode: 'both' } : {}}
                     >
                     {word}
                     </span>
@@ -244,8 +271,8 @@ export default function Home() {
                 {t('home.video.subtitle').split(" ").map((word, index) => (
                     <span
                     key={index}
-                    className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500 mr-1.5"
-                    style={{ animationDelay: `${700 + index * 100}ms`, animationFillMode: 'both' }}
+                    className={`inline-block mr-1.5 ${isImageHeroVisible ? 'animate-in fade-in slide-in-from-bottom-2 duration-500' : 'opacity-0'}`}
+                    style={isImageHeroVisible ? { animationDelay: `${700 + index * 100}ms`, animationFillMode: 'both' } : {}}
                     >
                     {word}
                     </span>
