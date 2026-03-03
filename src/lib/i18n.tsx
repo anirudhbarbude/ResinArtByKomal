@@ -6,7 +6,9 @@ const translations = {
   en: {
     home: {
       hero: {
-        title: "Artistic Resin By Komal",
+        title_prefix: "Artistic Resin By ",
+        title_name: "Komal",
+        title_suffix: "",
         description: "Explore a unique collection of handcrafted resin art, from elegant home décor to beautiful personal accessories. Each piece is a one-of-a-kind creation, made with passion and precision.",
         button1: "Our Story",
         button2: "Our Collections"
@@ -97,7 +99,9 @@ const translations = {
   hi: {
     home: {
       hero: {
-        title: "कोमल की कलात्मक रेज़िन",
+        title_prefix: "",
+        title_name: "कोमल",
+        title_suffix: " की कलात्मक रेज़िन",
         description: "हस्तनिर्मित रेज़िन कला का एक अनूठा संग्रह देखें, जिसमें सुंदर घर की सजावट से लेकर सुंदर व्यक्तिगत सामान शामिल हैं। प्रत्येक टुकड़ा जुनून और सटीकता के साथ बनाई गई एक अनूठी रचना है।",
         button1: "हमारी कहानी",
         button2: "हमारे संग्रह"
@@ -188,7 +192,9 @@ const translations = {
   de: {
     home: {
       hero: {
-        title: "Künstlerisches Harz von Komal",
+        title_prefix: "Künstlerisches Harz von ",
+        title_name: "Komal",
+        title_suffix: "",
         description: "Entdecken Sie eine einzigartige Sammlung handgefertigter Harzkunst, von eleganter Wohnkultur bis hin zu wunderschönen persönlichen Accessoires. Jedes Stück ist eine einzigartige Kreation, die mit Leidenschaft und Präzision hergestellt wurde.",
         button1: "Unsere Geschichte",
         button2: "Unsere Kollektionen"
@@ -279,7 +285,9 @@ const translations = {
   mrw: {
     home: {
       hero: {
-        title: "कोमल री कलात्मक रेजिन",
+        title_prefix: "",
+        title_name: "कोमल",
+        title_suffix: " री कलात्मक रेजिन",
         description: "हाथ सूं बणायोड़ी रेजिन कला रो एक अनूठो संग्रह देखो, जिणमें सुंदर घर री सजावट सूं ले'र खूबसूरत व्यक्तिगत सामान शामिल है। हर एक रचना जुनून अर सटीकता रे साथ बणायोड़ी एक अनूठी कलाकृति है।",
         button1: "म्हारी कहाणी",
         button2: "म्हारो संग्रह"

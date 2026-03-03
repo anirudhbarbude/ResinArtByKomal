@@ -111,10 +111,10 @@ export default function AboutPage() {
                   {t('about.subtitle')}
                 </h2>
                 <h1
-                  className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl text-primary mt-2"
+                  className="font-headline text-4xl tracking-tighter sm:text-5xl text-primary mt-2"
                 >
                   {t('about.title_prefix')}
-                  <span className="inline-block animate-fall-and-bounce">{t('about.title_name')}</span>
+                  <span className="font-logo text-accent text-5xl sm:text-7xl inline-block animate-fall-and-bounce mx-1">{t('about.title_name')}</span>
                   {t('about.title_suffix')}
                 </h1>
                 <p className="mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed font-body">

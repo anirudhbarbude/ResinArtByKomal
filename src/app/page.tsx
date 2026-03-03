@@ -190,8 +190,10 @@ export default function Home() {
           </div>
 
           <div className="container relative px-4 md:px-6 text-center">
-            <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary animate-in fade-in slide-in-from-top-4 duration-1000">
-              {t('home.hero.title')}
+            <h1 className="font-headline text-4xl tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary animate-in fade-in slide-in-from-top-4 duration-1000">
+              {t('home.hero.title_prefix')}
+              <span className="font-logo text-accent">{t('home.hero.title_name')}</span>
+              {t('home.hero.title_suffix')}
             </h1>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mt-4 font-body">
               {t('home.hero.description').split(" ").map((word, index) => (
@@ -326,9 +328,9 @@ export default function Home() {
                 <h2 className="font-headline text-3xl text-primary tracking-tight">
                   {t('about.subtitle')}
                 </h2>
-                <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl text-primary mt-2">
+                <h1 className="font-headline text-4xl tracking-tighter sm:text-5xl text-primary mt-2">
                   {t('about.title_prefix')}
-                  <span className="inline-block animate-fall-and-bounce">{t('about.title_name')}</span>
+                  <span className="font-logo text-accent text-5xl sm:text-7xl inline-block animate-fall-and-bounce mx-1">{t('about.title_name')}</span>
                   {t('about.title_suffix')}
                 </h1>
                 <p className="mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed font-body">
