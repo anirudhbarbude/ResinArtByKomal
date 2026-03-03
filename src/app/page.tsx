@@ -227,11 +227,27 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <div className="relative z-20 container px-4 md:px-6">
             <div className="mx-auto max-w-3xl text-white">
-              <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-white mb-4 animate-in fade-in slide-in-from-top-4 duration-700">
-                {t('home.video.title')}
+              <h2 className="font-logo text-5xl sm:text-6xl md:text-7xl text-white mb-4 drop-shadow-lg">
+                {t('home.video.title').split(" ").map((word, index) => (
+                    <span
+                    key={index}
+                    className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500 mr-1.5"
+                    style={{ animationDelay: `${200 + index * 100}ms`, animationFillMode: 'both' }}
+                    >
+                    {word}
+                    </span>
+                ))}
               </h2>
-              <p className="text-lg md:text-xl/relaxed font-body animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-                {t('home.video.subtitle')}
+              <p className="text-xl md:text-2xl font-body text-white/90 drop-shadow-md">
+                {t('home.video.subtitle').split(" ").map((word, index) => (
+                    <span
+                    key={index}
+                    className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500 mr-1.5"
+                    style={{ animationDelay: `${700 + index * 100}ms`, animationFillMode: 'both' }}
+                    >
+                    {word}
+                    </span>
+                ))}
               </p>
             </div>
           </div>
