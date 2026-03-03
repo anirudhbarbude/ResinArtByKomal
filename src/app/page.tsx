@@ -76,7 +76,7 @@ export default function Home() {
     .filter((img): img is ImagePlaceholder => !!img);
 
   const artworksInGroups: ImagePlaceholder[][] = [];
-  const groupSize = 15;
+  const groupSize = 12;
   for (let i = 0; i < pastArtworks.length; i += groupSize) {
     artworksInGroups.push(pastArtworks.slice(i, i + groupSize));
   }
@@ -368,12 +368,12 @@ export default function Home() {
                 align: "start",
                 loop: artworksInGroups.length > 1,
               }}
-              className="w-full"
+              className="w-full relative"
             >
               <CarouselContent>
                 {artworksInGroups.map((group, index) => (
                   <CarouselItem key={index}>
-                    <div className="grid grid-cols-5 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                       {group.map((artwork) => (
                         <Dialog key={artwork.id}>
                           <DialogTrigger asChild>
@@ -407,8 +407,8 @@ export default function Home() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 h-14 w-14 bg-background/50 backdrop-blur-sm border-none text-foreground/80 hover:bg-background/70 hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed transition-all" />
+              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 h-14 w-14 bg-background/50 backdrop-blur-sm border-none text-foreground/80 hover:bg-background/70 hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed transition-all" />
             </Carousel>
           </div>
         </section>
