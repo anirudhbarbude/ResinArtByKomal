@@ -238,7 +238,7 @@ export default function Home() {
                     className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
                     poster={getImage('resin-video-thumb-1').imageUrl}
                   >
-                    <source src="https://videos.pexels.com/video-files/8060317/8060317-hd_1920_1080_30fps.mp4" type="video/mp4" />
+                    <source src="https://videos.pexels.com/video-files/4682823/4682823-hd_1920_1080_25fps.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                   <div className="absolute inset-0 bg-black/50 z-10"></div>
