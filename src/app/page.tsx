@@ -110,15 +110,15 @@ export default function Home() {
 
   const videos = [
     {
-      href: "https://imgur.com/2K2d32a",
+      href: "https://i.imgur.com/2K2d32a.mp4",
       thumbnail: getImage('resin-video-thumb-1'),
     },
     {
-      href: "https://imgur.com/46BMkdw",
+      href: "https://i.imgur.com/46BMkdw.mp4",
       thumbnail: getImage('resin-video-thumb-2'),
     },
     {
-      href: "https://imgur.com/KP4FFye",
+      href: "https://i.imgur.com/KP4FFye.mp4",
       thumbnail: getImage('resin-video-thumb-3'),
     },
   ];
@@ -515,31 +515,39 @@ export default function Home() {
             </div>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
               {videos.map((video, index) => (
-                <a
-                  key={index}
-                  href={video.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full animate-in fade-in-0 zoom-in-95 duration-300"
-                  style={{ animationDelay: `${200 + index * 150}ms`, animationFillMode: 'both' }}
-                >
-                  <Card className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
-                    <CardContent className="p-0">
-                      <div className="aspect-video w-full relative">
-                        <Image
-                          src={video.thumbnail.imageUrl}
-                          alt={video.thumbnail.description}
-                          data-ai-hint={video.thumbnail.imageHint}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                          <PlayCircle className="h-20 w-20 text-white/80 transition-transform duration-300 group-hover:scale-110" />
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </a>
+                <Dialog key={index}>
+                  <DialogTrigger asChild>
+                    <div
+                      className="animate-in fade-in-0 zoom-in-95 duration-300"
+                      style={{ animationDelay: `${200 + index * 150}ms`, animationFillMode: 'both' }}
+                    >
+                      <Card className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
+                        <CardContent className="p-0">
+                          <div className="aspect-video w-full relative">
+                            <Image
+                              src={video.thumbnail.imageUrl}
+                              alt={video.thumbnail.description}
+                              data-ai-hint={video.thumbnail.imageHint}
+                              fill
+                              className="object-cover transition-transform duration-300 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                              <PlayCircle className="h-20 w-20 text-white/80 transition-transform duration-300 group-hover:scale-110" />
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="p-0 border-0 bg-transparent shadow-none max-w-5xl w-auto">
+                    <video
+                      src={video.href}
+                      controls
+                      autoPlay
+                      className="w-full h-auto max-h-[90vh] rounded-lg"
+                    />
+                  </DialogContent>
+                </Dialog>
               ))}
             </div>
           </div>
