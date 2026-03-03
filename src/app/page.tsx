@@ -486,9 +486,29 @@ export default function Home() {
           </div>
           <div className="container relative px-4 md:px-6">
             <div className="mx-auto max-w-3xl text-center animate-in fade-in slide-in-from-top-4 duration-500">
-              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary mb-4">
-                {t('home.create.title')}
-              </h2>
+              <div className="flex justify-center items-center gap-4 md:gap-8 mb-4">
+                  <svg
+                      className="w-16 md:w-24 text-primary opacity-70"
+                      viewBox="0 0 100 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                  >
+                      <path d="M100 10C80 0 70 2 50 10S10 19 0 20" stroke="currentColor" strokeWidth="2" />
+                      <path d="M75 10C80 5 85 5 90 8" stroke="hsl(var(--accent))" strokeWidth="1.5" />
+                  </svg>
+                  <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary shrink-0">
+                      {t('home.create.title')}
+                  </h2>
+                  <svg
+                      className="w-16 md:w-24 text-primary opacity-70 transform -scale-x-100"
+                      viewBox="0 0 100 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                  >
+                      <path d="M100 10C80 0 70 2 50 10S10 19 0 20" stroke="currentColor" strokeWidth="2" />
+                      <path d="M75 10C80 5 85 5 90 8" stroke="hsl(var(--accent))" strokeWidth="1.5" />
+                  </svg>
+              </div>
               <p className="text-muted-foreground md:text-xl/relaxed font-body">
                 {t('home.create.description')}
               </p>
