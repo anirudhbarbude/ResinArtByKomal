@@ -223,7 +223,7 @@ export default function Home() {
             alt={artImage.description}
             data-ai-hint={artImage.imageHint}
             fill
-            className="object-cover"
+            className="object-cover object-top"
             priority
           />
           <div className="absolute inset-0 bg-black/50 z-10"></div>
