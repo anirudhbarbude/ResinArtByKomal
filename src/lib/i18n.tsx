@@ -75,7 +75,8 @@ const translations = {
         home: "Home",
         products: "Products",
         about: "About",
-        contact: "Contact"
+        contact: "Contact",
+        howto: "How-To Guide"
       },
       categories: {
         title: "Categories",
@@ -93,6 +94,37 @@ const translations = {
       copyright: "© {{year}} Artistic Resin By Komal. All rights reserved.",
       handcrafted: "Handcrafted with",
       ineverypiece: "in every piece"
+    },
+    howto: {
+      title: "How-To Guide",
+      description: "A simple guide to download your project and manage images.",
+      download: {
+        title: "Download Your Project",
+        description: "Get the complete source code for your website.",
+        para1: "Your website is ready to be taken to the next level. You can download the complete source code to run it locally, customize it further, and deploy it to your own hosting environment.",
+        note: "Note: The download functionality is typically provided by the platform you are using to build this app. Look for a 'Download Code' button or similar option."
+      },
+      images: {
+        title: "Update & Add Your Images",
+        description: "Learn how to replace placeholder images with your own.",
+        step1: {
+            title: "Step 1: Understand the Image Manifest",
+            para1: "All images in this project are managed through a central file.",
+            para2: "This file acts as a database for your images, making it easy to update them without digging through code."
+        },
+        step2: {
+            title: "Step 2: Add or Update an Image Entry",
+            para1: "To add a new image, you first need to upload it somewhere to get a public URL (e.g., Imgur, Cloudinary, or your own server). Then, add a new JSON object to the `placeholderImages` array in the manifest file.",
+            li1: "To add a new image, add a new entry to the array.",
+            li2: "To replace an existing image, simply find its `id` and change the `imageUrl` value to your new URL.",
+            para2: "Each image object must have this structure:"
+        },
+        step3: {
+            title: "Step 3: Use the Image in Your Code",
+            para1: "To display an image, import the `getImage` function and call it with the `id` of the image you want to show.",
+            para2: "The function returns an object with all the image data you need."
+        }
+      }
     }
   },
   hi: {
@@ -167,7 +199,8 @@ const translations = {
         home: "होम",
         products: "उत्पादों",
         about: "हमारे बारे में",
-        contact: "संपर्क करें"
+        contact: "संपर्क करें",
+        howto: "कैसे करें गाइड"
       },
       categories: {
         title: "श्रेणियाँ",
@@ -185,6 +218,37 @@ const translations = {
       copyright: "© {{year}} कोमल द्वारा कलात्मक रेज़िन। सर्वाधिकार सुरक्षित।",
       handcrafted: "हस्तनिर्मित",
       ineverypiece: "हर टुकड़े में"
+    },
+    howto: {
+      title: "कैसे करें गाइड",
+      description: "अपने प्रोजेक्ट को डाउनलोड करने और छवियों को प्रबंधित करने के लिए एक सरल गाइड।",
+      download: {
+        title: "अपना प्रोजेक्ट डाउनलोड करें",
+        description: "अपनी वेबसाइट के लिए पूरा स्रोत कोड प्राप्त करें।",
+        para1: "आपकी वेबसाइट अगले स्तर पर ले जाने के लिए तैयार है। आप इसे स्थानीय रूप से चलाने, इसे और अधिक अनुकूलित करने और इसे अपने स्वयं के होस्टिंग वातावरण में तैनात करने के लिए पूरा स्रोत कोड डाउनलोड कर सकते हैं।",
+        note: "नोट: डाउनलोड कार्यक्षमता आमतौर पर उस प्लेटफ़ॉर्म द्वारा प्रदान की जाती है जिसका उपयोग आप इस ऐप को बनाने के लिए कर रहे हैं। 'डाउनलोड कोड' बटन या इसी तरह का विकल्प देखें।"
+      },
+      images: {
+        title: "अपनी छवियां अपडेट करें और जोड़ें",
+        description: "प्लेसहोल्डर छवियों को अपनी खुद की छवियों से बदलना सीखें।",
+        step1: {
+            title: "चरण 1: छवि मैनिफेस्ट को समझें",
+            para1: "इस प्रोजेक्ट की सभी छवियां एक केंद्रीय फ़ाइल के माध्यम से प्रबंधित की जाती हैं।",
+            para2: "यह फ़ाइल आपकी छवियों के लिए एक डेटाबेस के रूप में कार्य करती है, जिससे कोड में खोजे बिना उन्हें अपडेट करना आसान हो जाता है।"
+        },
+        step2: {
+            title: "चरण 2: एक छवि प्रविष्टि जोड़ें या अपडेट करें",
+            para1: "एक नई छवि जोड़ने के लिए, आपको पहले इसे कहीं अपलोड करना होगा ताकि एक सार्वजनिक URL प्राप्त हो सके (जैसे, Imgur, Cloudinary, या आपका अपना सर्वर)। फिर, मैनिफेस्ट फ़ाइल में `placeholderImages` ऐरे में एक नया JSON ऑब्जेक्ट जोड़ें।",
+            li1: "एक नई छवि जोड़ने के लिए, ऐरे में एक नई प्रविष्टि जोड़ें।",
+            li2: "किसी मौजूदा छवि को बदलने के लिए, बस उसकी `id` ढूंढें और `imageUrl` मान को अपने नए URL में बदलें।",
+            para2: "प्रत्येक छवि ऑब्जेक्ट की यह संरचना होनी चाहिए:"
+        },
+        step3: {
+            title: "चरण 3: कोड में छवि का उपयोग करें",
+            para1: "एक छवि प्रदर्शित करने के लिए, `getImage` फ़ंक्शन आयात करें और इसे उस छवि की `id` के साथ कॉल करें जिसे आप दिखाना चाहते हैं।",
+            para2: "फ़ंक्शन आपको आवश्यक सभी छवि डेटा के साथ एक ऑब्जेक्ट लौटाता है।"
+        }
+      }
     }
   },
   de: {
@@ -259,7 +323,8 @@ const translations = {
         home: "Startseite",
         products: "Produkte",
         about: "Über uns",
-        contact: "Kontakt"
+        contact: "Kontakt",
+        howto: "Anleitung"
       },
       categories: {
         title: "Kategorien",
@@ -277,6 +342,37 @@ const translations = {
       copyright: "© {{year}} Künstlerisches Harz von Komal. Alle Rechte vorbehalten.",
       handcrafted: "Handgefertigt mit",
       ineverypiece: "in jedem Stück"
+    },
+     howto: {
+      title: "Anleitung",
+      description: "Eine einfache Anleitung zum Herunterladen Ihres Projekts und Verwalten von Bildern.",
+      download: {
+        title: "Laden Sie Ihr Projekt herunter",
+        description: "Holen Sie sich den vollständigen Quellcode für Ihre Website.",
+        para1: "Ihre Website ist bereit, auf die nächste Stufe gehoben zu werden. Sie können den vollständigen Quellcode herunterladen, um ihn lokal auszuführen, weiter anzupassen und in Ihrer eigenen Hosting-Umgebung bereitzustellen.",
+        note: "Hinweis: Die Download-Funktionalität wird normalerweise von der Plattform bereitgestellt, die Sie zum Erstellen dieser App verwenden. Suchen Sie nach einer Schaltfläche 'Code herunterladen' oder einer ähnlichen Option."
+      },
+      images: {
+        title: "Aktualisieren und Hinzufügen Ihrer Bilder",
+        description: "Erfahren Sie, wie Sie Platzhalterbilder durch Ihre eigenen ersetzen.",
+        step1: {
+            title: "Schritt 1: Das Bildmanifest verstehen",
+            para1: "Alle Bilder in diesem Projekt werden über eine zentrale Datei verwaltet.",
+            para2: "Diese Datei fungiert als Datenbank für Ihre Bilder und erleichtert die Aktualisierung, ohne den Code durchsuchen zu müssen."
+        },
+        step2: {
+            title: "Schritt 2: Einen Bildeintrag hinzufügen oder aktualisieren",
+            para1: "Um ein neues Bild hinzuzufügen, müssen Sie es zuerst irgendwo hochladen, um eine öffentliche URL zu erhalten (z. B. Imgur, Cloudinary oder Ihr eigener Server). Fügen Sie dann ein neues JSON-Objekt zum `placeholderImages`-Array in der Manifestdatei hinzu.",
+            li1: "Um ein neues Bild hinzuzufügen, fügen Sie einen neuen Eintrag zum Array hinzu.",
+            li2: "Um ein vorhandenes Bild zu ersetzen, suchen Sie einfach seine `id` und ändern Sie den `imageUrl`-Wert in Ihre neue URL.",
+            para2: "Jedes Bildobjekt muss diese Struktur haben:"
+        },
+        step3: {
+            title: "Schritt 3: Das Bild in Ihrem Code verwenden",
+            para1: "Um ein Bild anzuzeigen, importieren Sie die `getImage`-Funktion und rufen Sie sie mit der `id` des Bildes auf, das Sie anzeigen möchten.",
+            para2: "Die Funktion gibt ein Objekt mit allen benötigten Bilddaten zurück."
+        }
+      }
     }
   },
   mrw: {
@@ -351,7 +447,8 @@ const translations = {
         home: "घर",
         products: "उत्पाद",
         about: "म्हारे बारे में",
-        contact: "सम्पर्क"
+        contact: "सम्पर्क",
+        howto: "किसी करां गाइड"
       },
       categories: {
         title: "श्रेणियाँ",
@@ -369,6 +466,37 @@ const translations = {
       copyright: "© {{year}} कोमल री कलात्मक रेजिन। सर्वाधिकार सुरक्षित।",
       handcrafted: "हाथ सूं बणायोड़ी",
       ineverypiece: "हर एक रचना में"
+    },
+    howto: {
+      title: "किसी करां गाइड",
+      description: "थारो प्रोजेक्ट डाउनलोड करण अर छवियां ने व्यवस्थित करण वास्ते एक सरल गाइड।",
+      download: {
+        title: "थारो प्रोजेक्ट डाउनलोड करो",
+        description: "थारी वेबसाइट वास्ते पूरो स्रोत कोड प्राप्त करो।",
+        para1: "थारी वेबसाइट अगले स्तर पर ले जावण वास्ते तैयार है। थे इने स्थानीय रूप सूं चलावण, इने और अधिक अनुकूलित करण, अर इने थारे खुद रे होस्टिंग वातावरण में तैनात करण वास्ते पूरो स्रोत कोड डाउनलोड कर सको हो।",
+        note: "ध्यान दें: डाउनलोड कार्यक्षमता आमतौर पर उस प्लेटफॉर्म द्वारा प्रदान की जावे है जिसका उपयोग थे इण ऐप ने बणावण वास्ते कर रह्या हो। 'कोड डाउनलोड करो' बटन या इसी तरह रो कोई विकल्प देखो।"
+      },
+      images: {
+        title: "थारी छवियां अपडेट करो अर जोड़ो",
+        description: "प्लेसहोल्डर छवियां ने थारी खुद री छवियां सूं किसी बदलणी है, वो सीखो।",
+        step1: {
+            title: "चरण 1: छवि मैनिफेस्ट ने समझो",
+            para1: "इण प्रोजेक्ट री सारी छवियां एक केंद्रीय फ़ाइल रे माध्यम सूं प्रबंधित की जावे है।",
+            para2: "आ फ़ाइल थारी छवियां वास्ते एक डेटाबेस रे रूप में काम करे है, जिण सूं कोड में खोज्या बिना उने अपडेट करणो आसान हो जावे है।"
+        },
+        step2: {
+            title: "चरण 2: एक छवि प्रविष्टि जोड़ो या अपडेट करो",
+            para1: "एक नई छवि जोड़ण वास्ते, थाने पेला इने कठेई अपलोड करणी पड़सी ताकि एक सार्वजनिक URL मिल सके (उदा., Imgur, Cloudinary, या थारो खुद रो सर्वर)। फेर, मैनिफेस्ट फ़ाइल में `placeholderImages` ऐरे में एक नयो JSON ऑब्जेक्ट जोड़ो।",
+            li1: "एक नई छवि जोड़ण वास्ते, ऐरे में एक नई प्रविष्टि जोड़ो।",
+            li2: "एक मौजूदा छवि ने बदलण वास्ते, बस उणरी `id` ढूंढो अर `imageUrl` मान ने थारे नया URL में बदलो।",
+            para2: "हर एक छवि ऑब्जेक्ट री आ संरचना होणी चाईजे:"
+        },
+        step3: {
+            title: "चरण 3: कोड में छवि रो उपयोग करो",
+            para1: "एक छवि दिखावण वास्ते, `getImage` फ़ंक्शन आयात करो अर उने उण छवि री `id` रे साथ कॉल करो जिने थे दिखावणो चावो हो।",
+            para2: "फ़ंक्शन थाने जरूरी सारा छवि डेटा रे साथ एक ऑब्जेक्ट लौटावे है।"
+        }
+      }
     }
   }
 };

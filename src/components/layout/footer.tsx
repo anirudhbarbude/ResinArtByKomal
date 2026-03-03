@@ -105,6 +105,14 @@ export function Footer() {
                     {t('footer.quicklinks.contact')}
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/how-to"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {t('footer.quicklinks.howto')}
+                  </Link>
+                </li>
               </ul>
             </div>
 
