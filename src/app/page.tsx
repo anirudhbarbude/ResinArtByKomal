@@ -121,6 +121,14 @@ export default function Home() {
       href: "https://i.imgur.com/KP4FFye.mp4",
       thumbnail: getImage('resin-video-thumb-3'),
     },
+    {
+      href: "https://i.imgur.com/AN5tdg3.mp4",
+      thumbnail: getImage('resin-video-thumb-4'),
+    },
+    {
+      href: "https://i.imgur.com/mDTdsV2.mp4",
+      thumbnail: getImage('resin-video-thumb-5'),
+    },
   ];
   
   const BotanicalBackground = () => (
