@@ -58,6 +58,7 @@ export default function Home() {
   });
   
   const komalImage = getImage('komal-portrait');
+  const artImage = getImage('resin-wall-art-1');
 
   const pastArtworksIds = [
     'resin-coasters-1', 'resin-tray-1', 'resin-jewelry-1', 'resin-wall-art-1', 'resin-clock-1', 'resin-keychains-1', 
@@ -214,18 +215,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="video-hero" className="relative h-[70vh] overflow-hidden flex items-center justify-center text-center">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
-            poster={getImage('resin-video-thumb-1').imageUrl}
-          >
-            <source src="https://videos.pexels.com/video-files/4682823/4682823-hd_1920_1080_25fps.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+        <section id="image-hero" className="relative h-[70vh] overflow-hidden flex items-center justify-center text-center">
+          <Image
+            src={artImage.imageUrl}
+            alt={artImage.description}
+            data-ai-hint={artImage.imageHint}
+            fill
+            className="object-cover"
+            priority
+          />
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <div className="relative z-20 container px-4 md:px-6">
             <div className="mx-auto max-w-3xl text-white">
