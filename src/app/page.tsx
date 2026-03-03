@@ -110,15 +110,15 @@ export default function Home() {
 
   const videos = [
     {
-      href: "https://www.instagram.com/reel/DDhiNu4Br_I/?igsh=dngxb2U1MWQ3MjI=",
+      href: "https://imgur.com/2K2d32a",
       thumbnail: getImage('resin-video-thumb-1'),
     },
     {
-      href: "https://www.instagram.com/reel/C8q_1Z_yY3L/",
+      href: "https://imgur.com/46BMkdw",
       thumbnail: getImage('resin-video-thumb-2'),
     },
     {
-      href: "https://www.instagram.com/reel/C9A_Z_YyZJ_/",
+      href: "https://imgur.com/KP4FFye",
       thumbnail: getImage('resin-video-thumb-3'),
     },
   ];
