@@ -493,7 +493,7 @@ export default function Home() {
             <BotanicalBackground />
           </div>
           <div className="container relative px-4 md:px-6">
-            <div className="mx-auto max-w-3xl text-center animate-in fade-in slide-in-from-top-4 duration-500">
+            <div className="relative z-10 mx-auto max-w-3xl text-center animate-in fade-in slide-in-from-top-4 duration-500">
               <div className="flex justify-center items-center gap-4 md:gap-8 mb-4">
                   <svg
                       className="w-16 md:w-24 text-primary opacity-70"
@@ -521,12 +521,14 @@ export default function Home() {
                 {t('home.create.description')}
               </p>
             </div>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
               {videos.map((video, index) => (
                 <Dialog key={index}>
                   <DialogTrigger asChild>
                     <div
-                      className="animate-in fade-in-0 zoom-in-95 duration-300"
+                      className={`animate-in fade-in-0 zoom-in-95 duration-300 ${
+                        videos.length % 2 !== 0 && index === videos.length - 1 ? 'md:col-span-2' : ''
+                      }`}
                       style={{ animationDelay: `${200 + index * 150}ms`, animationFillMode: 'both' }}
                     >
                       <Card className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
