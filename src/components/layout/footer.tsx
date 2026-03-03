@@ -1,6 +1,6 @@
 'use client';
 
-import { Instagram, Heart, Mail, Phone } from "lucide-react";
+import { Instagram, Heart, Mail } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { Input } from "@/components/ui/input";
@@ -9,7 +9,6 @@ import {
   EMAIL_ADDRESS,
   INSTAGRAM_URL,
   INSTAGRAM_USERNAME,
-  PHONE_NUMBER,
 } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 
@@ -65,10 +64,6 @@ export function Footer() {
                 <Instagram className="h-4 w-4" />
                 <span>@{INSTAGRAM_USERNAME}</span>
               </a>
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <span>{PHONE_NUMBER}</span>
-              </div>
             </div>
           </div>
 

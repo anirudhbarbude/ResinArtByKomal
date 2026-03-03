@@ -2,13 +2,12 @@
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { Instagram, Mail, Phone } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   EMAIL_ADDRESS,
   INSTAGRAM_URL,
   INSTAGRAM_USERNAME,
-  PHONE_NUMBER,
 } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 
@@ -31,7 +30,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-8 md:grid-cols-3">
+            <div className="mt-12 mx-auto grid max-w-2xl gap-8 md:grid-cols-2">
               <Card className="text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
                 <CardHeader>
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">
@@ -71,18 +70,6 @@ export default function ContactPage() {
                       @{INSTAGRAM_USERNAME}
                     </a>
                   </p>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-                <CardHeader>
-                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">
-                    <Phone className="h-6 w-6 text-accent" />
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardTitle className="text-xl font-headline">{t('contact.phone')}</CardTitle>
-                  <p className="mt-2 text-muted-foreground">{PHONE_NUMBER}</p>
                 </CardContent>
               </Card>
             </div>

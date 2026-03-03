@@ -60,8 +60,7 @@ const translations = {
       title: "Get In Touch",
       description: "Have questions about our products or interested in a custom piece? Reach out to us through any of these channels.",
       email: "Email",
-      instagram: "Instagram",
-      phone: "Phone"
+      instagram: "Instagram"
     },
     footer: {
       shop: {
@@ -153,8 +152,7 @@ const translations = {
       title: "संपर्क में रहें",
       description: "हमारे उत्पादों के बारे में प्रश्न हैं या एक कस्टम टुकड़े में रुचि रखते हैं? इन चैनलों में से किसी के माध्यम से हमसे संपर्क करें।",
       email: "ईमेल",
-      instagram: "इंस्टाग्राम",
-      phone: "फ़ोन"
+      instagram: "इंस्टाग्राम"
     },
     footer: {
       shop: {
@@ -246,8 +244,7 @@ const translations = {
       title: "In Kontakt kommen",
       description: "Haben Sie Fragen zu unseren Produkten oder interessieren Sie sich für ein individuelles Stück? Kontaktieren Sie uns über einen dieser Kanäle.",
       email: "Email",
-      instagram: "Instagram",
-      phone: "Telefon"
+      instagram: "Instagram"
     },
     footer: {
       shop: {
@@ -339,8 +336,7 @@ const translations = {
       title: "सम्पर्क करो",
       description: "म्हारे उत्पादां रे बारे में कोई सवाल है या कोई खास चीज बणवावण में रुचि है? इण तरीकां सूं म्हारे सूं संपर्क करो।",
       email: "ईमेल",
-      instagram: "इंस्टाग्राम",
-      phone: "फ़ोन"
+      instagram: "इंस्टाग्राम"
     },
     footer: {
       shop: {
