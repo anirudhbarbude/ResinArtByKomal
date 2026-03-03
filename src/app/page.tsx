@@ -274,9 +274,29 @@ export default function Home() {
             <BotanicalBackground />
           </div>
           <div className="container relative">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary animate-in fade-in slide-in-from-top-4 duration-500">
-              {t('home.collection.title')}
-            </h2>
+            <div className="flex justify-center items-center gap-4 md:gap-8 mb-12 animate-in fade-in slide-in-from-top-4 duration-500">
+                <svg
+                    className="w-16 md:w-24 text-primary opacity-70"
+                    viewBox="0 0 100 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="M100 10C80 0 70 2 50 10S10 19 0 20" stroke="currentColor" strokeWidth="2" />
+                    <path d="M75 10C80 5 85 5 90 8" stroke="hsl(var(--accent))" strokeWidth="1.5" />
+                </svg>
+                <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-primary shrink-0">
+                    {t('home.collection.title')}
+                </h2>
+                <svg
+                    className="w-16 md:w-24 text-primary opacity-70 transform -scale-x-100"
+                    viewBox="0 0 100 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="M100 10C80 0 70 2 50 10S10 19 0 20" stroke="currentColor" strokeWidth="2" />
+                    <path d="M75 10C80 5 85 5 90 8" stroke="hsl(var(--accent))" strokeWidth="1.5" />
+                </svg>
+            </div>
 
             <div className="flex justify-center gap-2 md:gap-4 mb-12 flex-wrap animate-in fade-in slide-in-from-top-4 duration-500 delay-100">
               {filterCategories.map((category) => (
