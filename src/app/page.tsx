@@ -60,22 +60,19 @@ export default function Home() {
   const komalImage = getImage('komal-portrait');
   const artImage = getImage('shree-krishna-art-1');
 
-  const pastArtworksIds = [
-    'resin-coasters-1', 'resin-tray-1', 'resin-jewelry-1', 'resin-wall-art-1', 'resin-clock-1', 'resin-keychains-1', 
-    'tilak-thali-1', 'tilak-thali-2', 'rakhi-1', 'rakhi-2', 'rakhi-3', 'rakhi-4', 'rakhi-5', 'rakhi-6', 'rakhi-7', 
-    'rakhi-8', 'rakhi-9', 'rakhi-10', 'frame-1', 'frame-2', 'frame-3', 'frame-4', 'frame-5', 'beach-watch-1', 
-    'beach-watch-2', 'beach-watch-3', 'wine-glass-1', 'wine-glass-2', 'wine-glass-3', 'radha-art-1', 'radha-art-2', 
-    'radha-art-3', 'shubh-labh-1', 'phone-cover-1', 'moksmala-frame-1', 'beach-theme-clock-1', 'flower-preservation-1', 
-    'custom-diyas-1', 'birthmoon-pendant-1', 'resin-necklaces-1', 'tissue-box-1', 'scanner-stand-1', 'rose-vase-1', 
-    'oceanic-journal-1', 'navkar-mantra-standee-1', 'resin-art-thali-1', 'shree-krishna-art-1', 'resin-ring-platter-1', 
-    'birthday-bouquet-1', 'ganpati-standee-1', 'resin-pendant-1', '3d-car-art-gift-1', 'diya-thali-1', 
-    'diya-thali-2', 'custom-art-work-1', 'diwali-resin-art-1', 'custom-art-plates-1', 'resin-make-plates-1', 
-    'floral-art-work-1', 'handmade-resin-coaster-1'
+  const galleryBlacklist = [
+    'komal-portrait',
+    'resin-video-thumb-1',
+    'resin-video-thumb-2',
+    'resin-video-thumb-3',
+    'resin-video-thumb-4',
+    'resin-video-thumb-5',
+    'delivery-package-1',
   ];
 
-  const pastArtworks: ImagePlaceholder[] = pastArtworksIds
-    .map(id => PlaceHolderImages.find(img => img.id === id))
-    .filter((img): img is ImagePlaceholder => !!img);
+  const pastArtworks: ImagePlaceholder[] = PlaceHolderImages.filter(
+    (img) => !galleryBlacklist.includes(img.id)
+  );
 
   const artworksInGroups: ImagePlaceholder[][] = [];
   const groupSize = 12;
