@@ -6,7 +6,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { products } from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
-import { CheckCircle, Truck } from "lucide-react";
+import { CheckCircle, PlayCircle, Truck } from "lucide-react";
 import { Button } from '@/components/ui/button';
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -60,10 +60,15 @@ export default function Home() {
   const komalImage = getImage('komal-portrait');
   const artImage = getImage('shree-krishna-art-1');
 
+  // Automatically populate gallery from products, excluding duplicates and specific items
+  const productImages = products.map(p => p.image);
+  const allImages = [...PlaceHolderImages, ...productImages];
+  const uniqueImages = Array.from(new Map(allImages.map(img => [img.id, img])).values());
+
   const galleryBlacklist: string[] = ["resin-video-thumb-1", "resin-video-thumb-2", "resin-video-thumb-3", "resin-video-thumb-4", "resin-video-thumb-5", "resin-video-thumb-6"];
 
-  const pastArtworks: ImagePlaceholder[] = PlaceHolderImages.filter(
-    (img) => !galleryBlacklist.includes(img.id)
+  const pastArtworks: ImagePlaceholder[] = uniqueImages.filter(
+    (img) => !galleryBlacklist.includes(img.id) && !img.imageUrl.startsWith("https://picsum.photos")
   );
 
   const artworksInGroups: ImagePlaceholder[][] = [];
@@ -90,7 +95,7 @@ export default function Home() {
       thumbnail: getImage('resin-video-thumb-4'),
     },
     {
-      href: "https://i.imgur.com/1WTuIHC.mp4",
+      href: 'https://i.imgur.com/1WTuIHC.mp4',
       thumbnail: getImage('resin-video-thumb-5'),
     },
     {
@@ -488,30 +493,47 @@ export default function Home() {
             </div>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
               {videos.map((video, index) => (
-                <div
-                  key={index}
-                  className={`animate-in fade-in-0 zoom-in-95 duration-300 ${
-                    videos.length % 2 !== 0 && index === videos.length - 1 ? 'md:col-span-2' : ''
-                  }`}
-                  style={{ animationDelay: `${200 + index * 150}ms`, animationFillMode: 'both' }}
-                >
-                  <Card className="group relative overflow-hidden rounded-xl shadow-lg">
-                    <CardContent className="p-0">
-                        <div className="aspect-video w-full relative">
-                        <video
-                            src={video.href}
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="object-cover w-full h-full"
-                        >
-                            Your browser does not support the video tag.
-                        </video>
-                        </div>
-                    </CardContent>
-                  </Card>
-                </div>
+                <Dialog key={index}>
+                  <DialogTrigger asChild>
+                    <div
+                      className={`cursor-pointer animate-in fade-in-0 zoom-in-95 duration-300 ${
+                        videos.length % 2 !== 0 && index === videos.length - 1 ? 'md:col-span-2' : ''
+                      }`}
+                      style={{ animationDelay: `${200 + index * 150}ms`, animationFillMode: 'both' }}
+                    >
+                      <Card className="group relative overflow-hidden rounded-xl shadow-lg">
+                        <CardContent className="p-0">
+                          <div className="aspect-video w-full relative">
+                            <video
+                                src={video.href}
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                            >
+                                Your browser does not support the video tag.
+                            </video>
+                             <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <PlayCircle className="h-16 w-16 text-white/80" />
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="p-0 border-0 bg-transparent shadow-none max-w-4xl w-full">
+                    <video 
+                      src={video.href} 
+                      controls 
+                      autoPlay
+                      playsInline
+                      className="w-full h-auto max-h-[90vh] rounded-lg"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </DialogContent>
+                </Dialog>
               ))}
             </div>
           </div>
