@@ -67,6 +67,7 @@ export default function Home() {
     'resin-video-thumb-3',
     'resin-video-thumb-4',
     'resin-video-thumb-5',
+    'resin-video-thumb-6',
   ];
 
   const pastArtworks: ImagePlaceholder[] = PlaceHolderImages.filter(
@@ -99,6 +100,10 @@ export default function Home() {
     {
       href: "https://i.imgur.com/1WTuIHC.mp4",
       thumbnail: getImage('resin-video-thumb-5'),
+    },
+    {
+      href: 'https://i.imgur.com/rMAHV85.mp4',
+      thumbnail: getImage('resin-video-thumb-6'),
     },
   ];
   
