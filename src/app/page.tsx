@@ -95,7 +95,7 @@ export default function Home() {
     'radha-art-3', 'shubh-labh-1', 'phone-cover-1', 'moksmala-frame-1', 'beach-theme-clock-1', 'flower-preservation-1', 
     'custom-diyas-1', 'birthmoon-pendant-1', 'resin-necklaces-1', 'tissue-box-1', 'scanner-stand-1', 'rose-vase-1', 
     'oceanic-journal-1', 'navkar-mantra-standee-1', 'resin-art-thali-1', 'shree-krishna-art-1', 'resin-ring-platter-1', 
-    'birthday-bouquet-1', 'ganpati-standee-1'
+    'birthday-bouquet-1', 'ganpati-standee-1', 'marriage-decoration-1', 'resin-pendant-1'
   ];
 
   const pastArtworks: ImagePlaceholder[] = pastArtworksIds

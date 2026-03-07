@@ -355,10 +355,10 @@
     {
       "id": "birthmoon-pendant-1",
       "description": "A personalized pendant showing the phase of the moon on a specific birth date.",
-      "imageUrl": "https://images.unsplash.com/photo-1762328489885-3cf1fd22b9dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb29uJTIwcGVuZGFudHxlbnwwfHx8fDE3NzE2MzY0ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.imgur.com/5mcm47T.png",
       "imageHint": "moon pendant",
-      "width": 600,
-      "height": 600
+      "width": 791,
+      "height": 791
     },
     {
       "id": "resin-necklaces-1",
@@ -387,18 +387,18 @@
     {
       "id": "rose-vase-1",
       "description": "A beautiful Komoflora vase for a single rose, with resin accents.",
-      "imageUrl": "https://picsum.photos/seed/rose-vase-1/600/800",
+      "imageUrl": "https://i.imgur.com/dYxfdPZ.png",
       "imageHint": "resin vase",
-      "width": 600,
-      "height": 800
+      "width": 790,
+      "height": 790
     },
     {
       "id": "oceanic-journal-1",
       "description": "A journal with a stunning oceanic themed resin cover.",
-      "imageUrl": "https://picsum.photos/seed/oceanic-journal-1/600/800",
+      "imageUrl": "https://i.imgur.com/VWFzqlT.png",
       "imageHint": "resin journal",
-      "width": 600,
-      "height": 800
+      "width": 791,
+      "height": 790
     },
     {
       "id": "navkar-mantra-standee-1",
@@ -455,6 +455,22 @@
       "imageHint": "delivery package",
       "width": 1920,
       "height": 1080
+    },
+    {
+      "id": "marriage-decoration-1",
+      "description": "A beautiful resin art piece for marriage decoration, preserving a varmala.",
+      "imageUrl": "https://i.imgur.com/5X0ffC1.png",
+      "imageHint": "marriage decoration",
+      "width": 791,
+      "height": 791
+    },
+    {
+      "id": "resin-pendant-1",
+      "description": "An elegant resin pendant with a floral design from a varmala.",
+      "imageUrl": "https://i.imgur.com/5X0ffC1.png",
+      "imageHint": "resin pendant",
+      "width": 791,
+      "height": 791
     }
   ]
 }

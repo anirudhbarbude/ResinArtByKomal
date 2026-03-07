@@ -132,7 +132,7 @@ export const products: Product[] = [
   },
   {
     id: "18",
-    name: "Resin Oceanic Journal",
+    name: "Resin Oceanic Diary",
     description: "Capture your thoughts in a journal with a stunning oceanic themed resin cover.",
     image: getImage("oceanic-journal-1"),
     category: "Designs",
@@ -179,4 +179,18 @@ export const products: Product[] = [
     image: getImage("ganpati-standee-1"),
     category: "Art work",
   },
+  {
+    id: "25",
+    name: "Marriage Decoration Art",
+    description: "A beautiful resin art piece for marriage decoration, preserving a varmala.",
+    image: getImage("marriage-decoration-1"),
+    category: "Designs",
+  },
+  {
+    id: "26",
+    name: "Custom Varmala Pendant",
+    description: "An elegant and unique resin pendant, created from your varmala.",
+    image: getImage("resin-pendant-1"),
+    category: "Jewellery",
+  }
 ];
