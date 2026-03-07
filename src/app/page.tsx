@@ -65,7 +65,7 @@ export default function Home() {
   const allImages = [...PlaceHolderImages, ...productImages];
   const uniqueImages = Array.from(new Map(allImages.map(img => [img.id, img])).values());
 
-  const galleryBlacklist: string[] = ["resin-video-thumb-1", "resin-video-thumb-2", "resin-video-thumb-3", "resin-video-thumb-4", "resin-video-thumb-5", "resin-video-thumb-6"];
+  const galleryBlacklist: string[] = ["komal-portrait", "resin-video-thumb-1", "resin-video-thumb-2", "resin-video-thumb-3", "resin-video-thumb-4", "resin-video-thumb-5", "resin-video-thumb-6"];
 
   const pastArtworks: ImagePlaceholder[] = uniqueImages.filter(
     (img) => !galleryBlacklist.includes(img.id) && !img.imageUrl.startsWith("https://picsum.photos")
