@@ -180,13 +180,6 @@ export const products: Product[] = [
     category: "Art work",
   },
   {
-    id: "25",
-    name: "Marriage Decoration Art",
-    description: "A beautiful resin art piece for marriage decoration, preserving a varmala.",
-    image: getImage("marriage-decoration-1"),
-    category: "Designs",
-  },
-  {
     id: "26",
     name: "Custom Varmala Pendant",
     description: "An elegant and unique resin pendant, created from your varmala.",
@@ -201,5 +194,3 @@ export const products: Product[] = [
     category: "Art work",
   }
 ];
-
-    

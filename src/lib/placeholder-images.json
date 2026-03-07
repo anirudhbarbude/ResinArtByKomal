@@ -363,10 +363,10 @@
     {
       "id": "resin-necklaces-1",
       "description": "An elegant resin necklace with floral inclusions.",
-      "imageUrl": "https://images.unsplash.com/photo-1654847695141-dffef9835ada?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZXNpbiUyMGpld2Vscnl8ZW58MHx8fHwxNzcwNTU5NjU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.imgur.com/F9B4pXr.png",
       "imageHint": "resin necklace",
-      "width": 600,
-      "height": 600
+      "width": 791,
+      "height": 790
     },
     {
       "id": "tissue-box-1",
@@ -455,14 +455,6 @@
       "imageHint": "delivery package",
       "width": 1920,
       "height": 1080
-    },
-    {
-      "id": "marriage-decoration-1",
-      "description": "A beautiful resin art piece for marriage decoration, preserving a varmala.",
-      "imageUrl": "https://i.imgur.com/5X0ffC1.png",
-      "imageHint": "marriage decoration",
-      "width": 791,
-      "height": 791
     },
     {
       "id": "resin-pendant-1",
