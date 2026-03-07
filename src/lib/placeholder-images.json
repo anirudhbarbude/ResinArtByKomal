@@ -330,11 +330,11 @@
     },
     {
       "id": "beach-theme-clock-1",
-      "description": "A wall clock with a stunning beach and ocean wave theme.",
-      "imageUrl": "https://images.unsplash.com/photo-1769874827520-8eeddf779a3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyZXNpbiUyMGNsb2NrfGVufDB8fHx8MTc3MDU1OTY1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A wall clock with a stunning beach and ocean wave theme, bringing the sea to you.",
+      "imageUrl": "https://i.imgur.com/MGria5J.png",
       "imageHint": "resin clock",
-      "width": 600,
-      "height": 600
+      "width": 789,
+      "height": 791
     },
     {
       "id": "flower-preservation-1",
@@ -379,10 +379,10 @@
     {
       "id": "scanner-stand-1",
       "description": "A handmade stand for a QR code scanner, decorated with resin.",
-      "imageUrl": "https://picsum.photos/seed/scanner-stand-1/600/600",
+      "imageUrl": "https://i.imgur.com/QbnIhvS.png",
       "imageHint": "resin stand",
-      "width": 600,
-      "height": 600
+      "width": 585,
+      "height": 586
     },
     {
       "id": "rose-vase-1",
@@ -410,11 +410,11 @@
     },
     {
       "id": "resin-art-thali-1",
-      "description": "A general purpose decorative art thali made with resin.",
-      "imageUrl": "https://picsum.photos/seed/resin-art-thali-1/600/600",
+      "description": "A versatile and decorative art thali made with vibrant resin for any occasion.",
+      "imageUrl": "https://i.imgur.com/cFjoJv9.png",
       "imageHint": "resin thali",
-      "width": 600,
-      "height": 600
+      "width": 790,
+      "height": 791
     },
     {
       "id": "shree-krishna-art-1",
@@ -442,11 +442,11 @@
     },
     {
       "id": "ganpati-standee-1",
-      "description": "An artistic standee of Lord Ganpati for your home or office.",
-      "imageUrl": "https://images.unsplash.com/photo-1696586905995-4a4fc35c45f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYW5wYXRpJTIwYXJ0fGVufDB8fHx8MTc3MTYzNjQ4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "An artistic standee of Lord Ganpati to bring blessings and beauty to your home or office.",
+      "imageUrl": "https://i.imgur.com/n1JEcHS.png",
       "imageHint": "ganpati art",
-      "width": 600,
-      "height": 800
+      "width": 790,
+      "height": 791
     },
     {
       "id": "delivery-package-1",
