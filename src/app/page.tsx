@@ -252,6 +252,19 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="relative h-[90vh] bg-black flex justify-center items-center overflow-hidden">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            src="https://i.imgur.com/o3hQfY6.mp4"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </section>
+
         <section ref={imageHeroRef} id="image-hero" className="relative h-[70vh] overflow-hidden flex items-center justify-center text-center">
           <Image
             src={artImage.imageUrl}
