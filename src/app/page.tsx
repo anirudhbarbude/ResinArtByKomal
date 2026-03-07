@@ -238,11 +238,14 @@ export default function Home() {
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20 z-10" />
           <div className="relative z-20 flex flex-col items-center">
-            <h2 className="font-headline text-4xl sm:text-5xl md:text-6xl text-white drop-shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <p className="font-headline text-2xl md:text-3xl text-white/90 drop-shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+              Crafted with passion, poured with purpose
+            </p>
+            <h2 className="font-logo text-5xl sm:text-6xl md:text-7xl text-white drop-shadow-xl my-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
               Gift your loved ones the best
             </h2>
             <div
-              className="mt-8 relative w-48 h-48 md:w-60 md:h-60 mx-auto rounded-full overflow-hidden border-4 border-white/80 shadow-2xl animate-in fade-in zoom-in-90 duration-700 delay-300"
+              className="mt-4 relative w-48 h-48 md:w-60 md:h-60 mx-auto rounded-full overflow-hidden border-4 border-white/80 shadow-2xl animate-in fade-in zoom-in-90 duration-700 delay-300"
             >
               <Image
                 src={artImage.imageUrl}
