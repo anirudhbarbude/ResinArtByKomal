@@ -6,7 +6,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { products } from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
-import { CheckCircle, PlayCircle, Truck } from "lucide-react";
+import { CheckCircle, Truck } from "lucide-react";
 import { Button } from '@/components/ui/button';
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -60,7 +60,7 @@ export default function Home() {
   const komalImage = getImage('komal-portrait');
   const artImage = getImage('shree-krishna-art-1');
 
-  const galleryBlacklist: string[] = [];
+  const galleryBlacklist: string[] = ["resin-video-thumb-1", "resin-video-thumb-2", "resin-video-thumb-3", "resin-video-thumb-4", "resin-video-thumb-5", "resin-video-thumb-6"];
 
   const pastArtworks: ImagePlaceholder[] = PlaceHolderImages.filter(
     (img) => !galleryBlacklist.includes(img.id)
@@ -488,53 +488,30 @@ export default function Home() {
             </div>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
               {videos.map((video, index) => (
-                <Dialog key={index}>
-                  <DialogTrigger asChild>
-                    <div
-                      className={`animate-in fade-in-0 zoom-in-95 duration-300 ${
-                        videos.length % 2 !== 0 && index === videos.length - 1 ? 'md:col-span-2' : ''
-                      }`}
-                      style={{ animationDelay: `${200 + index * 150}ms`, animationFillMode: 'both' }}
-                    >
-                      <Card className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
-                        <CardContent className="p-0">
-                           <div className="aspect-video w-full relative">
-                            {index === videos.length - 1 ? (
-                              <video
-                                src={`${video.href}#t=0.1`}
-                                preload="metadata"
-                                muted
-                                playsInline
-                                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                              >
-                                <source src={`${video.href}#t=0.1`} type="video/mp4" />
-                              </video>
-                            ) : (
-                              <Image
-                                src={video.thumbnail.imageUrl}
-                                alt={video.thumbnail.description}
-                                data-ai-hint={video.thumbnail.imageHint}
-                                fill
-                                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                              />
-                            )}
-                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                              <PlayCircle className="h-20 w-20 text-white/80 transition-transform duration-300 group-hover:scale-110" />
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </DialogTrigger>
-                  <DialogContent className="p-0 border-0 bg-transparent shadow-none max-w-5xl w-auto">
-                    <video
-                      src={video.href}
-                      controls
-                      autoPlay
-                      className="w-full h-auto max-h-[90vh] rounded-lg"
-                    />
-                  </DialogContent>
-                </Dialog>
+                <div
+                  key={index}
+                  className={`animate-in fade-in-0 zoom-in-95 duration-300 ${
+                    videos.length % 2 !== 0 && index === videos.length - 1 ? 'md:col-span-2' : ''
+                  }`}
+                  style={{ animationDelay: `${200 + index * 150}ms`, animationFillMode: 'both' }}
+                >
+                  <Card className="group relative overflow-hidden rounded-xl shadow-lg">
+                    <CardContent className="p-0">
+                        <div className="aspect-video w-full relative">
+                        <video
+                            src={video.href}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="object-cover w-full h-full"
+                        >
+                            Your browser does not support the video tag.
+                        </video>
+                        </div>
+                    </CardContent>
+                  </Card>
+                </div>
               ))}
             </div>
           </div>
