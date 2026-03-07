@@ -59,10 +59,10 @@
     {
       "id": "tilak-thali-1",
       "description": "Decorative Tilak Thali",
-      "imageUrl": "https://picsum.photos/seed/tilak-thali-1/600/800",
+      "imageUrl": "https://i.imgur.com/XdIXcjT.png",
       "imageHint": "resin thali",
-      "width": 600,
-      "height": 800
+      "width": 790,
+      "height": 789
     },
     {
       "id": "tilak-thali-2",
@@ -154,11 +154,11 @@
     },
     {
       "id": "frame-1",
-      "description": "Resin Frame",
-      "imageUrl": "https://images.unsplash.com/photo-1626846116799-ad61f874f99d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZXNpbiUyMGZyYW1lfGVufDB8fHx8MTc3MTYyMDA0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Miniature family photo frame in resin",
+      "imageUrl": "https://i.imgur.com/1I5omyV.png",
       "imageHint": "resin frame",
-      "width": 600,
-      "height": 750
+      "width": 791,
+      "height": 791
     },
     {
       "id": "frame-2",
@@ -219,10 +219,10 @@
     {
       "id": "wine-glass-1",
       "description": "Resin Wine Glass",
-      "imageUrl": "https://images.unsplash.com/photo-1660303438028-b59af33c618c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyZXNpbiUyMHdpbmVnbGFzc3xlbnwwfHx8fDE3NzE2MjAwNDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.imgur.com/moqOEy9.png",
       "imageHint": "resin wineglass",
-      "width": 600,
-      "height": 850
+      "width": 790,
+      "height": 790
     },
     {
       "id": "wine-glass-2",
@@ -283,7 +283,7 @@
     {
       "id": "resin-video-thumb-1",
       "description": "Thumbnail for a video showing the process of creating resin art.",
-      "imageUrl": "https://i.imgur.com/2K2d32a.jpg",
+      "imageUrl": "https://i.imgur.com/2K2d32al.jpg",
       "imageHint": "resin art video",
       "width": 1280,
       "height": 720
@@ -291,7 +291,7 @@
     {
       "id": "resin-video-thumb-2",
       "description": "Thumbnail for another video showing resin art.",
-      "imageUrl": "https://i.imgur.com/46BMkdw.jpg",
+      "imageUrl": "https://i.imgur.com/46BMkdwl.jpg",
       "imageHint": "resin video",
       "width": 1280,
       "height": 720
@@ -299,7 +299,7 @@
     {
       "id": "resin-video-thumb-3",
       "description": "Thumbnail for a third video showing resin art.",
-      "imageUrl": "https://i.imgur.com/KP4FFye.jpg",
+      "imageUrl": "https://i.imgur.com/KP4FFyel.jpg",
       "imageHint": "resin video",
       "width": 1280,
       "height": 720
@@ -307,7 +307,7 @@
     {
       "id": "resin-video-thumb-4",
       "description": "Thumbnail for a video of resin art creation.",
-      "imageUrl": "https://i.imgur.com/AN5tdg3.jpg",
+      "imageUrl": "https://i.imgur.com/AN5tdg3l.jpg",
       "imageHint": "resin video",
       "width": 1280,
       "height": 720
@@ -315,7 +315,7 @@
     {
       "id": "resin-video-thumb-5",
       "description": "Thumbnail for a video of resin art.",
-      "imageUrl": "https://i.imgur.com/mDTdsV2.jpg",
+      "imageUrl": "https://i.imgur.com/mDTdsV2l.jpg",
       "imageHint": "resin art",
       "width": 1280,
       "height": 720
@@ -403,10 +403,10 @@
     {
       "id": "navkar-mantra-standee-1",
       "description": "A sacred Navkar Mantra standee crafted with artistic resin.",
-      "imageUrl": "https://picsum.photos/seed/navkar-mantra-standee-1/600/700",
+      "imageUrl": "https://i.imgur.com/dR7Hl9n.png",
       "imageHint": "mantra frame",
-      "width": 600,
-      "height": 700
+      "width": 791,
+      "height": 789
     },
     {
       "id": "resin-art-thali-1",
