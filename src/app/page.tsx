@@ -67,7 +67,6 @@ export default function Home() {
     'resin-video-thumb-3',
     'resin-video-thumb-4',
     'resin-video-thumb-5',
-    'delivery-package-1',
   ];
 
   const pastArtworks: ImagePlaceholder[] = PlaceHolderImages.filter(

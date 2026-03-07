@@ -1,52 +1,12 @@
 {
   "placeholderImages": [
     {
-      "id": "resin-coasters-1",
-      "description": "A set of beautiful blue and gold resin coasters.",
-      "imageUrl": "https://images.unsplash.com/photo-1663121428718-04c60f1fb2e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyZXNpbiUyMGFydHxlbnwwfHx8fDE3NzA1NTk2NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin art",
-      "width": 600,
-      "height": 600
-    },
-    {
       "id": "resin-tray-1",
       "description": "A custom platter celebrating 25 years of togetherness, beautifully crafted with resin.",
       "imageUrl": "https://i.imgur.com/3oxNcEf.png",
       "imageHint": "engagement platter",
       "width": 789,
       "height": 791
-    },
-    {
-      "id": "resin-jewelry-1",
-      "description": "A pair of elegant earrings with purple and white swirls.",
-      "imageUrl": "https://images.unsplash.com/photo-1654847695141-dffef9835ada?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZXNpbiUyMGpld2Vscnl8ZW58MHx8fHwxNzcwNTU5NjU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin jewelry",
-      "width": 600,
-      "height": 600
-    },
-    {
-      "id": "resin-wall-art-1",
-      "description": "A large wall art piece mimicking a geode slice.",
-      "imageUrl": "https://images.unsplash.com/photo-1655083974316-59292d670f70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnZW9kZSUyMGFydHxlbnwwfHx8fDE3NzA1NTk2NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "geode art",
-      "width": 600,
-      "height": 600
-    },
-    {
-      "id": "resin-clock-1",
-      "description": "A stylish wall clock with a mesmerizing ocean wave effect.",
-      "imageUrl": "https://images.unsplash.com/photo-1769874827520-8eeddf779a3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyZXNpbiUyMGNsb2NrfGVufDB8fHx8MTc3MDU1OTY1NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin clock",
-      "width": 600,
-      "height": 600
-    },
-    {
-      "id": "resin-keychains-1",
-      "description": "A set of personalized initial keychains with glitter.",
-      "imageUrl": "https://images.unsplash.com/photo-1630827198646-a70c7c759969?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyZXNpbiUyMGtleWNoYWluc3xlbnwwfHx8fDE3NzA1NTk2NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin keychains",
-      "width": 600,
-      "height": 600
     },
     {
       "id": "komal-portrait",
@@ -65,92 +25,12 @@
       "height": 789
     },
     {
-      "id": "tilak-thali-2",
-      "description": "Decorative Tilak Thali",
-      "imageUrl": "https://picsum.photos/seed/tilak-thali-2/600/700",
-      "imageHint": "resin thali",
-      "width": 600,
-      "height": 700
-    },
-    {
       "id": "rakhi-1",
       "description": "Celebrate the bond of love with a unique, handcrafted resin Rakhi for your brother.",
       "imageUrl": "https://i.imgur.com/DNn7MEa.png",
       "imageHint": "resin rakhi",
       "width": 707,
       "height": 709
-    },
-    {
-      "id": "rakhi-2",
-      "description": "Handmade Rakhi",
-      "imageUrl": "https://picsum.photos/seed/rakhi-2/600/500",
-      "imageHint": "resin rakhi",
-      "width": 600,
-      "height": 500
-    },
-    {
-      "id": "rakhi-3",
-      "description": "Handmade Rakhi",
-      "imageUrl": "https://picsum.photos/seed/rakhi-3/600/600",
-      "imageHint": "resin rakhi",
-      "width": 600,
-      "height": 600
-    },
-    {
-      "id": "rakhi-4",
-      "description": "Handmade Rakhi",
-      "imageUrl": "https://picsum.photos/seed/rakhi-4/600/450",
-      "imageHint": "resin rakhi",
-      "width": 600,
-      "height": 450
-    },
-    {
-      "id": "rakhi-5",
-      "description": "Handmade Rakhi",
-      "imageUrl": "https://picsum.photos/seed/rakhi-5/600/550",
-      "imageHint": "resin rakhi",
-      "width": 600,
-      "height": 550
-    },
-    {
-      "id": "rakhi-6",
-      "description": "Handmade Rakhi",
-      "imageUrl": "https://picsum.photos/seed/rakhi-6/600/650",
-      "imageHint": "resin rakhi",
-      "width": 600,
-      "height": 650
-    },
-    {
-      "id": "rakhi-7",
-      "description": "Handmade Rakhi",
-      "imageUrl": "https://picsum.photos/seed/rakhi-7/600/350",
-      "imageHint": "resin rakhi",
-      "width": 600,
-      "height": 350
-    },
-    {
-      "id": "rakhi-8",
-      "description": "Handmade Rakhi",
-      "imageUrl": "https://picsum.photos/seed/rakhi-8/600/480",
-      "imageHint": "resin rakhi",
-      "width": 600,
-      "height": 480
-    },
-    {
-      "id": "rakhi-9",
-      "description": "Handmade Rakhi",
-      "imageUrl": "https://picsum.photos/seed/rakhi-9/600/580",
-      "imageHint": "resin rakhi",
-      "width": 600,
-      "height": 580
-    },
-    {
-      "id": "rakhi-10",
-      "description": "Handmade Rakhi",
-      "imageUrl": "https://picsum.photos/seed/rakhi-10/600/680",
-      "imageHint": "resin rakhi",
-      "width": 600,
-      "height": 680
     },
     {
       "id": "frame-1",
@@ -169,100 +49,12 @@
       "height": 791
     },
     {
-      "id": "frame-3",
-      "description": "Resin Frame",
-      "imageUrl": "https://images.unsplash.com/photo-1759692071780-fa9d6ec04064?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXNpbiUyMGZyYW1lfGVufDB8fHx8MTc3MTYyMDA0MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin frame",
-      "width": 600,
-      "height": 850
-    },
-    {
-      "id": "frame-4",
-      "description": "Resin Frame",
-      "imageUrl": "https://images.unsplash.com/photo-1759692071780-fa9d6ec04064?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXNpbiUyMGZyYW1lfGVufDB8fHx8MTc3MTYyMDA0MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin frame",
-      "width": 600,
-      "height": 700
-    },
-    {
-      "id": "frame-5",
-      "description": "Resin Frame",
-      "imageUrl": "https://images.unsplash.com/photo-1653854793537-d3b73e5b6d07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyZXNpbiUyMGZyYW1lfGVufDB8fHx8MTc3MTYyMDA0MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin frame",
-      "width": 600,
-      "height": 800
-    },
-    {
-      "id": "beach-watch-1",
-      "description": "Resin Beach Watch",
-      "imageUrl": "https://images.unsplash.com/photo-1700130007227-92e7040d22b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZXNpbiUyMHdhdGNofGVufDB8fHx8MTc3MTYyMDA0MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin watch",
-      "width": 600,
-      "height": 600
-    },
-    {
-      "id": "beach-watch-2",
-      "description": "Resin Beach Watch",
-      "imageUrl": "https://images.unsplash.com/photo-1700130007227-92e7040d22b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZXNpbiUyMHdhdGNofGVufDB8fHx8MTc3MTYyMDA0MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin watch",
-      "width": 600,
-      "height": 550
-    },
-    {
-      "id": "beach-watch-3",
-      "description": "Resin Beach Watch",
-      "imageUrl": "https://images.unsplash.com/photo-1700130007227-92e7040d22b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZXNpbiUyMHdhdGNofGVufDB8fHx8MTc3MTYyMDA0MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin watch",
-      "width": 600,
-      "height": 650
-    },
-    {
       "id": "wine-glass-1",
       "description": "Elegant wine glass with a touch of blue resin art, perfect for special occasions.",
       "imageUrl": "https://i.imgur.com/moqOEy9.png",
       "imageHint": "resin wineglass",
       "width": 790,
       "height": 790
-    },
-    {
-      "id": "wine-glass-2",
-      "description": "Resin Wine Glass",
-      "imageUrl": "https://images.unsplash.com/photo-1575624848988-154eddea5184?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXNpbiUyMHdpbmVnbGFzc3xlbnwwfHx8fDE3NzE2MjAwNDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin wineglass",
-      "width": 600,
-      "height": 750
-    },
-    {
-      "id": "wine-glass-3",
-      "description": "Resin Wine Glass",
-      "imageUrl": "https://images.unsplash.com/photo-1660303438028-b59af33c618c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyZXNpbiUyMHdpbmVnbGFzc3xlbnwwfHx8fDE3NzE2MjAwNDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin wineglass",
-      "width": 600,
-      "height": 950
-    },
-    {
-      "id": "radha-art-1",
-      "description": "Radha Krishna Art",
-      "imageUrl": "https://images.unsplash.com/photo-1641730259879-ad98e7db7bcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyYWRoYSUyMGtyaXNobmF8ZW58MHx8fHwxNzcxNjIwMDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "radha krishna",
-      "width": 600,
-      "height": 900
-    },
-    {
-      "id": "radha-art-2",
-      "description": "Radha Krishna Art",
-      "imageUrl": "https://images.unsplash.com/photo-1690271961502-35f311ada169?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmFkaGElMjBrcmlzaG5hfGVufDB8fHx8MTc3MTYyMDA0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "radha krishna",
-      "width": 600,
-      "height": 800
-    },
-    {
-      "id": "radha-art-3",
-      "description": "Radha Krishna Art",
-      "imageUrl": "https://images.unsplash.com/photo-1641730259879-ad98e7db7bcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyYWRoYSUyMGtyaXNobmF8ZW58MHx8fHwxNzcxNjIwMDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "radha krishna",
-      "width": 600,
-      "height": 1000
     },
     {
       "id": "shubh-labh-1",
@@ -439,14 +231,6 @@
       "imageHint": "ganpati art",
       "width": 790,
       "height": 791
-    },
-    {
-      "id": "delivery-package-1",
-      "description": "A beautifully wrapped package ready for delivery.",
-      "imageUrl": "https://images.unsplash.com/photo-1594793583893-12502c3a5d89?w=1920&q=80",
-      "imageHint": "delivery package",
-      "width": 1920,
-      "height": 1080
     },
     {
       "id": "resin-pendant-1",
