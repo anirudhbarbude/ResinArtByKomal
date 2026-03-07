@@ -471,6 +471,14 @@
       "imageHint": "resin pendant",
       "width": 791,
       "height": 791
+    },
+    {
+      "id": "3d-car-art-gift-1",
+      "description": "A 3D car art piece, perfect as a gift.",
+      "imageUrl": "https://i.imgur.com/bzEicQV.png",
+      "imageHint": "car art",
+      "width": 791,
+      "height": 790
     }
   ]
 }

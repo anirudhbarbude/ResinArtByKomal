@@ -192,5 +192,14 @@ export const products: Product[] = [
     description: "An elegant and unique resin pendant, created from your varmala.",
     image: getImage("resin-pendant-1"),
     category: "Jewellery",
+  },
+  {
+    id: "27",
+    name: "3D Car Art Gift",
+    description: "A unique 3D car art piece, perfect as a gift for car enthusiasts.",
+    image: getImage("3d-car-art-gift-1"),
+    category: "Art work",
   }
 ];
+
+    
