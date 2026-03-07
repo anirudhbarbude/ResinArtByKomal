@@ -60,15 +60,7 @@ export default function Home() {
   const komalImage = getImage('komal-portrait');
   const artImage = getImage('shree-krishna-art-1');
 
-  const galleryBlacklist = [
-    'komal-portrait',
-    'resin-video-thumb-1',
-    'resin-video-thumb-2',
-    'resin-video-thumb-3',
-    'resin-video-thumb-4',
-    'resin-video-thumb-5',
-    'resin-video-thumb-6',
-  ];
+  const galleryBlacklist: string[] = [];
 
   const pastArtworks: ImagePlaceholder[] = PlaceHolderImages.filter(
     (img) => !galleryBlacklist.includes(img.id)
@@ -506,14 +498,26 @@ export default function Home() {
                     >
                       <Card className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
                         <CardContent className="p-0">
-                          <div className="aspect-video w-full relative">
-                            <Image
-                              src={video.thumbnail.imageUrl}
-                              alt={video.thumbnail.description}
-                              data-ai-hint={video.thumbnail.imageHint}
-                              fill
-                              className="object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
+                           <div className="aspect-video w-full relative">
+                            {index === videos.length - 1 ? (
+                              <video
+                                src={`${video.href}#t=0.1`}
+                                preload="metadata"
+                                muted
+                                playsInline
+                                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                              >
+                                <source src={`${video.href}#t=0.1`} type="video/mp4" />
+                              </video>
+                            ) : (
+                              <Image
+                                src={video.thumbnail.imageUrl}
+                                alt={video.thumbnail.description}
+                                data-ai-hint={video.thumbnail.imageHint}
+                                fill
+                                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                              />
+                            )}
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                               <PlayCircle className="h-20 w-20 text-white/80 transition-transform duration-300 group-hover:scale-110" />
                             </div>
