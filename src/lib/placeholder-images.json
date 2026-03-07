@@ -10,11 +10,11 @@
     },
     {
       "id": "resin-tray-1",
-      "description": "A decorative tray with floral elements embedded in clear resin.",
-      "imageUrl": "https://images.unsplash.com/photo-1730388843790-f753ecf9ba94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyZXNpbiUyMHRyYXl8ZW58MHx8fHwxNzcwNDY5NjE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "resin tray",
-      "width": 600,
-      "height": 600
+      "description": "A custom platter celebrating 25 years of togetherness, beautifully crafted with resin.",
+      "imageUrl": "https://i.imgur.com/3oxNcEf.png",
+      "imageHint": "engagement platter",
+      "width": 789,
+      "height": 791
     },
     {
       "id": "resin-jewelry-1",
@@ -74,11 +74,11 @@
     },
     {
       "id": "rakhi-1",
-      "description": "Handmade Rakhi",
-      "imageUrl": "https://picsum.photos/seed/rakhi-1/600/400",
+      "description": "Celebrate the bond of love with a unique, handcrafted resin Rakhi for your brother.",
+      "imageUrl": "https://i.imgur.com/DNn7MEa.png",
       "imageHint": "resin rakhi",
-      "width": 600,
-      "height": 400
+      "width": 707,
+      "height": 709
     },
     {
       "id": "rakhi-2",
