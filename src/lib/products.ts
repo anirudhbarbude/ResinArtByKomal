@@ -159,13 +159,6 @@ export const products: Product[] = [
     category: "Art work",
   },
   {
-    id: "22",
-    name: "Resin Ring Platter",
-    description: "An exquisite custom resin ring platter for your engagement ceremony.",
-    image: getImage("resin-ring-platter-1"),
-    category: "Designs",
-  },
-  {
     id: "23",
     name: "Handmade Birthday Bouquet",
     description: "A beautiful handmade birthday bouquet of flowers, preserved forever in clear resin.",

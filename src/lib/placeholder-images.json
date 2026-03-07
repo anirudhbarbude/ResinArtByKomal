@@ -371,7 +371,7 @@
     {
       "id": "tissue-box-1",
       "description": "A stylish handmade tissue box with resin art.",
-      "imageUrl": "https://images.unsplash.com/photo-1698376621004-70ce754157d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyZXNpbiUyMGJveHxlbnwwfHx8fDE3NzE2MzY0ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.imgur.com/1hDw1Tz.png",
       "imageHint": "resin box",
       "width": 600,
       "height": 500
@@ -423,14 +423,6 @@
       "imageHint": "krishna art",
       "width": 790,
       "height": 789
-    },
-    {
-      "id": "resin-ring-platter-1",
-      "description": "A custom resin ring platter for engagement ceremonies.",
-      "imageUrl": "https://picsum.photos/seed/resin-ring-platter-1/600/600",
-      "imageHint": "resin platter",
-      "width": 600,
-      "height": 600
     },
     {
       "id": "birthday-bouquet-1",
