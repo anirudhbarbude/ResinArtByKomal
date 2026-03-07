@@ -68,7 +68,9 @@ export default function Home() {
     'radha-art-3', 'shubh-labh-1', 'phone-cover-1', 'moksmala-frame-1', 'beach-theme-clock-1', 'flower-preservation-1', 
     'custom-diyas-1', 'birthmoon-pendant-1', 'resin-necklaces-1', 'tissue-box-1', 'scanner-stand-1', 'rose-vase-1', 
     'oceanic-journal-1', 'navkar-mantra-standee-1', 'resin-art-thali-1', 'shree-krishna-art-1', 'resin-ring-platter-1', 
-    'birthday-bouquet-1', 'ganpati-standee-1', 'resin-pendant-1', '3d-car-art-gift-1'
+    'birthday-bouquet-1', 'ganpati-standee-1', 'resin-pendant-1', '3d-car-art-gift-1', 'diya-thali-1', 
+    'diya-thali-2', 'custom-art-work-1', 'diwali-resin-art-1', 'custom-art-plates-1', 'resin-make-plates-1', 
+    'floral-art-work-1', 'handmade-resin-coaster-1'
   ];
 
   const pastArtworks: ImagePlaceholder[] = pastArtworksIds
@@ -99,7 +101,7 @@ export default function Home() {
       thumbnail: getImage('resin-video-thumb-4'),
     },
     {
-      href: "https://i.imgur.com/mDTdsV2.mp4",
+      href: "https://i.imgur.com/1WTuIHC.mp4",
       thumbnail: getImage('resin-video-thumb-5'),
     },
   ];
@@ -244,17 +246,6 @@ export default function Home() {
             <h2 className="font-logo text-5xl sm:text-6xl md:text-7xl text-white drop-shadow-xl my-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
               Gift your loved ones the best
             </h2>
-            <div
-              className="mt-4 relative w-48 h-48 md:w-60 md:h-60 mx-auto rounded-full overflow-hidden border-4 border-white/80 shadow-2xl animate-in fade-in zoom-in-90 duration-700 delay-300"
-            >
-              <Image
-                src={artImage.imageUrl}
-                alt={artImage.description}
-                data-ai-hint={artImage.imageHint}
-                fill
-                className="object-cover object-top"
-              />
-            </div>
           </div>
         </section>
 
@@ -277,6 +268,19 @@ export default function Home() {
             <BotanicalBackground />
           </div>
           <div className="container relative">
+            <div className="flex justify-center mb-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <div
+                className="relative w-48 h-48 md:w-60 md:h-60 mx-auto rounded-full overflow-hidden border-4 border-primary/50 shadow-2xl"
+              >
+                <Image
+                  src={artImage.imageUrl}
+                  alt={artImage.description}
+                  data-ai-hint={artImage.imageHint}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
             <div className="flex justify-center items-center gap-4 md:gap-8 mb-12 animate-in fade-in slide-in-from-top-4 duration-500">
                 <svg
                     className="w-16 md:w-24 text-primary opacity-70"

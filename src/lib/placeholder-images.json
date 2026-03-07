@@ -315,7 +315,7 @@
     {
       "id": "resin-video-thumb-5",
       "description": "Thumbnail for a video of resin art.",
-      "imageUrl": "https://i.imgur.com/mDTdsV2h.jpg",
+      "imageUrl": "https://i.imgur.com/1WTuIHCh.jpg",
       "imageHint": "resin art",
       "width": 1280,
       "height": 720
@@ -347,10 +347,10 @@
     {
       "id": "custom-diyas-1",
       "description": "A set of customized, decorated diyas for festive occasions.",
-      "imageUrl": "https://picsum.photos/seed/custom-diyas-1/600/400",
+      "imageUrl": "https://i.imgur.com/KLzWTZY.png",
       "imageHint": "resin diya",
-      "width": 600,
-      "height": 400
+      "width": 789,
+      "height": 791
     },
     {
       "id": "birthmoon-pendant-1",
@@ -419,10 +419,10 @@
     {
       "id": "shree-krishna-art-1",
       "description": "Inspiring art piece of Shree Krishna made with resin.",
-      "imageUrl": "https://images.unsplash.com/photo-1641730259879-ad98e7db7bcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyYWRoYSUyMGtyaXNobmF8ZW58MHx8fHwxNzcxNjIwMDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.imgur.com/K80WMD0.png",
       "imageHint": "krishna art",
-      "width": 600,
-      "height": 900
+      "width": 790,
+      "height": 789
     },
     {
       "id": "resin-ring-platter-1",
@@ -435,10 +435,10 @@
     {
       "id": "birthday-bouquet-1",
       "description": "A handmade birthday bouquet preserved forever in clear resin.",
-      "imageUrl": "https://images.unsplash.com/photo-1601980257570-d66764aa1102?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXNpbiUyMGJvdXF1ZXR8ZW58MHx8fHwxNzcxNjM2NDgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.imgur.com/Wm0fX3w.png",
       "imageHint": "resin bouquet",
-      "width": 600,
-      "height": 800
+      "width": 789,
+      "height": 791
     },
     {
       "id": "ganpati-standee-1",
@@ -471,6 +471,70 @@
       "imageHint": "car art",
       "width": 791,
       "height": 790
+    },
+    {
+      "id": "diya-thali-1",
+      "description": "A beautiful Diya Thali for festive celebrations.",
+      "imageUrl": "https://i.imgur.com/2i5STL3.png",
+      "imageHint": "diya thali",
+      "width": 791,
+      "height": 790
+    },
+    {
+      "id": "diya-thali-2",
+      "description": "An elegant Diya Thali with intricate resin work.",
+      "imageUrl": "https://i.imgur.com/ORPiRgY.png",
+      "imageHint": "diya thali",
+      "width": 790,
+      "height": 789
+    },
+    {
+      "id": "custom-art-work-1",
+      "description": "A piece of custom resin artwork.",
+      "imageUrl": "https://i.imgur.com/DexpKCL.png",
+      "imageHint": "custom art",
+      "width": 790,
+      "height": 790
+    },
+    {
+      "id": "diwali-resin-art-1",
+      "description": "Special resin art for Diwali.",
+      "imageUrl": "https://i.imgur.com/2W54PJ4.png",
+      "imageHint": "diwali art",
+      "width": 790,
+      "height": 791
+    },
+    {
+      "id": "custom-art-plates-1",
+      "description": "Custom decorative plates with resin art.",
+      "imageUrl": "https://i.imgur.com/RhSw0V9.png",
+      "imageHint": "resin plates",
+      "width": 790,
+      "height": 790
+    },
+    {
+      "id": "resin-make-plates-1",
+      "description": "Customizable resin plates for makeup or trinkets.",
+      "imageUrl": "https://i.imgur.com/1Epbclw.png",
+      "imageHint": "resin plates",
+      "width": 791,
+      "height": 791
+    },
+    {
+      "id": "floral-art-work-1",
+      "description": "A piece of artwork featuring preserved flowers in resin.",
+      "imageUrl": "https://i.imgur.com/GsyznHw.png",
+      "imageHint": "floral art",
+      "width": 790,
+      "height": 791
+    },
+    {
+      "id": "handmade-resin-coaster-1",
+      "description": "A beautiful handmade resin coaster.",
+      "imageUrl": "https://i.imgur.com/6fYvw8p.png",
+      "imageHint": "resin coaster",
+      "width": 790,
+      "height": 791
     }
   ]
 }
