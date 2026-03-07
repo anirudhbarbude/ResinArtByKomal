@@ -241,5 +241,12 @@ export const products: Product[] = [
     description: "A beautiful handmade resin coaster.",
     image: getImage("handmade-resin-coaster-1"),
     category: "Home Decor",
+  },
+  {
+    id: "35",
+    name: "Diya Thali",
+    description: "A beautiful Diya Thali for festive celebrations.",
+    image: getImage("diya-thali-1"),
+    category: "Home Decor",
   }
 ];
