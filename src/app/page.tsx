@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -40,33 +40,6 @@ const filterCategories = [
 export default function Home() {
   const [filter, setFilter] = useState("All Products");
   const { t } = useTranslation();
-
-  const [isImageHeroVisible, setIsImageHeroVisible] = useState(false);
-  const imageHeroRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsImageHeroVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    const currentRef = imageHeroRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        observer.unobserve(currentRef);
-      }
-    };
-  }, []);
 
   const filteredProducts = products.filter((product) => {
     if (filter === "All Products") {
@@ -252,53 +225,32 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative h-[90vh] bg-black flex justify-center items-center overflow-hidden">
-          <video 
-            autoPlay 
-            loop 
-            muted 
+        <section className="relative h-[90vh] bg-black flex flex-col justify-center items-center text-center p-4 overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
             playsInline
-            className="absolute top-0 left-0 w-full h-full object-cover"
+            className="absolute top-0 left-0 w-full h-full object-cover z-0"
             src="https://i.imgur.com/o3hQfY6.mp4"
           >
             Your browser does not support the video tag.
           </video>
-        </section>
-
-        <section ref={imageHeroRef} id="image-hero" className="relative h-[70vh] overflow-hidden flex items-center justify-center text-center">
-          <Image
-            src={artImage.imageUrl}
-            alt={artImage.description}
-            data-ai-hint={artImage.imageHint}
-            fill
-            className="object-cover object-top"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <div className="relative z-20 container px-4 md:px-6">
-            <div className="mx-auto max-w-3xl text-white">
-              <h2 className="font-logo text-5xl sm:text-6xl md:text-7xl text-white mb-4 drop-shadow-lg">
-                {t('home.video.title').split(" ").map((word, index) => (
-                    <span
-                    key={index}
-                    className={`inline-block mr-1.5 ${isImageHeroVisible ? 'animate-in fade-in slide-in-from-bottom-2 duration-500' : 'opacity-0'}`}
-                    style={isImageHeroVisible ? { animationDelay: `${200 + index * 100}ms`, animationFillMode: 'both' } : {}}
-                    >
-                    {word}
-                    </span>
-                ))}
-              </h2>
-              <p className="text-xl md:text-2xl font-body text-white/90 drop-shadow-md">
-                {t('home.video.subtitle').split(" ").map((word, index) => (
-                    <span
-                    key={index}
-                    className={`inline-block mr-1.5 ${isImageHeroVisible ? 'animate-in fade-in slide-in-from-bottom-2 duration-500' : 'opacity-0'}`}
-                    style={isImageHeroVisible ? { animationDelay: `${700 + index * 100}ms`, animationFillMode: 'both' } : {}}
-                    >
-                    {word}
-                    </span>
-                ))}
-              </p>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20 z-10" />
+          <div className="relative z-20 flex flex-col items-center">
+            <h2 className="font-headline text-4xl sm:text-5xl md:text-6xl text-white drop-shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700">
+              Gift your loved ones the best
+            </h2>
+            <div
+              className="mt-8 relative w-48 h-48 md:w-60 md:h-60 mx-auto rounded-full overflow-hidden border-4 border-white/80 shadow-2xl animate-in fade-in zoom-in-90 duration-700 delay-300"
+            >
+              <Image
+                src={artImage.imageUrl}
+                alt={artImage.description}
+                data-ai-hint={artImage.imageHint}
+                fill
+                className="object-cover object-top"
+              />
             </div>
           </div>
         </section>
