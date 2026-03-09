@@ -1,5 +1,4 @@
-# Firebase Studio
+Artistic Resin Bt Komal - Resin Art Portfolio Cum Insta Shop 
 
-This is a NextJS starter in Firebase Studio.
 
-To get started, take a look at src/app/page.tsx.
+ Hosted Link : https://studio--studio-9987925990-281d4.us-central1.hosted.app
